@@ -1,0 +1,82 @@
+module Demo.Buttons exposing (view, model, update, Model, Msg)
+
+import Demo.Base exposing (demoSection)
+import Html exposing (Html, div, text, h3, i)
+import Html.Attributes exposing (style)
+import Aui.Buttons exposing (..)
+
+
+type Msg
+    = Clicked String
+    | NoOp
+
+
+type alias Model =
+    Maybe String
+
+
+model : Model
+model =
+    Nothing
+
+
+update : Msg -> Model -> Model
+update msg model =
+    case msg of
+        NoOp ->
+            model
+
+        Clicked s ->
+            Just s
+
+
+view : Model -> Html Msg
+view model =
+    demoSection "Buttons"
+        [ div []
+            [ case model of
+                Just s ->
+                    text ("Last clicked: " ++ s ++ "!")
+
+                Nothing ->
+                    i [] [ text "Nothing clicked..." ]
+            ]
+        , div [ style [ ( "padding", "20px" ) ] ]
+            [ h3 [] [ text "Default" ]
+            , button baseConfig (Clicked "Default") [ text "Default" ]
+            , button (baseConfig |> disable) (Clicked "Default Disabled") [ text "Default Disabled" ]
+            ]
+        , div [ style [ ( "padding", "20px" ) ] ]
+            [ h3 [] [ text "Primary" ]
+            , button (baseConfig |> withStyle Primary) (Clicked "Primary") [ text "Primary" ]
+            , button (baseConfig |> withStyle Primary |> disable) (Clicked "Primary Disabled") [ text "Primary Disabled" ]
+            ]
+        , div [ style [ ( "padding", "20px" ) ] ]
+            [ h3 [] [ text "Light" ]
+            , button (baseConfig |> withStyle Light) (Clicked "Light") [ text "Light" ]
+            , button (baseConfig |> withStyle Light |> disable) (Clicked "Light Disabled") [ text "Light Disabled" ]
+            ]
+        , div [ style [ ( "padding", "20px" ) ] ]
+            [ h3 [] [ text "Subtle" ]
+            , button (baseConfig |> withStyle Subtle) (Clicked "Subtle") [ text "Subtle" ]
+            , button (baseConfig |> withStyle Subtle |> disable) (Clicked "Subtle Disabled") [ text "Subtle Disabled" ]
+            ]
+        , div [ style [ ( "padding", "20px" ) ] ]
+            [ h3 [] [ text "Link" ]
+            , button (baseConfig |> withStyle Link) (Clicked "Link") [ text "Link" ]
+            , button (baseConfig |> withStyle Link |> disable) (Clicked "Link Disabled") [ text "Link Disabled" ]
+            ]
+        , div [ style [ ( "padding", "20px" ) ] ]
+            [ h3 [] [ text "With href" ]
+            , button (baseConfig |> withStyle Link |> withHref "http://elm-lang.org/") NoOp [ text "Go to elm" ]
+            , button (baseConfig |> withStyle Link |> disable |> withHref "http://elm-lang.org/") NoOp [ text "Go to elm (disabled)" ]
+            ]
+        , div [ style [ ( "padding", "20px" ) ] ]
+            [ h3 [] [ text "Groups"]
+            , buttonGroup
+                    [ button baseConfig (Clicked "Button 1") [ text "Button 1" ]
+                    , button baseConfig (Clicked "Button 2") [ text "Button 2" ]
+                    , button baseConfig (Clicked "Button 3") [ text "Button 3" ]
+                    ]
+            ]
+        ]
