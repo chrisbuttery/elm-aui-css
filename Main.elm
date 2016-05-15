@@ -14,6 +14,7 @@ import Demo.Messages
 import Demo.ProgressIndicator
 import Demo.ProgressTracker
 import Demo.Select
+import Demo.Tabs
 
 
 type alias Model =
@@ -22,6 +23,7 @@ type alias Model =
     , expander : Demo.Expander.Model
     , messages : Demo.Messages.Model
     , selects : Demo.Select.Model
+    , tabs : Demo.Tabs.Model
     }
 
 
@@ -32,6 +34,7 @@ type Msg
     | ExpanderMsg Demo.Expander.Msg
     | MessagesMsg Demo.Messages.Msg
     | SelectMsg Demo.Select.Msg
+    | TabsMsg Demo.Tabs.Msg
 
 
 main : Program Never
@@ -55,6 +58,7 @@ init =
           , expander = Demo.Expander.model
           , messages = Demo.Messages.model
           , selects = selects
+          , tabs = Demo.Tabs.initialModel
           }
         , Cmd.map SelectMsg selectsCmds
         )
@@ -66,6 +70,7 @@ view model =
         [ div [ class "aui-page-panel-inner" ]
             [ section [ class "aui-page-panel-content" ]
                 [ Html.App.map (\x -> NoOp) Demo.Avatars.view
+                , Html.App.map TabsMsg (Demo.Tabs.view model.tabs)
                 , Html.App.map SelectMsg (Demo.Select.view model.selects)
                 , Html.App.map (\x -> NoOp) Demo.Badges.view
                 , Html.App.map ButtonMsg (Demo.Buttons.view model.buttons)
@@ -99,6 +104,9 @@ update msg model =
 
         MessagesMsg x ->
             ( { model | messages = Demo.Messages.update x model.messages }, Cmd.none )
+
+        TabsMsg x ->
+            ( { model | tabs = Demo.Tabs.update x model.tabs }, Cmd.none )
 
         SelectMsg x ->
             let
