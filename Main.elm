@@ -15,6 +15,7 @@ import Demo.ProgressIndicator
 import Demo.ProgressTracker
 import Demo.Select
 import Demo.Tabs
+import Demo.Toolbar
 
 
 type alias Model =
@@ -70,6 +71,7 @@ view model =
         [ div [ class "aui-page-panel-inner" ]
             [ section [ class "aui-page-panel-content" ]
                 [ Html.App.map (\x -> NoOp) Demo.Avatars.view
+                , Html.App.map (\x -> NoOp) Demo.Toolbar.view
                 , Html.App.map TabsMsg (Demo.Tabs.view model.tabs)
                 , Html.App.map SelectMsg (Demo.Select.view model.selects)
                 , Html.App.map (\x -> NoOp) Demo.Badges.view
