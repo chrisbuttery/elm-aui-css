@@ -1,4 +1,4 @@
-module Demo.Messages exposing (view,update,model,Msg,Model)
+module Demo.Messages exposing (view, update, model, Msg, Model)
 
 import Demo.Base exposing (demoSection)
 import Aui.Messages exposing (..)

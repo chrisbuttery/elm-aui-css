@@ -19,6 +19,15 @@
           active.blur();
         }
       });
+      app.ports.auiFocus.subscribe(function(x) {
+        // var active = document.activeElement;
+        // if (active) {
+        //   active.blur();
+        // }
+        console.log(document.getElementById("mySelect"));
+        document.getElementById("mySelect").focus();
+        console.log("FOO")
+      });
     </script>
   </body>
 </html>

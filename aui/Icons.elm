@@ -1,4 +1,4 @@
-module Aui.Icons exposing (Icon(..), icon, iconSmall,iconLarge, Size(..))
+module Aui.Icons exposing (Icon(..), icon, iconSmall, iconLarge, Size(..))
 
 import Html exposing (Html, span, text)
 import Html.Attributes exposing (class)
