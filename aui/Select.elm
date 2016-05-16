@@ -1,15 +1,41 @@
-port module Aui.Select exposing (singleSelect, Config, Model, initialModel, update, Msg, baseConfig)
+module Aui.Select exposing (singleSelect, Config, Model, initialModel, update, Msg, baseConfig)
+
+{-| Functions to present AUI select.
+
+# Types
+
+@docs Msg, Config
+
+# Model
+
+@docs Model, initialModel, open, close
+
+# Update
+
+@docs update
+
+# Presentation
+
+@docs singleSelect
+
+# Utility
+
+@docs baseConfig
+
+-}
 
 import Html exposing (Html, ul, li, div, button, node, input, select, text, form, span)
 import Html.Attributes exposing (value, type', class, name, placeholder, tabindex, autocomplete, attribute, style, id)
 import Html.Events exposing (onClick, onFocus, onBlur, onInput, keyCode, on, onWithOptions, defaultOptions, onSubmit, onMouseEnter)
 import String exposing (contains, toLower)
 import Json.Decode as Json
-import Platform.Cmd
 import List.Extra exposing (elemIndex, getAt)
 import Aui.Backdrop exposing (backdrop)
+import Aui.Ports exposing (auiBlur, auiFocus)
 
 
+{-| Messages being sent by the select component
+-}
 type Msg
     = Toggle
     | Select String
@@ -23,12 +49,16 @@ type Msg
     | Hover String
 
 
+{-| Configuration record to show a dropdown component.
+-}
 type alias Config =
     { zIndexBackdrop : Int
     , placeholder : Maybe String
     }
 
 
+{-| Model for the select component.
+-}
 type alias Model =
     { open : Bool
     , query : Maybe String
@@ -38,6 +68,8 @@ type alias Model =
     }
 
 
+{-| Create a base configuration for presenting a select.
+-}
 baseConfig : Config
 baseConfig =
     { zIndexBackdrop = 99
@@ -45,11 +77,60 @@ baseConfig =
     }
 
 
+{-| Initial model for a select.
+-}
 initialModel : List String -> ( Model, Cmd Msg )
 initialModel items =
     ( { open = False, items = items, query = Nothing, value = Nothing, highlighted = Nothing }, Cmd.none )
 
 
+{-| Create a single select with a configuration and a model.
+-}
+singleSelect : Config -> Model -> Html Msg
+singleSelect config model =
+    let
+        popoverDisplay =
+            if model.open then
+                "block"
+            else
+                "none"
+
+        activeOptions' =
+            activeOptionsForModel model
+
+        zIndexItems =
+            config.zIndexBackdrop + 1 |> toString
+    in
+        div []
+            [ node "aui-select"
+                [ placeholder <| Maybe.withDefault "" config.placeholder
+                , tabindex -1
+                , style [ ( "position", "relative" ) ]
+                ]
+                [ form [ onSubmit NoOp ]
+                    [ backdrop config.zIndexBackdrop Close model.open
+                    , queryInput zIndexItems model
+                    , dropDownButton zIndexItems model
+                    , div
+                        [ class "aui-popover"
+                        , style
+                            [ ( "position", "absolute" )
+                            , ( "top", "30px" )
+                            , ( "width", "100%" )
+                            , ( "z-index", zIndexItems )
+                            , ( "display", popoverDisplay )
+                            ]
+                        ]
+                        [ ul [ class "aui-optionlist" ]
+                            (List.map (asOption model) activeOptions')
+                        ]
+                    ]
+                ]
+            ]
+
+
+{-| Update function for the select component. This should be called from within your update function when handling `Msg`
+-}
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
@@ -95,12 +176,6 @@ update msg model =
 
         Down ->
             changeHighlighted 1 model
-
-
-port auiBlur : String -> Cmd msg
-
-
-port auiFocus : String -> Cmd msg
 
 
 changeHighlighted : Int -> Model -> ( Model, Cmd Msg )
@@ -178,49 +253,6 @@ activeOptionsForQuery queryOpt model =
 activeOptionsForModel : Model -> List String
 activeOptionsForModel model =
     activeOptionsForQuery model.query model
-
-
-singleSelect : Config -> Model -> Html Msg
-singleSelect config model =
-    let
-        popoverDisplay =
-            if model.open then
-                "block"
-            else
-                "none"
-
-        activeOptions' =
-            activeOptionsForModel model
-
-        zIndexItems =
-            config.zIndexBackdrop + 1 |> toString
-    in
-        div []
-            [ node "aui-select"
-                [ placeholder <| Maybe.withDefault "" config.placeholder
-                , tabindex -1
-                , style [ ( "position", "relative" ) ]
-                ]
-                [ form [ onSubmit NoOp ]
-                    [ backdrop config.zIndexBackdrop Close model.open
-                    , queryInput zIndexItems model
-                    , dropDownButton zIndexItems model
-                    , div
-                        [ class "aui-popover"
-                        , style
-                            [ ( "position", "absolute" )
-                            , ( "top", "30px" )
-                            , ( "width", "100%" )
-                            , ( "z-index", zIndexItems )
-                            , ( "display", popoverDisplay )
-                            ]
-                        ]
-                        [ ul [ class "aui-optionlist" ]
-                            (List.map (asOption model) activeOptions')
-                        ]
-                    ]
-                ]
-            ]
 
 
 dropDownButton : String -> Model -> Html Msg

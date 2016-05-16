@@ -20,17 +20,12 @@ initialModel =
     { toggle1 = False, toggle2 = True }
 
 
-toggleConfig : Config
-toggleConfig =
-    { onTooltip = Just "On", offTooltip = Just "Off" }
-
-
 view : Model -> Html Msg
 view model =
     demoSection "Toggles"
-        [ div [ style [ ( "padding", "5px" ) ] ] [ toggle toggleConfig True Switch1 model.toggle1 ]
-        , div [ style [ ( "padding", "5px" ) ] ] [ toggle toggleConfig True Switch2 model.toggle2 ]
-        , div [ style [ ( "padding", "5px" ) ] ] [ toggle toggleConfig False Switch1 model.toggle1 ]
+        [ div [ style [ ( "padding", "5px" ) ] ] [ toggle True Switch1 model.toggle1 ]
+        , div [ style [ ( "padding", "5px" ) ] ] [ toggle True Switch2 model.toggle2 ]
+        , div [ style [ ( "padding", "5px" ) ] ] [ toggle False Switch1 model.toggle1 ]
         ]
 
 

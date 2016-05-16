@@ -1,7 +1,32 @@
-module Aui.ProgressTracker exposing (tracker, invertedTracker)
+module Aui.ProgressTracker exposing (progressTracker, invertedProgressTracker)
+
+{-| Functions to present AUI progress tracker.
+
+
+# Presentation
+
+@docs progressTracker, invertedProgressTracker
+
+-}
 
 import Html exposing (ol, li, span, text, Html)
 import Html.Attributes exposing (class, style)
+
+
+{-| Create a progress tracker with items and a given active index (zero based).
+
+    progressTracker ["Step 1", "Step 2", "Step 3"] 1
+-}
+progressTracker : List String -> Int -> Html a
+progressTracker =
+    baseTracker "aui-progress-tracker"
+
+
+{-| Create an inverted progress tracker with items and a given active index.
+-}
+invertedProgressTracker : List String -> Int -> Html a
+invertedProgressTracker =
+    baseTracker "aui-progress-tracker aui-progress-tracker-inverted"
 
 
 baseTracker : String -> List String -> Int -> Html a
@@ -12,16 +37,6 @@ baseTracker trackerClass items current =
     in
         ol [ class trackerClass ]
             (List.indexedMap (itemToLi itemWidth current) items)
-
-
-tracker : List String -> Int -> Html a
-tracker =
-    baseTracker "aui-progress-tracker"
-
-
-invertedTracker : List String -> Int -> Html a
-invertedTracker =
-    baseTracker "aui-progress-tracker aui-progress-tracker-inverted"
 
 
 itemToLi : String -> Int -> Int -> String -> Html a

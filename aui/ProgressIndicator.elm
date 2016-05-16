@@ -1,11 +1,22 @@
-module Aui.ProgressIndicator exposing (..)
+module Aui.ProgressIndicator exposing (progressIndicator)
+
+{-| Functions to present AUI progress indicator.
+
+
+# Presentation
+
+@docs progressIndicator
+
+-}
 
 import Html exposing (Html, span, div)
 import Html.Attributes exposing (class, style, attribute)
 
 
-indicator : Float -> Html a
-indicator value =
+{-| Create a progress indicator with a value between 0.0 and 1.0.
+-}
+progressIndicator : Float -> Html a
+progressIndicator value =
     let
         ( w, attrs ) =
             if value == 0.0 then

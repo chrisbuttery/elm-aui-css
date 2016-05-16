@@ -1,21 +1,28 @@
 module Aui.Icons exposing (Icon(..), icon, iconSmall, iconLarge, Size(..))
 
-import Html exposing (Html, span, text)
+{-| Functions to present AUI icons.
+
+
+# Types
+
+@docs Icon, Size
+
+# Presentation
+
+@docs icon, iconSmall, iconLarge
+
+-}
+
+import Html exposing (Html, span)
 import Html.Attributes exposing (class)
 import Regex exposing (regex, replace, HowMany(All))
 import String exposing (toLower)
 
 
-iconSmall : Icon -> Html a
-iconSmall =
-    icon Small
+{-| Create an icon with a given size and type.
 
-
-iconLarge : Icon -> Html a
-iconLarge =
-    icon Large
-
-
+    icon Small Configure
+-}
 icon : Size -> Icon -> Html a
 icon size i =
     let
@@ -29,7 +36,21 @@ icon size i =
             icon2class i
     in
         span [ class ("aui-icon aui-icon-" ++ sizeClass ++ " aui-iconfont" ++ cl) ]
-            [ text "Insert meaningful text here for accessibility" ]
+            []
+
+
+{-| Shortcut for `icon Small`
+-}
+iconSmall : Icon -> Html a
+iconSmall =
+    icon Small
+
+
+{-| Shortcut for `icon Large`
+-}
+iconLarge : Icon -> Html a
+iconLarge =
+    icon Large
 
 
 icon2class : Icon -> String
@@ -40,11 +61,15 @@ icon2class i =
             (\match -> "-" ++ toLower match.match)
 
 
+{-| Sizes for icon
+-}
 type Size
     = Large
     | Small
 
 
+{-| Available icon types. See official configuration for icon names. For all icon names the following convention is applied: from `add-comment` to `AddComment`
+-}
 type Icon
     = Add
     | AddComment

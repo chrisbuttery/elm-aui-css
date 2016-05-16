@@ -62,7 +62,7 @@ init =
     in
         ( { buttons = Demo.Buttons.model
           , labels = Demo.Labels.model
-          , expander = Demo.Expander.model
+          , expander = Demo.Expander.initialModel
           , messages = Demo.Messages.model
           , selects = selects
           , tabs = Demo.Tabs.initialModel

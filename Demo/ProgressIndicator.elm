@@ -15,4 +15,4 @@ view =
 asIndicator : Float -> Html a
 asIndicator f =
     div [ style [ ( "padding", "10px" ) ] ]
-        [ indicator f ]
+        [ progressIndicator f ]

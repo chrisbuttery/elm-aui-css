@@ -1,9 +1,23 @@
-module Aui.Avatars exposing (Size(..), avatar, withSize, asProject)
+module Aui.Avatars exposing (Size(XSmall, Small, Medium, Large, XLarge, XXLarge, XXXLarge), Config, avatar)
+
+{-| Functions to present AUI avatars.
+
+
+# Types
+
+@docs Size, Config
+
+# Presentation
+
+@docs avatar
+-}
 
 import Html exposing (Html, span, img)
 import Html.Attributes exposing (class, src)
 
 
+{-| Representation of the size of an avatar.
+-}
 type Size
     = XSmall
     | Small
@@ -14,22 +28,37 @@ type Size
     | XXXLarge
 
 
-type alias AvatarConfig =
+{-| Configuration record to present avatar
+-}
+type alias Config =
     { size : Size
     , project : Bool
     }
 
 
-withSize : Size -> AvatarConfig
-withSize size =
-    { size = size
-    , project = False
-    }
+{-| Function to convert a configuration record and an source url to an HTML element
 
+    avatar {size = Large, project = False}
+        "http://myimage.net"
+-}
+avatar : Config -> String -> Html msg
+avatar { size, project } source =
+    let
+        projectClass =
+            if project then
+                "aui-avatar-project "
+            else
+                ""
 
-asProject : AvatarConfig -> AvatarConfig
-asProject config =
-    { config | project = True }
+        sizeClass =
+            size2class size
+    in
+        span [ class <| "aui-avatar " ++ projectClass ++ sizeClass ]
+            [ span [ class "aui-avatar-inner" ]
+                [ img [ src source ]
+                    []
+                ]
+            ]
 
 
 size2class : Size -> String
@@ -55,23 +84,3 @@ size2class s =
 
         XXXLarge ->
             "aui-avatar-xxxlarge"
-
-
-avatar : AvatarConfig -> String -> Html msg
-avatar { size, project } source =
-    let
-        projectClass =
-            if project then
-                "aui-avatar-project "
-            else
-                ""
-
-        sizeClass =
-            size2class size
-    in
-        span [ class <| "aui-avatar " ++ projectClass ++ sizeClass ]
-            [ span [ class "aui-avatar-inner" ]
-                [ img [ src source ]
-                    []
-                ]
-            ]

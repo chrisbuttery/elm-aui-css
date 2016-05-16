@@ -1,9 +1,24 @@
 module Aui.Lozenge exposing (lozenge, Type(..), Presense(..))
 
+{-| Functions to present AUI lozenges.
+
+
+# Types
+
+@docs Type, Presense
+
+# Presentation
+
+@docs lozenge
+
+-}
+
 import Html exposing (Html, span)
 import Html.Attributes exposing (class)
 
 
+{-| Types for a lozenge
+-}
 type Type
     = Generic
     | Success
@@ -13,15 +28,18 @@ type Type
     | Moved
 
 
+{-| Presense style for a lozenge
+-}
 type Presense
     = Normal
     | Subtle
 
 
+{-| Create a lozenge with presense and type
+-}
 lozenge : Presense -> Type -> List (Html a) -> Html a
-lozenge presense t inner =
+lozenge presense t =
     span [ class <| "aui-lozenge " ++ presense2class presense ++ " " ++ (type2class t) ]
-        inner
 
 
 presense2class : Presense -> String

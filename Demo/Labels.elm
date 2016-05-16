@@ -33,7 +33,7 @@ view model =
         , div []
             [ label baseConfig [ text "Label text" ]
             , label (baseConfig |> withNavigate "http://elm-lang.org/") [ text "To elm lang" ]
-            , label (baseConfig |> withClick Clicked) [ text "Clickable label" ]
+            , label (baseConfig |> onClick Clicked) [ text "Clickable label" ]
             ]
         , div []
             [ p []
@@ -41,7 +41,7 @@ view model =
                 , text <| String.join ", " model.removedItems
                 ]
             , p []
-                (List.map (\x -> label (baseConfig |> withRemove (Remove x)) [ text x ]) model.items)
+                (List.map (\x -> label (baseConfig |> onRemove (Remove x)) [ text x ]) model.items)
             ]
         ]
 

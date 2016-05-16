@@ -8,18 +8,18 @@ import Aui.Avatars exposing (..)
 view : Html a
 view =
     demoSection "Avatars"
-        [ avatar (withSize XSmall) personAvatar
-        , avatar (withSize Small) personAvatar
-        , avatar (withSize Medium) personAvatar
-        , avatar (withSize Large) personAvatar
-        , avatar (withSize XLarge) personAvatar
-        , avatar (withSize XXLarge) personAvatar
-        , avatar (withSize XSmall |> asProject) projectAvatar
-        , avatar (withSize Small |> asProject) projectAvatar
-        , avatar (withSize Medium |> asProject) projectAvatar
-        , avatar (withSize Large |> asProject) projectAvatar
-        , avatar (withSize XLarge |> asProject) projectAvatar
-        , avatar (withSize XXLarge |> asProject) projectAvatar
+        [ avatar { size = XSmall, project = False } personAvatar
+        , avatar { size = Small, project = False } personAvatar
+        , avatar { size = Medium, project = False } personAvatar
+        , avatar { size = Large, project = False } personAvatar
+        , avatar { size = XLarge, project = False } personAvatar
+        , avatar { size = XXLarge, project = False } personAvatar
+        , avatar { size = XSmall, project = True } projectAvatar
+        , avatar { size = Small, project = True } projectAvatar
+        , avatar { size = Medium, project = True } projectAvatar
+        , avatar { size = Large, project = True } projectAvatar
+        , avatar { size = XLarge, project = True } projectAvatar
+        , avatar { size = XXLarge, project = True } projectAvatar
         ]
 
 

@@ -1,4 +1,4 @@
-module Demo.Expander exposing (view, model, update, Model, Msg)
+module Demo.Expander exposing (view, initialModel, update, Model, Msg)
 
 import Demo.Base exposing (demoSection)
 import Html exposing (Html)
@@ -6,29 +6,29 @@ import Aui.Expander exposing (..)
 
 
 type alias Model =
-    Bool
+    Aui.Expander.Model
 
 
 type Msg
-    = Toggle
+    = ExpanderMsg Aui.Expander.Msg
 
 
-model : Model
-model =
-    False
+initialModel : Model
+initialModel =
+    Aui.Expander.initialModel
 
 
 update : Msg -> Model -> Model
 update msg model =
     case msg of
-        Toggle ->
-            not model
+        ExpanderMsg x ->
+            Aui.Expander.update x model
 
 
 view : Model -> Html Msg
 view model =
     demoSection "Expander"
-        [ expander (baseConfig Toggle) longText model
+        [ expander (baseConfig ExpanderMsg) longText model
         ]
 
 

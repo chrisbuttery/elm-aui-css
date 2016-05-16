@@ -39,17 +39,15 @@ asClosableMessage : Type -> Html Msg
 asClosableMessage t =
     closableMessage t
         (Close t)
-        ( [ text "Title" ]
-        , [ text "Something important" ]
-        )
+        [ text "Title" ]
+        [ text "Something important" ]
 
 
 asMessage : Type -> Html Msg
 asMessage t =
     message t
-        ( [ text "Title" ]
-        , [ text "Something important" ]
-        )
+        [ text "Title" ]
+        [ text "Something important" ]
 
 
 allTypes : List Type

@@ -1,18 +1,26 @@
-module Aui.Toggle exposing (toggle, Config)
+module Aui.Toggle exposing (toggle)
+
+{-| Functions to present AUI toggle.
+
+# Presentation
+
+@docs toggle
+
+-}
 
 import Html exposing (Html, node, input, span)
 import Html.Attributes exposing (class, type', checked, disabled, attribute)
 import Html.Events exposing (onClick)
 
 
-type alias Config =
-    { onTooltip : Maybe String
-    , offTooltip : Maybe String
-    }
+{-| Create a toggle with if it is enabled, a message and its state.
 
-
-toggle : Config -> Bool -> (Bool -> a) -> Bool -> Html a
-toggle config enabled toMsg state =
+    toggle isEnabled
+        ToggleClicked
+        isOn
+-}
+toggle : Bool -> (Bool -> a) -> Bool -> Html a
+toggle enabled toMsg state =
     let
         attrs =
             []

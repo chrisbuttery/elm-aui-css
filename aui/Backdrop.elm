@@ -1,10 +1,21 @@
 module Aui.Backdrop exposing (backdrop)
 
+{-| Functions to create a backdrop that is needed for several AUI Components.
+
+# Presentation
+
+@docs backdrop
+-}
+
 import Html exposing (Html, div)
 import Html.Attributes exposing (style)
 import Html.Events exposing (onClick)
 
 
+{-| Present a backdrop with a click handler.
+
+    backdrop 1000 ClickedBackdrop True
+-}
 backdrop : Int -> a -> Bool -> Html a
 backdrop zIndex msg visible =
     div
