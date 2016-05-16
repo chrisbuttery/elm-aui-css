@@ -20,7 +20,7 @@ model : ( Model, Cmd Msg )
 model =
     let
         ( selectModel, selectCmds ) =
-            Aui.Select.initialModel [ "JIRA", "Confluence", "Bamboo" ]
+            Aui.Select.initialModel "product-select" [ "JIRA", "Confluence", "Bamboo" ]
     in
         ( { selectModel = selectModel }, Cmd.map SelectMsg selectCmds )
 

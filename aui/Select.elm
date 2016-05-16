@@ -64,6 +64,7 @@ type alias Model =
     , query : Maybe String
     , items : List String
     , value : Maybe String
+    , identifier : String
     , highlighted : Maybe String
     }
 
@@ -79,9 +80,9 @@ baseConfig =
 
 {-| Initial model for a select.
 -}
-initialModel : List String -> ( Model, Cmd Msg )
-initialModel items =
-    ( { open = False, items = items, query = Nothing, value = Nothing, highlighted = Nothing }, Cmd.none )
+initialModel : String -> List String -> ( Model, Cmd Msg )
+initialModel identifier items =
+    ( { identifier = identifier, open = False, items = items, query = Nothing, value = Nothing, highlighted = Nothing }, Cmd.none )
 
 
 {-| Create a single select with a configuration and a model.
@@ -101,7 +102,7 @@ singleSelect config model =
         zIndexItems =
             config.zIndexBackdrop + 1 |> toString
     in
-        div []
+        div [ id model.identifier ]
             [ node "aui-select"
                 [ placeholder <| Maybe.withDefault "" config.placeholder
                 , tabindex -1
@@ -214,7 +215,7 @@ handleOpen model =
         newHighlighted =
             activeOptionForQuery newQuery model
     in
-        ( { model | open = True, query = newQuery, highlighted = newHighlighted }, auiFocus "select" )
+        ( { model | open = True, query = newQuery, highlighted = newHighlighted }, auiFocus (model.identifier ++ " input") )
 
 
 handleQueryChange : String -> Model -> ( Model, Cmd Msg )
@@ -232,7 +233,7 @@ handleSubmit model =
         activeOptions' =
             activeOptionsForModel model
     in
-        ( { model | open = False, query = Nothing, highlighted = Nothing, value = model.highlighted }, auiBlur "some" )
+        ( { model | open = False, query = Nothing, highlighted = Nothing, value = model.highlighted }, auiBlur (model.identifier ++ " input") )
 
 
 activeOptionForQuery : Maybe String -> Model -> Maybe String
