@@ -1,4 +1,4 @@
-port module Aui.Select exposing (singleSelect, Config, Model, initialModel, update, Msg)
+port module Aui.Select exposing (singleSelect, Config, Model, initialModel, update, Msg, baseConfig)
 
 import Html exposing (Html, ul, li, div, button, node, input, select, text, form, span)
 import Html.Attributes exposing (value, type', class, name, placeholder, tabindex, autocomplete, attribute, style, id)
@@ -7,6 +7,7 @@ import String exposing (contains, toLower)
 import Json.Decode as Json
 import Platform.Cmd
 import List.Extra exposing (elemIndex, getAt)
+import Aui.Backdrop exposing (backdrop)
 
 
 type Msg
@@ -22,13 +23,9 @@ type Msg
     | Hover String
 
 
-
--- | KeyPress Int
-
-
 type alias Config =
-    { name : Maybe String
-    , placeholder : String
+    { zIndexBackdrop : Int
+    , placeholder : Maybe String
     }
 
 
@@ -38,6 +35,13 @@ type alias Model =
     , items : List String
     , value : Maybe String
     , highlighted : Maybe String
+    }
+
+
+baseConfig : Config
+baseConfig =
+    { zIndexBackdrop = 99
+    , placeholder = Nothing
     }
 
 
@@ -187,25 +191,27 @@ singleSelect config model =
 
         activeOptions' =
             activeOptionsForModel model
+
+        zIndexItems =
+            config.zIndexBackdrop + 1 |> toString
     in
         div []
-            [ div [] [ text <| toString model ]
-            , node "aui-select"
-                [ placeholder "Select a product"
+            [ node "aui-select"
+                [ placeholder <| Maybe.withDefault "" config.placeholder
                 , tabindex -1
                 , style [ ( "position", "relative" ) ]
                 ]
                 [ form [ onSubmit NoOp ]
-                    [ backdrop model
-                    , queryInput model
-                    , dropDownButton model
+                    [ backdrop config.zIndexBackdrop Close model.open
+                    , queryInput zIndexItems model
+                    , dropDownButton zIndexItems model
                     , div
                         [ class "aui-popover"
                         , style
                             [ ( "position", "absolute" )
                             , ( "top", "30px" )
                             , ( "width", "100%" )
-                            , ( "z-index", "101" )
+                            , ( "z-index", zIndexItems )
                             , ( "display", popoverDisplay )
                             ]
                         ]
@@ -217,37 +223,13 @@ singleSelect config model =
             ]
 
 
-backdrop : Model -> Html Msg
-backdrop m =
-    div
-        [ style
-            [ ( "background", "#000" )
-            , ( "position", "fixed" )
-            , ( "top", "0" )
-            , ( "left", "0" )
-            , ( "width", "100%" )
-            , ( "height", "100%" )
-            , ( "z-index", "99" )
-            , ( "opacity", "0.5" )
-            , ( "display"
-              , if m.open then
-                    "block"
-                else
-                    "none"
-              )
-            ]
-        , onClick Close
-        ]
-        []
-
-
-dropDownButton : Model -> Html Msg
-dropDownButton model =
+dropDownButton : String -> Model -> Html Msg
+dropDownButton zIndex model =
     button
         [ class "aui-button"
         , attribute "role" "button"
         , tabindex -1
-        , style [ ( "z-index", "100" ) ]
+        , style [ ( "z-index", zIndex ) ]
         , type' "button"
         , onClick
             (if model.open then
@@ -259,8 +241,8 @@ dropDownButton model =
         []
 
 
-queryInput : Model -> Html Msg
-queryInput model =
+queryInput : String -> Model -> Html Msg
+queryInput zIndex model =
     let
         inputValue =
             if model.open then
@@ -274,7 +256,7 @@ queryInput model =
             , class "text"
             , id "mySelect"
             , autocomplete False
-            , style [ ( "position", "relative" ), ( "z-index", "100" ) ]
+            , style [ ( "position", "relative" ), ( "z-index", zIndex ) ]
             , on "input" (Json.map ChangeQuery Html.Events.targetValue)
             , onSpecialKeys
             , onFocus Open

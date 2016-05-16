@@ -1,4 +1,4 @@
-module Aui.Buttons exposing (baseConfig, buttonGroup, enable, disable, button, withStyle, withHref, Style(..))
+module Aui.Buttons exposing (baseConfig, buttonGroup, enable, disable, button, withStyle, withHref, withActive, withAdditionClass, forceAnchor, Style(..))
 
 import Html exposing (Html, p)
 import Html.Attributes exposing (class, attribute, href)
@@ -6,27 +6,31 @@ import Html.Events exposing (onClick)
 
 
 type Style
-    = Primary
+    = Normal
+    | Primary
     | Subtle
     | Light
     | Link
 
 
 type alias Config =
-    { style : Maybe Style
+    { style : Style
+    , forceAnchor : Bool
     , disabled : Bool
     , href : Maybe String
+    , active : Bool
+    , additionalClass : Maybe String
     }
 
 
 config2buttonClass : Config -> String
-config2buttonClass { style } =
-    case style of
-        Nothing ->
-            "aui-button"
+config2buttonClass { style, active, additionalClass } =
+    let
+        styleClass =
+            case style of
+                Normal ->
+                    "aui-button"
 
-        Just s ->
-            case s of
                 Primary ->
                     "aui-button aui-button-primary"
 
@@ -39,12 +43,28 @@ config2buttonClass { style } =
                 Light ->
                     "aui-button aui-button-light"
 
+        styleClass' =
+            if active then
+                styleClass ++ " active"
+            else
+                styleClass
+    in
+        case additionalClass of
+            Nothing ->
+                styleClass'
+
+            Just x ->
+                styleClass' ++ " " ++ x
+
 
 baseConfig : Config
 baseConfig =
-    { style = Nothing
+    { style = Normal
+    , forceAnchor = False
     , disabled = False
     , href = Nothing
+    , active = False
+    , additionalClass = Nothing
     }
 
 
@@ -60,12 +80,27 @@ disable c =
 
 withStyle : Style -> Config -> Config
 withStyle s config =
-    { config | style = Just s }
+    { config | style = s }
 
 
 withHref : String -> Config -> Config
 withHref href config =
     { config | href = Just href }
+
+
+withActive : Bool -> Config -> Config
+withActive active config =
+    { config | active = active }
+
+
+withAdditionClass : String -> Config -> Config
+withAdditionClass cl config =
+    { config | additionalClass = Just cl }
+
+
+forceAnchor : Config -> Config
+forceAnchor config =
+    { config | forceAnchor = True }
 
 
 buttonGroup : List (Html a) -> Html a
@@ -92,12 +127,15 @@ button config click inner =
                         onClick click
 
         elem =
-            case config.href of
-                Just _ ->
-                    Html.a
+            if config.forceAnchor then
+                Html.a
+            else
+                case config.href of
+                    Just _ ->
+                        Html.a
 
-                Nothing ->
-                    Html.button
+                    Nothing ->
+                        Html.button
 
         attrs =
             [ clickOrDisabled, classAttr ]

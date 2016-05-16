@@ -17,6 +17,7 @@ import Demo.Select
 import Demo.Tabs
 import Demo.Toolbar
 import Demo.Toggle
+import Demo.Dropdown
 
 
 type alias Model =
@@ -27,6 +28,7 @@ type alias Model =
     , selects : Demo.Select.Model
     , tabs : Demo.Tabs.Model
     , toggles : Demo.Toggle.Model
+    , dropdowns : Demo.Dropdown.Model
     }
 
 
@@ -39,6 +41,7 @@ type Msg
     | SelectMsg Demo.Select.Msg
     | TabsMsg Demo.Tabs.Msg
     | ToggleMsg Demo.Toggle.Msg
+    | DropdownMsg Demo.Dropdown.Msg
 
 
 main : Program Never
@@ -64,6 +67,7 @@ init =
           , selects = selects
           , tabs = Demo.Tabs.initialModel
           , toggles = Demo.Toggle.initialModel
+          , dropdowns = Demo.Dropdown.initialModel
           }
         , Cmd.map SelectMsg selectsCmds
         )
@@ -76,6 +80,7 @@ view model =
             [ section [ class "aui-page-panel-content" ]
                 [ Html.App.map (\x -> NoOp) Demo.Avatars.view
                 , Html.App.map (\x -> NoOp) Demo.Toolbar.view
+                , Html.App.map DropdownMsg (Demo.Dropdown.view model.dropdowns)
                 , Html.App.map ToggleMsg (Demo.Toggle.view model.toggles)
                 , Html.App.map TabsMsg (Demo.Tabs.view model.tabs)
                 , Html.App.map SelectMsg (Demo.Select.view model.selects)
@@ -88,7 +93,6 @@ view model =
                 , Html.App.map MessagesMsg (Demo.Messages.view model.messages)
                 , Html.App.map (\x -> NoOp) Demo.ProgressIndicator.view
                 , Html.App.map (\x -> NoOp) Demo.ProgressTracker.view
-                , input [] []
                 ]
             ]
         ]
@@ -117,6 +121,9 @@ update msg model =
 
         ToggleMsg x ->
             ( { model | toggles = Demo.Toggle.update x model.toggles }, Cmd.none )
+
+        DropdownMsg x ->
+            ( { model | dropdowns = Demo.Dropdown.update x model.dropdowns }, Cmd.none )
 
         SelectMsg x ->
             let

@@ -2,9 +2,8 @@ module Demo.Toggle exposing (view, update, initialModel, Model, Msg)
 
 import Aui.Toggle exposing (..)
 import Demo.Base exposing (demoSection)
-import Html exposing (Html,text,div)
+import Html exposing (Html, text, div)
 import Html.Attributes exposing (style)
-
 
 
 type Msg
@@ -29,10 +28,9 @@ toggleConfig =
 view : Model -> Html Msg
 view model =
     demoSection "Toggles"
-        [ text <| toString model
-        , div [style [("padding","5px")]] [toggle toggleConfig True Switch1 model.toggle1]
-        , div [style [("padding","5px")]] [toggle toggleConfig True Switch2 model.toggle2]
-        , div [style [("padding","5px")]] [toggle toggleConfig False Switch1 model.toggle1]
+        [ div [ style [ ( "padding", "5px" ) ] ] [ toggle toggleConfig True Switch1 model.toggle1 ]
+        , div [ style [ ( "padding", "5px" ) ] ] [ toggle toggleConfig True Switch2 model.toggle2 ]
+        , div [ style [ ( "padding", "5px" ) ] ] [ toggle toggleConfig False Switch1 model.toggle1 ]
         ]
 
 
