@@ -1,4 +1,4 @@
-module Aui.Labels exposing (label, baseConfig, withNavigate, onClick, onRemove)
+module Aui.Labels exposing (label, baseConfig, withNavigate, onClick, onRemove, Config, Action(..))
 
 {-| Functions to present AUI labels.
 

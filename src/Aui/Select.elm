@@ -8,7 +8,7 @@ module Aui.Select exposing (singleSelect, Config, Model, initialModel, update, M
 
 # Model
 
-@docs Model, initialModel, open, close
+@docs Model, initialModel
 
 # Update
 
@@ -233,7 +233,7 @@ handleSubmit model =
         activeOptions' =
             activeOptionsForModel model
     in
-        ( { model | open = False, query = Nothing, highlighted = Nothing, value = model.highlighted }, auiBlur ( "#" ++ model.identifier ++ " input") )
+        ( { model | open = False, query = Nothing, highlighted = Nothing, value = model.highlighted }, auiBlur ("#" ++ model.identifier ++ " input") )
 
 
 activeOptionForQuery : Maybe String -> Model -> Maybe String

@@ -1,4 +1,4 @@
-module Aui.Buttons exposing (baseConfig, buttonGroup, disable, button, withStyle, withHref, withActive, withAdditionalClass, forceAnchor, Style(..))
+module Aui.Buttons exposing (baseConfig, buttonGroup, disable, button, withStyle, withHref, withActive, withAdditionalClass, forceAnchor, Config, Style(..))
 
 {-| Functions to present AUI buttons and groups.
 

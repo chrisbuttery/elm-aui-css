@@ -18,10 +18,6 @@ module Aui.Tabs exposing (tabs, Config, Item, Msg, Model, modelWithActive, updat
 
 @docs tabs
 
-# Utility
-
-@docs baseConfig
-
 -}
 
 import Html exposing (Html, div, ul, li, a, text)

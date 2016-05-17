@@ -1,4 +1,4 @@
-module Aui.Dropdown exposing (dropdown, dropdownSection, Style, Model, initialModel, Msg, Alignment(..), baseConfig, withAlignment, withStyle, update, close)
+module Aui.Dropdown exposing (dropdown, dropdownSection, Style, Model, initialModel, Msg, Alignment(..), baseConfig, withAlignment, withStyle, update, Config, open, close)
 
 {-| Functions to present AUI buttons and groups.
 
@@ -9,7 +9,7 @@ module Aui.Dropdown exposing (dropdown, dropdownSection, Style, Model, initialMo
 
 # Model
 
-@docs Model, initialModel, open, close
+@docs Model, Msg, initialModel, open, close
 
 # Update
 

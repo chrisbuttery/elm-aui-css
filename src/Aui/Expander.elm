@@ -9,7 +9,7 @@ module Aui.Expander exposing (expander, Config, baseConfig, Model, initialModel,
 
 # Model
 
-@docs Model, initialModel
+@docs Model, Msg, initialModel
 
 # Update
 
