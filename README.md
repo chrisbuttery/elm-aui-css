@@ -42,7 +42,7 @@ app.ports.auiFocus.subscribe(function(selector) {
 * Toggle
 * Toolbar
 
-If you request another component, please create in issue for it or a pull request (that would be great).
+If you request another component, please create an issue for it or create a pull request (that would be great).
 
 ## Using Components
 
