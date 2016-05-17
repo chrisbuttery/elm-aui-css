@@ -27,7 +27,9 @@ initialModel =
 view : Model -> Html Msg
 view model =
     demoSection "Tabs"
-        [ tabs config tabView model ]
+        [ tabs config tabView model
+        , tabs { config | horizontal = True } tabView model
+        ]
 
 
 update : Msg -> Model -> Model

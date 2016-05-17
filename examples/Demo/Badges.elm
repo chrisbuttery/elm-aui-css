@@ -10,6 +10,7 @@ view =
     demoSection "Badges"
         (List.map presentBadge [1..10])
 
+
 presentBadge : Int -> Html a
 presentBadge n =
-    span [] [ badge (toString n), text " "]
+    span [] [ badge (toString n), text " " ]

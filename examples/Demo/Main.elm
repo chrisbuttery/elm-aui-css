@@ -132,7 +132,7 @@ intro : Html a
 intro =
     demoSection "elm-aui-css"
         [ p [] [ text "AUI components ported to Elm." ]
-        , p [] [ text "If you find any bugs or request other components please file an issue in the repo."]
+        , p [] [ text "If you find any bugs or request other components please file an issue in the repo." ]
         ]
 
 

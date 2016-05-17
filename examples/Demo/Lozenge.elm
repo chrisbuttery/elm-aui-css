@@ -18,11 +18,14 @@ view =
             )
         ]
 
+
 presentLozenge : Presense -> Type -> Html a
 presentLozenge p t =
     span []
-        [ lozenge p t [ text <| toString t]
-        , text " "]
+        [ lozenge p t [ text <| toString t ]
+        , text " "
+        ]
+
 
 types : List Type
 types =
