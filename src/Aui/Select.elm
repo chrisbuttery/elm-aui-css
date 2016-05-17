@@ -215,7 +215,7 @@ handleOpen model =
         newHighlighted =
             activeOptionForQuery newQuery model
     in
-        ( { model | open = True, query = newQuery, highlighted = newHighlighted }, auiFocus (model.identifier ++ " input") )
+        ( { model | open = True, query = newQuery, highlighted = newHighlighted }, auiFocus ("#" ++ model.identifier ++ " input") )
 
 
 handleQueryChange : String -> Model -> ( Model, Cmd Msg )
@@ -233,7 +233,7 @@ handleSubmit model =
         activeOptions' =
             activeOptionsForModel model
     in
-        ( { model | open = False, query = Nothing, highlighted = Nothing, value = model.highlighted }, auiBlur (model.identifier ++ " input") )
+        ( { model | open = False, query = Nothing, highlighted = Nothing, value = model.highlighted }, auiBlur ( "#" ++ model.identifier ++ " input") )
 
 
 activeOptionForQuery : Maybe String -> Model -> Maybe String
