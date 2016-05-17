@@ -54,10 +54,10 @@
     <div id="target"></div>
     <script>
         var app = Elm.Demo.Main.fullscreen();
-        app.ports.auiBlur.subscribe(function(selector) {
+        app.ports.blur.subscribe(function(selector) {
             document.querySelector(selector).blur();
         });
-        app.ports.auiFocus.subscribe(function(selector) {
+        app.ports.focus.subscribe(function(selector) {
             document.querySelector(selector).focus();
         });
     </script>

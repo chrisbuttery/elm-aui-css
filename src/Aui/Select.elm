@@ -1,10 +1,10 @@
-module Aui.Select exposing (singleSelect, Config, Model, initialModel, update, Msg, baseConfig)
+module Aui.Select exposing (singleSelect, Config, Model, initialModel, update, Ports, Msg, baseConfig)
 
 {-| Functions to present AUI select.
 
 # Types
 
-@docs Msg, Config
+@docs Msg, Config, Ports
 
 # Model
 
@@ -31,7 +31,6 @@ import String exposing (contains, toLower)
 import Json.Decode as Json
 import List.Extra exposing (elemIndex, getAt)
 import Aui.Backdrop exposing (backdrop)
-import Aui.Ports exposing (auiBlur, auiFocus)
 
 
 {-| Messages being sent by the select component
@@ -57,10 +56,17 @@ type alias Config =
     }
 
 
+{-| Required ports for this module. These should be injected in the module because ports cannot be published in a package. :/
+-}
+type alias Ports =
+    { blur : String -> Cmd Msg, focus : String -> Cmd Msg }
+
+
 {-| Model for the select component.
 -}
 type alias Model =
-    { open : Bool
+    { ports : Ports
+    , open : Bool
     , query : Maybe String
     , items : List String
     , value : Maybe String
@@ -80,9 +86,18 @@ baseConfig =
 
 {-| Initial model for a select.
 -}
-initialModel : String -> List String -> ( Model, Cmd Msg )
-initialModel identifier items =
-    ( { identifier = identifier, open = False, items = items, query = Nothing, value = Nothing, highlighted = Nothing }, Cmd.none )
+initialModel : Ports -> String -> List String -> ( Model, Cmd Msg )
+initialModel ports identifier items =
+    ( { ports = ports
+      , identifier = identifier
+      , open = False
+      , items = items
+      , query = Nothing
+      , value = Nothing
+      , highlighted = Nothing
+      }
+    , Cmd.none
+    )
 
 
 {-| Create a single select with a configuration and a model.
@@ -215,7 +230,7 @@ handleOpen model =
         newHighlighted =
             activeOptionForQuery newQuery model
     in
-        ( { model | open = True, query = newQuery, highlighted = newHighlighted }, auiFocus ("#" ++ model.identifier ++ " input") )
+        ( { model | open = True, query = newQuery, highlighted = newHighlighted }, model.ports.focus ("#" ++ model.identifier ++ " input") )
 
 
 handleQueryChange : String -> Model -> ( Model, Cmd Msg )
@@ -233,7 +248,7 @@ handleSubmit model =
         activeOptions' =
             activeOptionsForModel model
     in
-        ( { model | open = False, query = Nothing, highlighted = Nothing, value = model.highlighted }, auiBlur ("#" ++ model.identifier ++ " input") )
+        ( { model | open = False, query = Nothing, highlighted = Nothing, value = model.highlighted }, model.ports.blur ("#" ++ model.identifier ++ " input") )
 
 
 activeOptionForQuery : Maybe String -> Model -> Maybe String

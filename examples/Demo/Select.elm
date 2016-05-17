@@ -1,6 +1,7 @@
 module Demo.Select exposing (view, model, Model, Msg, update)
 
 import Demo.Base exposing (demoSection)
+import Demo.Ports
 import Aui.Select exposing (..)
 import Html exposing (Html, form)
 import Html.Attributes exposing (class)
@@ -16,11 +17,16 @@ type alias Model =
     }
 
 
+ports : Ports
+ports =
+    { blur = Demo.Ports.blur, focus = Demo.Ports.focus }
+
+
 model : ( Model, Cmd Msg )
 model =
     let
         ( selectModel, selectCmds ) =
-            Aui.Select.initialModel "product-select" [ "JIRA", "Confluence", "Bamboo" ]
+            Aui.Select.initialModel ports "product-select" [ "JIRA", "Confluence", "Bamboo" ]
     in
         ( { selectModel = selectModel }, Cmd.map SelectMsg selectCmds )
 

@@ -8406,7 +8406,7 @@ var _elm_lang$html$Html_Events$Options = F2(
 		return {stopPropagation: a, preventDefault: b};
 	});
 
-var _user$project$Aui_Avatars$size2class = function (s) {
+var _stil4m$elm_aui_css$Aui_Avatars$size2class = function (s) {
 	var _p0 = s;
 	switch (_p0.ctor) {
 		case 'XSmall':
@@ -8425,10 +8425,10 @@ var _user$project$Aui_Avatars$size2class = function (s) {
 			return 'aui-avatar-xxxlarge';
 	}
 };
-var _user$project$Aui_Avatars$avatar = F2(
+var _stil4m$elm_aui_css$Aui_Avatars$avatar = F2(
 	function (_p1, source) {
 		var _p2 = _p1;
-		var sizeClass = _user$project$Aui_Avatars$size2class(_p2.size);
+		var sizeClass = _stil4m$elm_aui_css$Aui_Avatars$size2class(_p2.size);
 		var projectClass = _p2.project ? 'aui-avatar-project ' : '';
 		return A2(
 			_elm_lang$html$Html$span,
@@ -8461,19 +8461,19 @@ var _user$project$Aui_Avatars$avatar = F2(
 						]))
 				]));
 	});
-var _user$project$Aui_Avatars$Config = F2(
+var _stil4m$elm_aui_css$Aui_Avatars$Config = F2(
 	function (a, b) {
 		return {size: a, project: b};
 	});
-var _user$project$Aui_Avatars$XXXLarge = {ctor: 'XXXLarge'};
-var _user$project$Aui_Avatars$XXLarge = {ctor: 'XXLarge'};
-var _user$project$Aui_Avatars$XLarge = {ctor: 'XLarge'};
-var _user$project$Aui_Avatars$Large = {ctor: 'Large'};
-var _user$project$Aui_Avatars$Medium = {ctor: 'Medium'};
-var _user$project$Aui_Avatars$Small = {ctor: 'Small'};
-var _user$project$Aui_Avatars$XSmall = {ctor: 'XSmall'};
+var _stil4m$elm_aui_css$Aui_Avatars$XXXLarge = {ctor: 'XXXLarge'};
+var _stil4m$elm_aui_css$Aui_Avatars$XXLarge = {ctor: 'XXLarge'};
+var _stil4m$elm_aui_css$Aui_Avatars$XLarge = {ctor: 'XLarge'};
+var _stil4m$elm_aui_css$Aui_Avatars$Large = {ctor: 'Large'};
+var _stil4m$elm_aui_css$Aui_Avatars$Medium = {ctor: 'Medium'};
+var _stil4m$elm_aui_css$Aui_Avatars$Small = {ctor: 'Small'};
+var _stil4m$elm_aui_css$Aui_Avatars$XSmall = {ctor: 'XSmall'};
 
-var _user$project$Aui_Backdrop$backdrop = F3(
+var _stil4m$elm_aui_css$Aui_Backdrop$backdrop = F3(
 	function (zIndex, msg, visible) {
 		return A2(
 			_elm_lang$html$Html$div,
@@ -8506,7 +8506,7 @@ var _user$project$Aui_Backdrop$backdrop = F3(
 				[]));
 	});
 
-var _user$project$Aui_Badges$badge = function (inner) {
+var _stil4m$elm_aui_css$Aui_Badges$badge = function (inner) {
 	return A3(
 		_elm_lang$html$Html$node,
 		'aui-badge',
@@ -8518,12 +8518,12 @@ var _user$project$Aui_Badges$badge = function (inner) {
 			]));
 };
 
-var _user$project$Aui_Buttons$forceAnchor = function (config) {
+var _stil4m$elm_aui_css$Aui_Buttons$forceAnchor = function (config) {
 	return _elm_lang$core$Native_Utils.update(
 		config,
 		{forceAnchor: true});
 };
-var _user$project$Aui_Buttons$withAdditionalClass = F2(
+var _stil4m$elm_aui_css$Aui_Buttons$withAdditionalClass = F2(
 	function (cl, config) {
 		return _elm_lang$core$Native_Utils.update(
 			config,
@@ -8531,13 +8531,13 @@ var _user$project$Aui_Buttons$withAdditionalClass = F2(
 				additionalClass: _elm_lang$core$Maybe$Just(cl)
 			});
 	});
-var _user$project$Aui_Buttons$withActive = F2(
+var _stil4m$elm_aui_css$Aui_Buttons$withActive = F2(
 	function (active, config) {
 		return _elm_lang$core$Native_Utils.update(
 			config,
 			{active: active});
 	});
-var _user$project$Aui_Buttons$withHref = F2(
+var _stil4m$elm_aui_css$Aui_Buttons$withHref = F2(
 	function (href, config) {
 		return _elm_lang$core$Native_Utils.update(
 			config,
@@ -8545,18 +8545,18 @@ var _user$project$Aui_Buttons$withHref = F2(
 				href: _elm_lang$core$Maybe$Just(href)
 			});
 	});
-var _user$project$Aui_Buttons$withStyle = F2(
+var _stil4m$elm_aui_css$Aui_Buttons$withStyle = F2(
 	function (s, config) {
 		return _elm_lang$core$Native_Utils.update(
 			config,
 			{style: s});
 	});
-var _user$project$Aui_Buttons$disable = function (c) {
+var _stil4m$elm_aui_css$Aui_Buttons$disable = function (c) {
 	return _elm_lang$core$Native_Utils.update(
 		c,
 		{disabled: true});
 };
-var _user$project$Aui_Buttons$config2buttonClass = function (_p0) {
+var _stil4m$elm_aui_css$Aui_Buttons$config2buttonClass = function (_p0) {
 	var _p1 = _p0;
 	var styleClass = function () {
 		var _p2 = _p1.style;
@@ -8584,7 +8584,7 @@ var _user$project$Aui_Buttons$config2buttonClass = function (_p0) {
 			A2(_elm_lang$core$Basics_ops['++'], ' ', _p3._0));
 	}
 };
-var _user$project$Aui_Buttons$button = F3(
+var _stil4m$elm_aui_css$Aui_Buttons$button = F3(
 	function (config, click, inner) {
 		var elem = function () {
 			if (config.forceAnchor) {
@@ -8611,12 +8611,12 @@ var _user$project$Aui_Buttons$button = F3(
 			}
 		}();
 		var classAttr = _elm_lang$html$Html_Attributes$class(
-			_user$project$Aui_Buttons$config2buttonClass(config));
+			_stil4m$elm_aui_css$Aui_Buttons$config2buttonClass(config));
 		var attrs = _elm_lang$core$Native_List.fromArray(
 			[clickOrDisabled, classAttr]);
 		return A2(elem, attrs, inner);
 	});
-var _user$project$Aui_Buttons$buttonGroup = function (buttons) {
+var _stil4m$elm_aui_css$Aui_Buttons$buttonGroup = function (buttons) {
 	return A2(
 		_elm_lang$html$Html$p,
 		_elm_lang$core$Native_List.fromArray(
@@ -8625,30 +8625,30 @@ var _user$project$Aui_Buttons$buttonGroup = function (buttons) {
 			]),
 		buttons);
 };
-var _user$project$Aui_Buttons$Config = F6(
+var _stil4m$elm_aui_css$Aui_Buttons$Config = F6(
 	function (a, b, c, d, e, f) {
 		return {style: a, forceAnchor: b, disabled: c, href: d, active: e, additionalClass: f};
 	});
-var _user$project$Aui_Buttons$Link = {ctor: 'Link'};
-var _user$project$Aui_Buttons$Light = {ctor: 'Light'};
-var _user$project$Aui_Buttons$Subtle = {ctor: 'Subtle'};
-var _user$project$Aui_Buttons$Primary = {ctor: 'Primary'};
-var _user$project$Aui_Buttons$Normal = {ctor: 'Normal'};
-var _user$project$Aui_Buttons$baseConfig = {style: _user$project$Aui_Buttons$Normal, forceAnchor: false, disabled: false, href: _elm_lang$core$Maybe$Nothing, active: false, additionalClass: _elm_lang$core$Maybe$Nothing};
+var _stil4m$elm_aui_css$Aui_Buttons$Link = {ctor: 'Link'};
+var _stil4m$elm_aui_css$Aui_Buttons$Light = {ctor: 'Light'};
+var _stil4m$elm_aui_css$Aui_Buttons$Subtle = {ctor: 'Subtle'};
+var _stil4m$elm_aui_css$Aui_Buttons$Primary = {ctor: 'Primary'};
+var _stil4m$elm_aui_css$Aui_Buttons$Normal = {ctor: 'Normal'};
+var _stil4m$elm_aui_css$Aui_Buttons$baseConfig = {style: _stil4m$elm_aui_css$Aui_Buttons$Normal, forceAnchor: false, disabled: false, href: _elm_lang$core$Maybe$Nothing, active: false, additionalClass: _elm_lang$core$Maybe$Nothing};
 
-var _user$project$Aui_Dropdown$withStyle = F2(
+var _stil4m$elm_aui_css$Aui_Dropdown$withStyle = F2(
 	function (x, config) {
 		return _elm_lang$core$Native_Utils.update(
 			config,
 			{style: x});
 	});
-var _user$project$Aui_Dropdown$withAlignment = F2(
+var _stil4m$elm_aui_css$Aui_Dropdown$withAlignment = F2(
 	function (x, config) {
 		return _elm_lang$core$Native_Utils.update(
 			config,
 			{alignment: x});
 	});
-var _user$project$Aui_Dropdown$dropdownSection = F2(
+var _stil4m$elm_aui_css$Aui_Dropdown$dropdownSection = F2(
 	function (title, inner) {
 		var _p0 = title;
 		if (_p0.ctor === 'Just') {
@@ -8686,7 +8686,7 @@ var _user$project$Aui_Dropdown$dropdownSection = F2(
 				inner);
 		}
 	});
-var _user$project$Aui_Dropdown$update = F2(
+var _stil4m$elm_aui_css$Aui_Dropdown$update = F2(
 	function (msg, model) {
 		var _p1 = msg;
 		return _elm_lang$core$Native_Utils.update(
@@ -8695,31 +8695,31 @@ var _user$project$Aui_Dropdown$update = F2(
 				open: _elm_lang$core$Basics$not(model.open)
 			});
 	});
-var _user$project$Aui_Dropdown$open = function (model) {
+var _stil4m$elm_aui_css$Aui_Dropdown$open = function (model) {
 	return _elm_lang$core$Native_Utils.update(
 		model,
 		{open: true});
 };
-var _user$project$Aui_Dropdown$close = function (model) {
+var _stil4m$elm_aui_css$Aui_Dropdown$close = function (model) {
 	return _elm_lang$core$Native_Utils.update(
 		model,
 		{open: false});
 };
-var _user$project$Aui_Dropdown$initialModel = {open: false};
-var _user$project$Aui_Dropdown$Config = F5(
+var _stil4m$elm_aui_css$Aui_Dropdown$initialModel = {open: false};
+var _stil4m$elm_aui_css$Aui_Dropdown$Config = F5(
 	function (a, b, c, d, e) {
 		return {zIndexBackdrop: a, style: b, disabled: c, msgMap: d, alignment: e};
 	});
-var _user$project$Aui_Dropdown$Model = function (a) {
+var _stil4m$elm_aui_css$Aui_Dropdown$Model = function (a) {
 	return {open: a};
 };
-var _user$project$Aui_Dropdown$Right = {ctor: 'Right'};
-var _user$project$Aui_Dropdown$Left = {ctor: 'Left'};
-var _user$project$Aui_Dropdown$baseConfig = function (msgMap) {
-	return {zIndexBackdrop: 99, style: _user$project$Aui_Buttons$Normal, disabled: false, msgMap: msgMap, alignment: _user$project$Aui_Dropdown$Left};
+var _stil4m$elm_aui_css$Aui_Dropdown$Right = {ctor: 'Right'};
+var _stil4m$elm_aui_css$Aui_Dropdown$Left = {ctor: 'Left'};
+var _stil4m$elm_aui_css$Aui_Dropdown$baseConfig = function (msgMap) {
+	return {zIndexBackdrop: 99, style: _stil4m$elm_aui_css$Aui_Buttons$Normal, disabled: false, msgMap: msgMap, alignment: _stil4m$elm_aui_css$Aui_Dropdown$Left};
 };
-var _user$project$Aui_Dropdown$Toggle = {ctor: 'Toggle'};
-var _user$project$Aui_Dropdown$dropdown = F4(
+var _stil4m$elm_aui_css$Aui_Dropdown$Toggle = {ctor: 'Toggle'};
+var _stil4m$elm_aui_css$Aui_Dropdown$dropdown = F4(
 	function (config, buttonInner, dropdownInner, model) {
 		var itemsZIndex = _elm_lang$core$Basics$toString(config.zIndexBackdrop + 1);
 		var contentDisplay = model.open ? 'inline-block' : 'none';
@@ -8739,7 +8739,7 @@ var _user$project$Aui_Dropdown$dropdown = F4(
 					A2(
 					_elm_lang$html$Html_App$map,
 					config.msgMap,
-					A3(_user$project$Aui_Backdrop$backdrop, config.zIndexBackdrop, _user$project$Aui_Dropdown$Toggle, model.open)),
+					A3(_stil4m$elm_aui_css$Aui_Backdrop$backdrop, config.zIndexBackdrop, _stil4m$elm_aui_css$Aui_Dropdown$Toggle, model.open)),
 					A2(
 					_elm_lang$html$Html$div,
 					_elm_lang$core$Native_List.fromArray(
@@ -8757,18 +8757,18 @@ var _user$project$Aui_Dropdown$dropdown = F4(
 							_elm_lang$html$Html_App$map,
 							config.msgMap,
 							A3(
-								_user$project$Aui_Buttons$button,
+								_stil4m$elm_aui_css$Aui_Buttons$button,
 								A2(
-									_user$project$Aui_Buttons$withActive,
+									_stil4m$elm_aui_css$Aui_Buttons$withActive,
 									model.open,
 									A2(
-										_user$project$Aui_Buttons$withStyle,
+										_stil4m$elm_aui_css$Aui_Buttons$withStyle,
 										config.style,
 										A2(
-											_user$project$Aui_Buttons$withAdditionalClass,
+											_stil4m$elm_aui_css$Aui_Buttons$withAdditionalClass,
 											'aui-dropdown2-trigger',
-											_user$project$Aui_Buttons$forceAnchor(_user$project$Aui_Buttons$baseConfig)))),
-								_user$project$Aui_Dropdown$Toggle,
+											_stil4m$elm_aui_css$Aui_Buttons$forceAnchor(_stil4m$elm_aui_css$Aui_Buttons$baseConfig)))),
+								_stil4m$elm_aui_css$Aui_Dropdown$Toggle,
 								buttonInner))
 						])),
 					A2(
@@ -8784,7 +8784,7 @@ var _user$project$Aui_Dropdown$dropdown = F4(
 									{ctor: '_Tuple2', _0: 'top', _1: '30px'},
 									{
 									ctor: '_Tuple2',
-									_0: _elm_lang$core$Native_Utils.eq(config.alignment, _user$project$Aui_Dropdown$Left) ? 'left' : 'right',
+									_0: _elm_lang$core$Native_Utils.eq(config.alignment, _stil4m$elm_aui_css$Aui_Dropdown$Left) ? 'left' : 'right',
 									_1: '0'
 								}
 								])),
@@ -8794,7 +8794,7 @@ var _user$project$Aui_Dropdown$dropdown = F4(
 				]));
 	});
 
-var _user$project$Aui_Expander$baseConfig = function (x) {
+var _stil4m$elm_aui_css$Aui_Expander$baseConfig = function (x) {
 	return {
 		moreText: 'Show more',
 		lessText: 'Show less',
@@ -8802,18 +8802,18 @@ var _user$project$Aui_Expander$baseConfig = function (x) {
 		minHeight: _elm_lang$core$Maybe$Just('1.5em')
 	};
 };
-var _user$project$Aui_Expander$update = F2(
+var _stil4m$elm_aui_css$Aui_Expander$update = F2(
 	function (msg, model) {
 		var _p0 = msg;
 		return _elm_lang$core$Basics$not(model);
 	});
-var _user$project$Aui_Expander$initialModel = false;
-var _user$project$Aui_Expander$Config = F4(
+var _stil4m$elm_aui_css$Aui_Expander$initialModel = false;
+var _stil4m$elm_aui_css$Aui_Expander$Config = F4(
 	function (a, b, c, d) {
 		return {moreText: a, lessText: b, msgMap: c, minHeight: d};
 	});
-var _user$project$Aui_Expander$Toggle = {ctor: 'Toggle'};
-var _user$project$Aui_Expander$expander = F3(
+var _stil4m$elm_aui_css$Aui_Expander$Toggle = {ctor: 'Toggle'};
+var _stil4m$elm_aui_css$Aui_Expander$expander = F3(
 	function (config, body, model) {
 		return A2(
 			_elm_lang$html$Html$div,
@@ -8846,7 +8846,7 @@ var _user$project$Aui_Expander$expander = F3(
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html_Attributes$class('aui-expander-trigger aui-expander-reveal-text'),
-								_elm_lang$html$Html_Events$onClick(_user$project$Aui_Expander$Toggle)
+								_elm_lang$html$Html_Events$onClick(_stil4m$elm_aui_css$Aui_Expander$Toggle)
 							]),
 						_elm_lang$core$Native_List.fromArray(
 							[
@@ -8856,7 +8856,7 @@ var _user$project$Aui_Expander$expander = F3(
 				]));
 	});
 
-var _user$project$Aui_Icons$icon2class = function (i) {
+var _stil4m$elm_aui_css$Aui_Icons$icon2class = function (i) {
 	return A4(
 		_elm_lang$core$Regex$replace,
 		_elm_lang$core$Regex$All,
@@ -8869,12 +8869,12 @@ var _user$project$Aui_Icons$icon2class = function (i) {
 		},
 		_elm_lang$core$Basics$toString(i));
 };
-var _user$project$Aui_Icons$Small = {ctor: 'Small'};
-var _user$project$Aui_Icons$Large = {ctor: 'Large'};
-var _user$project$Aui_Icons$icon = F2(
+var _stil4m$elm_aui_css$Aui_Icons$Small = {ctor: 'Small'};
+var _stil4m$elm_aui_css$Aui_Icons$Large = {ctor: 'Large'};
+var _stil4m$elm_aui_css$Aui_Icons$icon = F2(
 	function (size, i) {
-		var cl = _user$project$Aui_Icons$icon2class(i);
-		var sizeClass = _elm_lang$core$Native_Utils.eq(size, _user$project$Aui_Icons$Large) ? 'large' : 'small';
+		var cl = _stil4m$elm_aui_css$Aui_Icons$icon2class(i);
+		var sizeClass = _elm_lang$core$Native_Utils.eq(size, _stil4m$elm_aui_css$Aui_Icons$Large) ? 'large' : 'small';
 		return A2(
 			_elm_lang$html$Html$span,
 			_elm_lang$core$Native_List.fromArray(
@@ -8891,238 +8891,238 @@ var _user$project$Aui_Icons$icon = F2(
 			_elm_lang$core$Native_List.fromArray(
 				[]));
 	});
-var _user$project$Aui_Icons$iconSmall = _user$project$Aui_Icons$icon(_user$project$Aui_Icons$Small);
-var _user$project$Aui_Icons$iconLarge = _user$project$Aui_Icons$icon(_user$project$Aui_Icons$Large);
-var _user$project$Aui_Icons$JiraTestSession = {ctor: 'JiraTestSession'};
-var _user$project$Aui_Icons$JiraCompletedTask = {ctor: 'JiraCompletedTask'};
-var _user$project$Aui_Icons$Jira = {ctor: 'Jira'};
-var _user$project$Aui_Icons$EditorUnderline = {ctor: 'EditorUnderline'};
-var _user$project$Aui_Icons$EditorTask = {ctor: 'EditorTask'};
-var _user$project$Aui_Icons$EditorTable = {ctor: 'EditorTable'};
-var _user$project$Aui_Icons$EditorSymbol = {ctor: 'EditorSymbol'};
-var _user$project$Aui_Icons$EditorStyles = {ctor: 'EditorStyles'};
-var _user$project$Aui_Icons$EditorOutdent = {ctor: 'EditorOutdent'};
-var _user$project$Aui_Icons$EditorMention = {ctor: 'EditorMention'};
-var _user$project$Aui_Icons$EditorMacroToc = {ctor: 'EditorMacroToc'};
-var _user$project$Aui_Icons$EditorListNumber = {ctor: 'EditorListNumber'};
-var _user$project$Aui_Icons$EditorListBullet = {ctor: 'EditorListBullet'};
-var _user$project$Aui_Icons$EditorLayout = {ctor: 'EditorLayout'};
-var _user$project$Aui_Icons$EditorItalic = {ctor: 'EditorItalic'};
-var _user$project$Aui_Icons$EditorIndent = {ctor: 'EditorIndent'};
-var _user$project$Aui_Icons$EditorHr = {ctor: 'EditorHr'};
-var _user$project$Aui_Icons$EditorHelp = {ctor: 'EditorHelp'};
-var _user$project$Aui_Icons$EditorEmoticon = {ctor: 'EditorEmoticon'};
-var _user$project$Aui_Icons$EditorColor = {ctor: 'EditorColor'};
-var _user$project$Aui_Icons$EditorBold = {ctor: 'EditorBold'};
-var _user$project$Aui_Icons$EditorAlignRight = {ctor: 'EditorAlignRight'};
-var _user$project$Aui_Icons$EditorAlignLeft = {ctor: 'EditorAlignLeft'};
-var _user$project$Aui_Icons$EditorAlignCenter = {ctor: 'EditorAlignCenter'};
-var _user$project$Aui_Icons$Bitbucket = {ctor: 'Bitbucket'};
-var _user$project$Aui_Icons$DevtoolsTaskInProgress = {ctor: 'DevtoolsTaskInProgress'};
-var _user$project$Aui_Icons$DevtoolsTaskDisabled = {ctor: 'DevtoolsTaskDisabled'};
-var _user$project$Aui_Icons$DevtoolsTaskCancelled = {ctor: 'DevtoolsTaskCancelled'};
-var _user$project$Aui_Icons$DevtoolsTagSmall = {ctor: 'DevtoolsTagSmall'};
-var _user$project$Aui_Icons$DevtoolsTag = {ctor: 'DevtoolsTag'};
-var _user$project$Aui_Icons$DevtoolsSubmodule = {ctor: 'DevtoolsSubmodule'};
-var _user$project$Aui_Icons$DevtoolsSideDiff = {ctor: 'DevtoolsSideDiff'};
-var _user$project$Aui_Icons$DevtoolsRepositoryLocked = {ctor: 'DevtoolsRepositoryLocked'};
-var _user$project$Aui_Icons$DevtoolsRepositoryForked = {ctor: 'DevtoolsRepositoryForked'};
-var _user$project$Aui_Icons$DevtoolsRepository = {ctor: 'DevtoolsRepository'};
-var _user$project$Aui_Icons$DevtoolsPullRequest = {ctor: 'DevtoolsPullRequest'};
-var _user$project$Aui_Icons$DevtoolsFork = {ctor: 'DevtoolsFork'};
-var _user$project$Aui_Icons$DevtoolsFolderOpen = {ctor: 'DevtoolsFolderOpen'};
-var _user$project$Aui_Icons$DevtoolsFolderClosed = {ctor: 'DevtoolsFolderClosed'};
-var _user$project$Aui_Icons$DevtoolsFileCommented = {ctor: 'DevtoolsFileCommented'};
-var _user$project$Aui_Icons$DevtoolsFileBinary = {ctor: 'DevtoolsFileBinary'};
-var _user$project$Aui_Icons$DevtoolsFile = {ctor: 'DevtoolsFile'};
-var _user$project$Aui_Icons$DevtoolsCompare = {ctor: 'DevtoolsCompare'};
-var _user$project$Aui_Icons$DevtoolsCommit = {ctor: 'DevtoolsCommit'};
-var _user$project$Aui_Icons$DevtoolsClone = {ctor: 'DevtoolsClone'};
-var _user$project$Aui_Icons$DevtoolsCheckout = {ctor: 'DevtoolsCheckout'};
-var _user$project$Aui_Icons$DevtoolsBrowseUp = {ctor: 'DevtoolsBrowseUp'};
-var _user$project$Aui_Icons$DevtoolsBranchSmall = {ctor: 'DevtoolsBranchSmall'};
-var _user$project$Aui_Icons$DevtoolsBranch = {ctor: 'DevtoolsBranch'};
-var _user$project$Aui_Icons$DevtoolsArrowRight = {ctor: 'DevtoolsArrowRight'};
-var _user$project$Aui_Icons$DevtoolsArrowLeft = {ctor: 'DevtoolsArrowLeft'};
-var _user$project$Aui_Icons$JiraIssues = {ctor: 'JiraIssues'};
-var _user$project$Aui_Icons$UserLarge = {ctor: 'UserLarge'};
-var _user$project$Aui_Icons$TeamcalsLarge = {ctor: 'TeamcalsLarge'};
-var _user$project$Aui_Icons$SidebarLinkLarge = {ctor: 'SidebarLinkLarge'};
-var _user$project$Aui_Icons$PagesLarge = {ctor: 'PagesLarge'};
-var _user$project$Aui_Icons$NavChildrenLarge = {ctor: 'NavChildrenLarge'};
-var _user$project$Aui_Icons$Layout3colLarge = {ctor: 'Layout3colLarge'};
-var _user$project$Aui_Icons$Layout3colCenterLarge = {ctor: 'Layout3colCenterLarge'};
-var _user$project$Aui_Icons$Layout2colRightLarge = {ctor: 'Layout2colRightLarge'};
-var _user$project$Aui_Icons$Layout2colLeftLarge = {ctor: 'Layout2colLeftLarge'};
-var _user$project$Aui_Icons$Layout2colLarge = {ctor: 'Layout2colLarge'};
-var _user$project$Aui_Icons$Layout1colLarge = {ctor: 'Layout1colLarge'};
-var _user$project$Aui_Icons$EmailLarge = {ctor: 'EmailLarge'};
-var _user$project$Aui_Icons$BlogrollLarge = {ctor: 'BlogrollLarge'};
-var _user$project$Aui_Icons$FileVideo = {ctor: 'FileVideo'};
-var _user$project$Aui_Icons$ArrowUp = {ctor: 'ArrowUp'};
-var _user$project$Aui_Icons$ArrowDown = {ctor: 'ArrowDown'};
-var _user$project$Aui_Icons$FileGeneric = {ctor: 'FileGeneric'};
-var _user$project$Aui_Icons$DeployFail = {ctor: 'DeployFail'};
-var _user$project$Aui_Icons$DeploySuccess = {ctor: 'DeploySuccess'};
-var _user$project$Aui_Icons$Roadmap = {ctor: 'Roadmap'};
-var _user$project$Aui_Icons$Reopen = {ctor: 'Reopen'};
-var _user$project$Aui_Icons$Component = {ctor: 'Component'};
-var _user$project$Aui_Icons$AdminJiraSettings = {ctor: 'AdminJiraSettings'};
-var _user$project$Aui_Icons$Workflow = {ctor: 'Workflow'};
-var _user$project$Aui_Icons$Version = {ctor: 'Version'};
-var _user$project$Aui_Icons$SwitchSmall = {ctor: 'SwitchSmall'};
-var _user$project$Aui_Icons$ShareList = {ctor: 'ShareList'};
-var _user$project$Aui_Icons$RefreshSmall = {ctor: 'RefreshSmall'};
-var _user$project$Aui_Icons$PriorityLowest = {ctor: 'PriorityLowest'};
-var _user$project$Aui_Icons$PriorityLow = {ctor: 'PriorityLow'};
-var _user$project$Aui_Icons$PriorityMedium = {ctor: 'PriorityMedium'};
-var _user$project$Aui_Icons$PriorityHigh = {ctor: 'PriorityHigh'};
-var _user$project$Aui_Icons$PriorityHighest = {ctor: 'PriorityHighest'};
-var _user$project$Aui_Icons$Pause = {ctor: 'Pause'};
-var _user$project$Aui_Icons$AdminJiraScreens = {ctor: 'AdminJiraScreens'};
-var _user$project$Aui_Icons$AdminRoles = {ctor: 'AdminRoles'};
-var _user$project$Aui_Icons$AdminNotifications = {ctor: 'AdminNotifications'};
-var _user$project$Aui_Icons$AdminIssue = {ctor: 'AdminIssue'};
-var _user$project$Aui_Icons$AdminJiraFields = {ctor: 'AdminJiraFields'};
-var _user$project$Aui_Icons$AdminFusion = {ctor: 'AdminFusion'};
-var _user$project$Aui_Icons$FileImage = {ctor: 'FileImage'};
-var _user$project$Aui_Icons$ExportList = {ctor: 'ExportList'};
-var _user$project$Aui_Icons$Export = {ctor: 'Export'};
-var _user$project$Aui_Icons$ConfigureColumns = {ctor: 'ConfigureColumns'};
-var _user$project$Aui_Icons$WorkboxEmpty = {ctor: 'WorkboxEmpty'};
-var _user$project$Aui_Icons$Workbox = {ctor: 'Workbox'};
-var _user$project$Aui_Icons$Watch = {ctor: 'Watch'};
-var _user$project$Aui_Icons$Warning = {ctor: 'Warning'};
-var _user$project$Aui_Icons$ViewTable = {ctor: 'ViewTable'};
-var _user$project$Aui_Icons$ViewList = {ctor: 'ViewList'};
-var _user$project$Aui_Icons$ViewCard = {ctor: 'ViewCard'};
-var _user$project$Aui_Icons$View = {ctor: 'View'};
-var _user$project$Aui_Icons$UserStatus = {ctor: 'UserStatus'};
-var _user$project$Aui_Icons$User = {ctor: 'User'};
-var _user$project$Aui_Icons$Up = {ctor: 'Up'};
-var _user$project$Aui_Icons$Unwatch = {ctor: 'Unwatch'};
-var _user$project$Aui_Icons$Unstar = {ctor: 'Unstar'};
-var _user$project$Aui_Icons$Unlocked = {ctor: 'Unlocked'};
-var _user$project$Aui_Icons$Unfocus = {ctor: 'Unfocus'};
-var _user$project$Aui_Icons$Undo = {ctor: 'Undo'};
-var _user$project$Aui_Icons$Time = {ctor: 'Time'};
-var _user$project$Aui_Icons$Teamcals = {ctor: 'Teamcals'};
-var _user$project$Aui_Icons$TableSplit = {ctor: 'TableSplit'};
-var _user$project$Aui_Icons$TableRowUp = {ctor: 'TableRowUp'};
-var _user$project$Aui_Icons$TableRowRemove = {ctor: 'TableRowRemove'};
-var _user$project$Aui_Icons$TableRowDown = {ctor: 'TableRowDown'};
-var _user$project$Aui_Icons$TableRemove = {ctor: 'TableRemove'};
-var _user$project$Aui_Icons$TablePasteRow = {ctor: 'TablePasteRow'};
-var _user$project$Aui_Icons$TableNoBg = {ctor: 'TableNoBg'};
-var _user$project$Aui_Icons$TableMerge = {ctor: 'TableMerge'};
-var _user$project$Aui_Icons$TableHeaderRow = {ctor: 'TableHeaderRow'};
-var _user$project$Aui_Icons$TableHeaderColumn = {ctor: 'TableHeaderColumn'};
-var _user$project$Aui_Icons$TableCutRow = {ctor: 'TableCutRow'};
-var _user$project$Aui_Icons$TableCopyRow = {ctor: 'TableCopyRow'};
-var _user$project$Aui_Icons$TableColRight = {ctor: 'TableColRight'};
-var _user$project$Aui_Icons$TableColRemove = {ctor: 'TableColRemove'};
-var _user$project$Aui_Icons$TableColLeft = {ctor: 'TableColLeft'};
-var _user$project$Aui_Icons$TableBg = {ctor: 'TableBg'};
-var _user$project$Aui_Icons$Success = {ctor: 'Success'};
-var _user$project$Aui_Icons$Star = {ctor: 'Star'};
-var _user$project$Aui_Icons$SpacePersonal = {ctor: 'SpacePersonal'};
-var _user$project$Aui_Icons$SpaceDefault = {ctor: 'SpaceDefault'};
-var _user$project$Aui_Icons$Sourcetree = {ctor: 'Sourcetree'};
-var _user$project$Aui_Icons$SidebarLink = {ctor: 'SidebarLink'};
-var _user$project$Aui_Icons$Share = {ctor: 'Share'};
-var _user$project$Aui_Icons$SearchSmall = {ctor: 'SearchSmall'};
-var _user$project$Aui_Icons$Search = {ctor: 'Search'};
-var _user$project$Aui_Icons$Rss = {ctor: 'Rss'};
-var _user$project$Aui_Icons$Review = {ctor: 'Review'};
-var _user$project$Aui_Icons$RemoveLabel = {ctor: 'RemoveLabel'};
-var _user$project$Aui_Icons$Remove = {ctor: 'Remove'};
-var _user$project$Aui_Icons$Redo = {ctor: 'Redo'};
-var _user$project$Aui_Icons$Quote = {ctor: 'Quote'};
-var _user$project$Aui_Icons$Pages = {ctor: 'Pages'};
-var _user$project$Aui_Icons$PageTemplate = {ctor: 'PageTemplate'};
-var _user$project$Aui_Icons$PageDefault = {ctor: 'PageDefault'};
-var _user$project$Aui_Icons$PageBlogpost = {ctor: 'PageBlogpost'};
-var _user$project$Aui_Icons$PageBlank = {ctor: 'PageBlank'};
-var _user$project$Aui_Icons$NavChildren = {ctor: 'NavChildren'};
-var _user$project$Aui_Icons$More = {ctor: 'More'};
-var _user$project$Aui_Icons$MacroStatus = {ctor: 'MacroStatus'};
-var _user$project$Aui_Icons$MacroGallery = {ctor: 'MacroGallery'};
-var _user$project$Aui_Icons$MacroDefault = {ctor: 'MacroDefault'};
-var _user$project$Aui_Icons$MacroCode = {ctor: 'MacroCode'};
-var _user$project$Aui_Icons$LockedSmall = {ctor: 'LockedSmall'};
-var _user$project$Aui_Icons$Locked = {ctor: 'Locked'};
-var _user$project$Aui_Icons$ListRemove = {ctor: 'ListRemove'};
-var _user$project$Aui_Icons$ListAdd = {ctor: 'ListAdd'};
-var _user$project$Aui_Icons$Link = {ctor: 'Link'};
-var _user$project$Aui_Icons$Weblink = {ctor: 'Weblink'};
-var _user$project$Aui_Icons$LikeSmall = {ctor: 'LikeSmall'};
-var _user$project$Aui_Icons$Like = {ctor: 'Like'};
-var _user$project$Aui_Icons$Info = {ctor: 'Info'};
-var _user$project$Aui_Icons$ImageSmall = {ctor: 'ImageSmall'};
-var _user$project$Aui_Icons$ImageExtrasmall = {ctor: 'ImageExtrasmall'};
-var _user$project$Aui_Icons$Image = {ctor: 'Image'};
-var _user$project$Aui_Icons$Homepage = {ctor: 'Homepage'};
-var _user$project$Aui_Icons$Hipchat = {ctor: 'Hipchat'};
-var _user$project$Aui_Icons$Help = {ctor: 'Help'};
-var _user$project$Aui_Icons$HandleHorizontal = {ctor: 'HandleHorizontal'};
-var _user$project$Aui_Icons$Group = {ctor: 'Group'};
-var _user$project$Aui_Icons$Focus = {ctor: 'Focus'};
-var _user$project$Aui_Icons$Flag = {ctor: 'Flag'};
-var _user$project$Aui_Icons$FileZip = {ctor: 'FileZip'};
-var _user$project$Aui_Icons$FileXls = {ctor: 'FileXls'};
-var _user$project$Aui_Icons$FileWav = {ctor: 'FileWav'};
-var _user$project$Aui_Icons$FileTxt = {ctor: 'FileTxt'};
-var _user$project$Aui_Icons$FilePpt = {ctor: 'FilePpt'};
-var _user$project$Aui_Icons$FilePdf = {ctor: 'FilePdf'};
-var _user$project$Aui_Icons$FileJava = {ctor: 'FileJava'};
-var _user$project$Aui_Icons$FileDoc = {ctor: 'FileDoc'};
-var _user$project$Aui_Icons$FileCode = {ctor: 'FileCode'};
-var _user$project$Aui_Icons$Expanded = {ctor: 'Expanded'};
-var _user$project$Aui_Icons$Error = {ctor: 'Error'};
-var _user$project$Aui_Icons$Email = {ctor: 'Email'};
-var _user$project$Aui_Icons$EditSmall = {ctor: 'EditSmall'};
-var _user$project$Aui_Icons$Edit = {ctor: 'Edit'};
-var _user$project$Aui_Icons$DragVertical = {ctor: 'DragVertical'};
-var _user$project$Aui_Icons$Down = {ctor: 'Down'};
-var _user$project$Aui_Icons$Doc = {ctor: 'Doc'};
-var _user$project$Aui_Icons$Details = {ctor: 'Details'};
-var _user$project$Aui_Icons$Deploy = {ctor: 'Deploy'};
-var _user$project$Aui_Icons$Delete = {ctor: 'Delete'};
-var _user$project$Aui_Icons$CustomBullet = {ctor: 'CustomBullet'};
-var _user$project$Aui_Icons$CopyClipboard = {ctor: 'CopyClipboard'};
-var _user$project$Aui_Icons$Confluence = {ctor: 'Confluence'};
-var _user$project$Aui_Icons$Configure = {ctor: 'Configure'};
-var _user$project$Aui_Icons$Comment = {ctor: 'Comment'};
-var _user$project$Aui_Icons$Collapsed = {ctor: 'Collapsed'};
-var _user$project$Aui_Icons$CloseDialog = {ctor: 'CloseDialog'};
-var _user$project$Aui_Icons$Calendar = {ctor: 'Calendar'};
-var _user$project$Aui_Icons$Build = {ctor: 'Build'};
-var _user$project$Aui_Icons$BpTroubleshooting = {ctor: 'BpTroubleshooting'};
-var _user$project$Aui_Icons$BpSharedlinks = {ctor: 'BpSharedlinks'};
-var _user$project$Aui_Icons$BpRetrospective = {ctor: 'BpRetrospective'};
-var _user$project$Aui_Icons$BpMeeting = {ctor: 'BpMeeting'};
-var _user$project$Aui_Icons$BpJira = {ctor: 'BpJira'};
-var _user$project$Aui_Icons$BpHowto = {ctor: 'BpHowto'};
-var _user$project$Aui_Icons$BpRequirements = {ctor: 'BpRequirements'};
-var _user$project$Aui_Icons$BpFiles = {ctor: 'BpFiles'};
-var _user$project$Aui_Icons$BpDefault = {ctor: 'BpDefault'};
-var _user$project$Aui_Icons$BpDecisions = {ctor: 'BpDecisions'};
-var _user$project$Aui_Icons$Blogroll = {ctor: 'Blogroll'};
-var _user$project$Aui_Icons$BackPage = {ctor: 'BackPage'};
-var _user$project$Aui_Icons$AutocompleteDate = {ctor: 'AutocompleteDate'};
-var _user$project$Aui_Icons$AttachmentSmall = {ctor: 'AttachmentSmall'};
-var _user$project$Aui_Icons$Attachment = {ctor: 'Attachment'};
-var _user$project$Aui_Icons$ArrowsUp = {ctor: 'ArrowsUp'};
-var _user$project$Aui_Icons$ArrowsRight = {ctor: 'ArrowsRight'};
-var _user$project$Aui_Icons$ArrowsLeft = {ctor: 'ArrowsLeft'};
-var _user$project$Aui_Icons$ArrowsDown = {ctor: 'ArrowsDown'};
-var _user$project$Aui_Icons$Appswitcher = {ctor: 'Appswitcher'};
-var _user$project$Aui_Icons$Approve = {ctor: 'Approve'};
-var _user$project$Aui_Icons$AddSmall = {ctor: 'AddSmall'};
-var _user$project$Aui_Icons$AddComment = {ctor: 'AddComment'};
-var _user$project$Aui_Icons$Add = {ctor: 'Add'};
+var _stil4m$elm_aui_css$Aui_Icons$iconSmall = _stil4m$elm_aui_css$Aui_Icons$icon(_stil4m$elm_aui_css$Aui_Icons$Small);
+var _stil4m$elm_aui_css$Aui_Icons$iconLarge = _stil4m$elm_aui_css$Aui_Icons$icon(_stil4m$elm_aui_css$Aui_Icons$Large);
+var _stil4m$elm_aui_css$Aui_Icons$JiraTestSession = {ctor: 'JiraTestSession'};
+var _stil4m$elm_aui_css$Aui_Icons$JiraCompletedTask = {ctor: 'JiraCompletedTask'};
+var _stil4m$elm_aui_css$Aui_Icons$Jira = {ctor: 'Jira'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorUnderline = {ctor: 'EditorUnderline'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorTask = {ctor: 'EditorTask'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorTable = {ctor: 'EditorTable'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorSymbol = {ctor: 'EditorSymbol'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorStyles = {ctor: 'EditorStyles'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorOutdent = {ctor: 'EditorOutdent'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorMention = {ctor: 'EditorMention'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorMacroToc = {ctor: 'EditorMacroToc'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorListNumber = {ctor: 'EditorListNumber'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorListBullet = {ctor: 'EditorListBullet'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorLayout = {ctor: 'EditorLayout'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorItalic = {ctor: 'EditorItalic'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorIndent = {ctor: 'EditorIndent'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorHr = {ctor: 'EditorHr'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorHelp = {ctor: 'EditorHelp'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorEmoticon = {ctor: 'EditorEmoticon'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorColor = {ctor: 'EditorColor'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorBold = {ctor: 'EditorBold'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorAlignRight = {ctor: 'EditorAlignRight'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorAlignLeft = {ctor: 'EditorAlignLeft'};
+var _stil4m$elm_aui_css$Aui_Icons$EditorAlignCenter = {ctor: 'EditorAlignCenter'};
+var _stil4m$elm_aui_css$Aui_Icons$Bitbucket = {ctor: 'Bitbucket'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsTaskInProgress = {ctor: 'DevtoolsTaskInProgress'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsTaskDisabled = {ctor: 'DevtoolsTaskDisabled'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsTaskCancelled = {ctor: 'DevtoolsTaskCancelled'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsTagSmall = {ctor: 'DevtoolsTagSmall'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsTag = {ctor: 'DevtoolsTag'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsSubmodule = {ctor: 'DevtoolsSubmodule'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsSideDiff = {ctor: 'DevtoolsSideDiff'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsRepositoryLocked = {ctor: 'DevtoolsRepositoryLocked'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsRepositoryForked = {ctor: 'DevtoolsRepositoryForked'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsRepository = {ctor: 'DevtoolsRepository'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsPullRequest = {ctor: 'DevtoolsPullRequest'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsFork = {ctor: 'DevtoolsFork'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsFolderOpen = {ctor: 'DevtoolsFolderOpen'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsFolderClosed = {ctor: 'DevtoolsFolderClosed'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsFileCommented = {ctor: 'DevtoolsFileCommented'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsFileBinary = {ctor: 'DevtoolsFileBinary'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsFile = {ctor: 'DevtoolsFile'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsCompare = {ctor: 'DevtoolsCompare'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsCommit = {ctor: 'DevtoolsCommit'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsClone = {ctor: 'DevtoolsClone'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsCheckout = {ctor: 'DevtoolsCheckout'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsBrowseUp = {ctor: 'DevtoolsBrowseUp'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsBranchSmall = {ctor: 'DevtoolsBranchSmall'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsBranch = {ctor: 'DevtoolsBranch'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsArrowRight = {ctor: 'DevtoolsArrowRight'};
+var _stil4m$elm_aui_css$Aui_Icons$DevtoolsArrowLeft = {ctor: 'DevtoolsArrowLeft'};
+var _stil4m$elm_aui_css$Aui_Icons$JiraIssues = {ctor: 'JiraIssues'};
+var _stil4m$elm_aui_css$Aui_Icons$UserLarge = {ctor: 'UserLarge'};
+var _stil4m$elm_aui_css$Aui_Icons$TeamcalsLarge = {ctor: 'TeamcalsLarge'};
+var _stil4m$elm_aui_css$Aui_Icons$SidebarLinkLarge = {ctor: 'SidebarLinkLarge'};
+var _stil4m$elm_aui_css$Aui_Icons$PagesLarge = {ctor: 'PagesLarge'};
+var _stil4m$elm_aui_css$Aui_Icons$NavChildrenLarge = {ctor: 'NavChildrenLarge'};
+var _stil4m$elm_aui_css$Aui_Icons$Layout3colLarge = {ctor: 'Layout3colLarge'};
+var _stil4m$elm_aui_css$Aui_Icons$Layout3colCenterLarge = {ctor: 'Layout3colCenterLarge'};
+var _stil4m$elm_aui_css$Aui_Icons$Layout2colRightLarge = {ctor: 'Layout2colRightLarge'};
+var _stil4m$elm_aui_css$Aui_Icons$Layout2colLeftLarge = {ctor: 'Layout2colLeftLarge'};
+var _stil4m$elm_aui_css$Aui_Icons$Layout2colLarge = {ctor: 'Layout2colLarge'};
+var _stil4m$elm_aui_css$Aui_Icons$Layout1colLarge = {ctor: 'Layout1colLarge'};
+var _stil4m$elm_aui_css$Aui_Icons$EmailLarge = {ctor: 'EmailLarge'};
+var _stil4m$elm_aui_css$Aui_Icons$BlogrollLarge = {ctor: 'BlogrollLarge'};
+var _stil4m$elm_aui_css$Aui_Icons$FileVideo = {ctor: 'FileVideo'};
+var _stil4m$elm_aui_css$Aui_Icons$ArrowUp = {ctor: 'ArrowUp'};
+var _stil4m$elm_aui_css$Aui_Icons$ArrowDown = {ctor: 'ArrowDown'};
+var _stil4m$elm_aui_css$Aui_Icons$FileGeneric = {ctor: 'FileGeneric'};
+var _stil4m$elm_aui_css$Aui_Icons$DeployFail = {ctor: 'DeployFail'};
+var _stil4m$elm_aui_css$Aui_Icons$DeploySuccess = {ctor: 'DeploySuccess'};
+var _stil4m$elm_aui_css$Aui_Icons$Roadmap = {ctor: 'Roadmap'};
+var _stil4m$elm_aui_css$Aui_Icons$Reopen = {ctor: 'Reopen'};
+var _stil4m$elm_aui_css$Aui_Icons$Component = {ctor: 'Component'};
+var _stil4m$elm_aui_css$Aui_Icons$AdminJiraSettings = {ctor: 'AdminJiraSettings'};
+var _stil4m$elm_aui_css$Aui_Icons$Workflow = {ctor: 'Workflow'};
+var _stil4m$elm_aui_css$Aui_Icons$Version = {ctor: 'Version'};
+var _stil4m$elm_aui_css$Aui_Icons$SwitchSmall = {ctor: 'SwitchSmall'};
+var _stil4m$elm_aui_css$Aui_Icons$ShareList = {ctor: 'ShareList'};
+var _stil4m$elm_aui_css$Aui_Icons$RefreshSmall = {ctor: 'RefreshSmall'};
+var _stil4m$elm_aui_css$Aui_Icons$PriorityLowest = {ctor: 'PriorityLowest'};
+var _stil4m$elm_aui_css$Aui_Icons$PriorityLow = {ctor: 'PriorityLow'};
+var _stil4m$elm_aui_css$Aui_Icons$PriorityMedium = {ctor: 'PriorityMedium'};
+var _stil4m$elm_aui_css$Aui_Icons$PriorityHigh = {ctor: 'PriorityHigh'};
+var _stil4m$elm_aui_css$Aui_Icons$PriorityHighest = {ctor: 'PriorityHighest'};
+var _stil4m$elm_aui_css$Aui_Icons$Pause = {ctor: 'Pause'};
+var _stil4m$elm_aui_css$Aui_Icons$AdminJiraScreens = {ctor: 'AdminJiraScreens'};
+var _stil4m$elm_aui_css$Aui_Icons$AdminRoles = {ctor: 'AdminRoles'};
+var _stil4m$elm_aui_css$Aui_Icons$AdminNotifications = {ctor: 'AdminNotifications'};
+var _stil4m$elm_aui_css$Aui_Icons$AdminIssue = {ctor: 'AdminIssue'};
+var _stil4m$elm_aui_css$Aui_Icons$AdminJiraFields = {ctor: 'AdminJiraFields'};
+var _stil4m$elm_aui_css$Aui_Icons$AdminFusion = {ctor: 'AdminFusion'};
+var _stil4m$elm_aui_css$Aui_Icons$FileImage = {ctor: 'FileImage'};
+var _stil4m$elm_aui_css$Aui_Icons$ExportList = {ctor: 'ExportList'};
+var _stil4m$elm_aui_css$Aui_Icons$Export = {ctor: 'Export'};
+var _stil4m$elm_aui_css$Aui_Icons$ConfigureColumns = {ctor: 'ConfigureColumns'};
+var _stil4m$elm_aui_css$Aui_Icons$WorkboxEmpty = {ctor: 'WorkboxEmpty'};
+var _stil4m$elm_aui_css$Aui_Icons$Workbox = {ctor: 'Workbox'};
+var _stil4m$elm_aui_css$Aui_Icons$Watch = {ctor: 'Watch'};
+var _stil4m$elm_aui_css$Aui_Icons$Warning = {ctor: 'Warning'};
+var _stil4m$elm_aui_css$Aui_Icons$ViewTable = {ctor: 'ViewTable'};
+var _stil4m$elm_aui_css$Aui_Icons$ViewList = {ctor: 'ViewList'};
+var _stil4m$elm_aui_css$Aui_Icons$ViewCard = {ctor: 'ViewCard'};
+var _stil4m$elm_aui_css$Aui_Icons$View = {ctor: 'View'};
+var _stil4m$elm_aui_css$Aui_Icons$UserStatus = {ctor: 'UserStatus'};
+var _stil4m$elm_aui_css$Aui_Icons$User = {ctor: 'User'};
+var _stil4m$elm_aui_css$Aui_Icons$Up = {ctor: 'Up'};
+var _stil4m$elm_aui_css$Aui_Icons$Unwatch = {ctor: 'Unwatch'};
+var _stil4m$elm_aui_css$Aui_Icons$Unstar = {ctor: 'Unstar'};
+var _stil4m$elm_aui_css$Aui_Icons$Unlocked = {ctor: 'Unlocked'};
+var _stil4m$elm_aui_css$Aui_Icons$Unfocus = {ctor: 'Unfocus'};
+var _stil4m$elm_aui_css$Aui_Icons$Undo = {ctor: 'Undo'};
+var _stil4m$elm_aui_css$Aui_Icons$Time = {ctor: 'Time'};
+var _stil4m$elm_aui_css$Aui_Icons$Teamcals = {ctor: 'Teamcals'};
+var _stil4m$elm_aui_css$Aui_Icons$TableSplit = {ctor: 'TableSplit'};
+var _stil4m$elm_aui_css$Aui_Icons$TableRowUp = {ctor: 'TableRowUp'};
+var _stil4m$elm_aui_css$Aui_Icons$TableRowRemove = {ctor: 'TableRowRemove'};
+var _stil4m$elm_aui_css$Aui_Icons$TableRowDown = {ctor: 'TableRowDown'};
+var _stil4m$elm_aui_css$Aui_Icons$TableRemove = {ctor: 'TableRemove'};
+var _stil4m$elm_aui_css$Aui_Icons$TablePasteRow = {ctor: 'TablePasteRow'};
+var _stil4m$elm_aui_css$Aui_Icons$TableNoBg = {ctor: 'TableNoBg'};
+var _stil4m$elm_aui_css$Aui_Icons$TableMerge = {ctor: 'TableMerge'};
+var _stil4m$elm_aui_css$Aui_Icons$TableHeaderRow = {ctor: 'TableHeaderRow'};
+var _stil4m$elm_aui_css$Aui_Icons$TableHeaderColumn = {ctor: 'TableHeaderColumn'};
+var _stil4m$elm_aui_css$Aui_Icons$TableCutRow = {ctor: 'TableCutRow'};
+var _stil4m$elm_aui_css$Aui_Icons$TableCopyRow = {ctor: 'TableCopyRow'};
+var _stil4m$elm_aui_css$Aui_Icons$TableColRight = {ctor: 'TableColRight'};
+var _stil4m$elm_aui_css$Aui_Icons$TableColRemove = {ctor: 'TableColRemove'};
+var _stil4m$elm_aui_css$Aui_Icons$TableColLeft = {ctor: 'TableColLeft'};
+var _stil4m$elm_aui_css$Aui_Icons$TableBg = {ctor: 'TableBg'};
+var _stil4m$elm_aui_css$Aui_Icons$Success = {ctor: 'Success'};
+var _stil4m$elm_aui_css$Aui_Icons$Star = {ctor: 'Star'};
+var _stil4m$elm_aui_css$Aui_Icons$SpacePersonal = {ctor: 'SpacePersonal'};
+var _stil4m$elm_aui_css$Aui_Icons$SpaceDefault = {ctor: 'SpaceDefault'};
+var _stil4m$elm_aui_css$Aui_Icons$Sourcetree = {ctor: 'Sourcetree'};
+var _stil4m$elm_aui_css$Aui_Icons$SidebarLink = {ctor: 'SidebarLink'};
+var _stil4m$elm_aui_css$Aui_Icons$Share = {ctor: 'Share'};
+var _stil4m$elm_aui_css$Aui_Icons$SearchSmall = {ctor: 'SearchSmall'};
+var _stil4m$elm_aui_css$Aui_Icons$Search = {ctor: 'Search'};
+var _stil4m$elm_aui_css$Aui_Icons$Rss = {ctor: 'Rss'};
+var _stil4m$elm_aui_css$Aui_Icons$Review = {ctor: 'Review'};
+var _stil4m$elm_aui_css$Aui_Icons$RemoveLabel = {ctor: 'RemoveLabel'};
+var _stil4m$elm_aui_css$Aui_Icons$Remove = {ctor: 'Remove'};
+var _stil4m$elm_aui_css$Aui_Icons$Redo = {ctor: 'Redo'};
+var _stil4m$elm_aui_css$Aui_Icons$Quote = {ctor: 'Quote'};
+var _stil4m$elm_aui_css$Aui_Icons$Pages = {ctor: 'Pages'};
+var _stil4m$elm_aui_css$Aui_Icons$PageTemplate = {ctor: 'PageTemplate'};
+var _stil4m$elm_aui_css$Aui_Icons$PageDefault = {ctor: 'PageDefault'};
+var _stil4m$elm_aui_css$Aui_Icons$PageBlogpost = {ctor: 'PageBlogpost'};
+var _stil4m$elm_aui_css$Aui_Icons$PageBlank = {ctor: 'PageBlank'};
+var _stil4m$elm_aui_css$Aui_Icons$NavChildren = {ctor: 'NavChildren'};
+var _stil4m$elm_aui_css$Aui_Icons$More = {ctor: 'More'};
+var _stil4m$elm_aui_css$Aui_Icons$MacroStatus = {ctor: 'MacroStatus'};
+var _stil4m$elm_aui_css$Aui_Icons$MacroGallery = {ctor: 'MacroGallery'};
+var _stil4m$elm_aui_css$Aui_Icons$MacroDefault = {ctor: 'MacroDefault'};
+var _stil4m$elm_aui_css$Aui_Icons$MacroCode = {ctor: 'MacroCode'};
+var _stil4m$elm_aui_css$Aui_Icons$LockedSmall = {ctor: 'LockedSmall'};
+var _stil4m$elm_aui_css$Aui_Icons$Locked = {ctor: 'Locked'};
+var _stil4m$elm_aui_css$Aui_Icons$ListRemove = {ctor: 'ListRemove'};
+var _stil4m$elm_aui_css$Aui_Icons$ListAdd = {ctor: 'ListAdd'};
+var _stil4m$elm_aui_css$Aui_Icons$Link = {ctor: 'Link'};
+var _stil4m$elm_aui_css$Aui_Icons$Weblink = {ctor: 'Weblink'};
+var _stil4m$elm_aui_css$Aui_Icons$LikeSmall = {ctor: 'LikeSmall'};
+var _stil4m$elm_aui_css$Aui_Icons$Like = {ctor: 'Like'};
+var _stil4m$elm_aui_css$Aui_Icons$Info = {ctor: 'Info'};
+var _stil4m$elm_aui_css$Aui_Icons$ImageSmall = {ctor: 'ImageSmall'};
+var _stil4m$elm_aui_css$Aui_Icons$ImageExtrasmall = {ctor: 'ImageExtrasmall'};
+var _stil4m$elm_aui_css$Aui_Icons$Image = {ctor: 'Image'};
+var _stil4m$elm_aui_css$Aui_Icons$Homepage = {ctor: 'Homepage'};
+var _stil4m$elm_aui_css$Aui_Icons$Hipchat = {ctor: 'Hipchat'};
+var _stil4m$elm_aui_css$Aui_Icons$Help = {ctor: 'Help'};
+var _stil4m$elm_aui_css$Aui_Icons$HandleHorizontal = {ctor: 'HandleHorizontal'};
+var _stil4m$elm_aui_css$Aui_Icons$Group = {ctor: 'Group'};
+var _stil4m$elm_aui_css$Aui_Icons$Focus = {ctor: 'Focus'};
+var _stil4m$elm_aui_css$Aui_Icons$Flag = {ctor: 'Flag'};
+var _stil4m$elm_aui_css$Aui_Icons$FileZip = {ctor: 'FileZip'};
+var _stil4m$elm_aui_css$Aui_Icons$FileXls = {ctor: 'FileXls'};
+var _stil4m$elm_aui_css$Aui_Icons$FileWav = {ctor: 'FileWav'};
+var _stil4m$elm_aui_css$Aui_Icons$FileTxt = {ctor: 'FileTxt'};
+var _stil4m$elm_aui_css$Aui_Icons$FilePpt = {ctor: 'FilePpt'};
+var _stil4m$elm_aui_css$Aui_Icons$FilePdf = {ctor: 'FilePdf'};
+var _stil4m$elm_aui_css$Aui_Icons$FileJava = {ctor: 'FileJava'};
+var _stil4m$elm_aui_css$Aui_Icons$FileDoc = {ctor: 'FileDoc'};
+var _stil4m$elm_aui_css$Aui_Icons$FileCode = {ctor: 'FileCode'};
+var _stil4m$elm_aui_css$Aui_Icons$Expanded = {ctor: 'Expanded'};
+var _stil4m$elm_aui_css$Aui_Icons$Error = {ctor: 'Error'};
+var _stil4m$elm_aui_css$Aui_Icons$Email = {ctor: 'Email'};
+var _stil4m$elm_aui_css$Aui_Icons$EditSmall = {ctor: 'EditSmall'};
+var _stil4m$elm_aui_css$Aui_Icons$Edit = {ctor: 'Edit'};
+var _stil4m$elm_aui_css$Aui_Icons$DragVertical = {ctor: 'DragVertical'};
+var _stil4m$elm_aui_css$Aui_Icons$Down = {ctor: 'Down'};
+var _stil4m$elm_aui_css$Aui_Icons$Doc = {ctor: 'Doc'};
+var _stil4m$elm_aui_css$Aui_Icons$Details = {ctor: 'Details'};
+var _stil4m$elm_aui_css$Aui_Icons$Deploy = {ctor: 'Deploy'};
+var _stil4m$elm_aui_css$Aui_Icons$Delete = {ctor: 'Delete'};
+var _stil4m$elm_aui_css$Aui_Icons$CustomBullet = {ctor: 'CustomBullet'};
+var _stil4m$elm_aui_css$Aui_Icons$CopyClipboard = {ctor: 'CopyClipboard'};
+var _stil4m$elm_aui_css$Aui_Icons$Confluence = {ctor: 'Confluence'};
+var _stil4m$elm_aui_css$Aui_Icons$Configure = {ctor: 'Configure'};
+var _stil4m$elm_aui_css$Aui_Icons$Comment = {ctor: 'Comment'};
+var _stil4m$elm_aui_css$Aui_Icons$Collapsed = {ctor: 'Collapsed'};
+var _stil4m$elm_aui_css$Aui_Icons$CloseDialog = {ctor: 'CloseDialog'};
+var _stil4m$elm_aui_css$Aui_Icons$Calendar = {ctor: 'Calendar'};
+var _stil4m$elm_aui_css$Aui_Icons$Build = {ctor: 'Build'};
+var _stil4m$elm_aui_css$Aui_Icons$BpTroubleshooting = {ctor: 'BpTroubleshooting'};
+var _stil4m$elm_aui_css$Aui_Icons$BpSharedlinks = {ctor: 'BpSharedlinks'};
+var _stil4m$elm_aui_css$Aui_Icons$BpRetrospective = {ctor: 'BpRetrospective'};
+var _stil4m$elm_aui_css$Aui_Icons$BpMeeting = {ctor: 'BpMeeting'};
+var _stil4m$elm_aui_css$Aui_Icons$BpJira = {ctor: 'BpJira'};
+var _stil4m$elm_aui_css$Aui_Icons$BpHowto = {ctor: 'BpHowto'};
+var _stil4m$elm_aui_css$Aui_Icons$BpRequirements = {ctor: 'BpRequirements'};
+var _stil4m$elm_aui_css$Aui_Icons$BpFiles = {ctor: 'BpFiles'};
+var _stil4m$elm_aui_css$Aui_Icons$BpDefault = {ctor: 'BpDefault'};
+var _stil4m$elm_aui_css$Aui_Icons$BpDecisions = {ctor: 'BpDecisions'};
+var _stil4m$elm_aui_css$Aui_Icons$Blogroll = {ctor: 'Blogroll'};
+var _stil4m$elm_aui_css$Aui_Icons$BackPage = {ctor: 'BackPage'};
+var _stil4m$elm_aui_css$Aui_Icons$AutocompleteDate = {ctor: 'AutocompleteDate'};
+var _stil4m$elm_aui_css$Aui_Icons$AttachmentSmall = {ctor: 'AttachmentSmall'};
+var _stil4m$elm_aui_css$Aui_Icons$Attachment = {ctor: 'Attachment'};
+var _stil4m$elm_aui_css$Aui_Icons$ArrowsUp = {ctor: 'ArrowsUp'};
+var _stil4m$elm_aui_css$Aui_Icons$ArrowsRight = {ctor: 'ArrowsRight'};
+var _stil4m$elm_aui_css$Aui_Icons$ArrowsLeft = {ctor: 'ArrowsLeft'};
+var _stil4m$elm_aui_css$Aui_Icons$ArrowsDown = {ctor: 'ArrowsDown'};
+var _stil4m$elm_aui_css$Aui_Icons$Appswitcher = {ctor: 'Appswitcher'};
+var _stil4m$elm_aui_css$Aui_Icons$Approve = {ctor: 'Approve'};
+var _stil4m$elm_aui_css$Aui_Icons$AddSmall = {ctor: 'AddSmall'};
+var _stil4m$elm_aui_css$Aui_Icons$AddComment = {ctor: 'AddComment'};
+var _stil4m$elm_aui_css$Aui_Icons$Add = {ctor: 'Add'};
 
-var _user$project$Aui_Labels$actionAttrs = function (onClick) {
+var _stil4m$elm_aui_css$Aui_Labels$actionAttrs = function (onClick) {
 	var _p0 = onClick;
 	if (_p0.ctor === 'Just') {
 		var _p1 = _p0._0;
@@ -9142,7 +9142,7 @@ var _user$project$Aui_Labels$actionAttrs = function (onClick) {
 			[]);
 	}
 };
-var _user$project$Aui_Labels$labelRemoveSpan = function (x) {
+var _stil4m$elm_aui_css$Aui_Labels$labelRemoveSpan = function (x) {
 	return A2(
 		_elm_lang$html$Html$span,
 		_elm_lang$core$Native_List.fromArray(
@@ -9162,7 +9162,7 @@ var _user$project$Aui_Labels$labelRemoveSpan = function (x) {
 					[]))
 			]));
 };
-var _user$project$Aui_Labels$onRemove = F2(
+var _stil4m$elm_aui_css$Aui_Labels$onRemove = F2(
 	function (x, config) {
 		return _elm_lang$core$Native_Utils.update(
 			config,
@@ -9170,14 +9170,14 @@ var _user$project$Aui_Labels$onRemove = F2(
 				onRemove: _elm_lang$core$Maybe$Just(x)
 			});
 	});
-var _user$project$Aui_Labels$baseConfig = {onRemove: _elm_lang$core$Maybe$Nothing, onClick: _elm_lang$core$Maybe$Nothing};
-var _user$project$Aui_Labels$label = F2(
+var _stil4m$elm_aui_css$Aui_Labels$baseConfig = {onRemove: _elm_lang$core$Maybe$Nothing, onClick: _elm_lang$core$Maybe$Nothing};
+var _stil4m$elm_aui_css$Aui_Labels$label = F2(
 	function (_p2, inner) {
 		var _p3 = _p2;
 		var _p6 = _p3.onRemove;
 		var _p5 = _p3.onClick;
 		var elem = _elm_lang$core$Native_Utils.eq(_p5, _elm_lang$core$Maybe$Nothing) ? _elm_lang$html$Html$span : _elm_lang$html$Html$a;
-		var actionAttrs$ = _user$project$Aui_Labels$actionAttrs(_p5);
+		var actionAttrs$ = _stil4m$elm_aui_css$Aui_Labels$actionAttrs(_p5);
 		var inner$ = function () {
 			var _p4 = _p6;
 			if (_p4.ctor === 'Nothing') {
@@ -9192,7 +9192,7 @@ var _user$project$Aui_Labels$label = F2(
 								_elm_lang$html$Html_Attributes$class('aui-label-split-main')
 							]),
 						inner),
-						_user$project$Aui_Labels$labelRemoveSpan(_p4._0)
+						_stil4m$elm_aui_css$Aui_Labels$labelRemoveSpan(_p4._0)
 					]);
 			}
 		}();
@@ -9205,36 +9205,36 @@ var _user$project$Aui_Labels$label = F2(
 				actionAttrs$),
 			inner$);
 	});
-var _user$project$Aui_Labels$Config = F2(
+var _stil4m$elm_aui_css$Aui_Labels$Config = F2(
 	function (a, b) {
 		return {onRemove: a, onClick: b};
 	});
-var _user$project$Aui_Labels$Trigger = function (a) {
+var _stil4m$elm_aui_css$Aui_Labels$Trigger = function (a) {
 	return {ctor: 'Trigger', _0: a};
 };
-var _user$project$Aui_Labels$onClick = F2(
+var _stil4m$elm_aui_css$Aui_Labels$onClick = F2(
 	function (x, config) {
 		return _elm_lang$core$Native_Utils.update(
 			config,
 			{
 				onClick: _elm_lang$core$Maybe$Just(
-					_user$project$Aui_Labels$Trigger(x))
+					_stil4m$elm_aui_css$Aui_Labels$Trigger(x))
 			});
 	});
-var _user$project$Aui_Labels$Navigate = function (a) {
+var _stil4m$elm_aui_css$Aui_Labels$Navigate = function (a) {
 	return {ctor: 'Navigate', _0: a};
 };
-var _user$project$Aui_Labels$withNavigate = F2(
+var _stil4m$elm_aui_css$Aui_Labels$withNavigate = F2(
 	function (x, config) {
 		return _elm_lang$core$Native_Utils.update(
 			config,
 			{
 				onClick: _elm_lang$core$Maybe$Just(
-					_user$project$Aui_Labels$Navigate(x))
+					_stil4m$elm_aui_css$Aui_Labels$Navigate(x))
 			});
 	});
 
-var _user$project$Aui_Lozenge$type2class = function (t) {
+var _stil4m$elm_aui_css$Aui_Lozenge$type2class = function (t) {
 	var _p0 = t;
 	switch (_p0.ctor) {
 		case 'Generic':
@@ -9251,7 +9251,7 @@ var _user$project$Aui_Lozenge$type2class = function (t) {
 			return 'aui-lozenge-moved';
 	}
 };
-var _user$project$Aui_Lozenge$presense2class = function (presense) {
+var _stil4m$elm_aui_css$Aui_Lozenge$presense2class = function (presense) {
 	var _p1 = presense;
 	if (_p1.ctor === 'Normal') {
 		return '';
@@ -9259,7 +9259,7 @@ var _user$project$Aui_Lozenge$presense2class = function (presense) {
 		return 'aui-lozenge-subtle';
 	}
 };
-var _user$project$Aui_Lozenge$lozenge = F2(
+var _stil4m$elm_aui_css$Aui_Lozenge$lozenge = F2(
 	function (presense, t) {
 		return _elm_lang$html$Html$span(
 			_elm_lang$core$Native_List.fromArray(
@@ -9270,23 +9270,23 @@ var _user$project$Aui_Lozenge$lozenge = F2(
 						'aui-lozenge ',
 						A2(
 							_elm_lang$core$Basics_ops['++'],
-							_user$project$Aui_Lozenge$presense2class(presense),
+							_stil4m$elm_aui_css$Aui_Lozenge$presense2class(presense),
 							A2(
 								_elm_lang$core$Basics_ops['++'],
 								' ',
-								_user$project$Aui_Lozenge$type2class(t)))))
+								_stil4m$elm_aui_css$Aui_Lozenge$type2class(t)))))
 				]));
 	});
-var _user$project$Aui_Lozenge$Moved = {ctor: 'Moved'};
-var _user$project$Aui_Lozenge$Complete = {ctor: 'Complete'};
-var _user$project$Aui_Lozenge$Current = {ctor: 'Current'};
-var _user$project$Aui_Lozenge$Error = {ctor: 'Error'};
-var _user$project$Aui_Lozenge$Success = {ctor: 'Success'};
-var _user$project$Aui_Lozenge$Generic = {ctor: 'Generic'};
-var _user$project$Aui_Lozenge$Subtle = {ctor: 'Subtle'};
-var _user$project$Aui_Lozenge$Normal = {ctor: 'Normal'};
+var _stil4m$elm_aui_css$Aui_Lozenge$Moved = {ctor: 'Moved'};
+var _stil4m$elm_aui_css$Aui_Lozenge$Complete = {ctor: 'Complete'};
+var _stil4m$elm_aui_css$Aui_Lozenge$Current = {ctor: 'Current'};
+var _stil4m$elm_aui_css$Aui_Lozenge$Error = {ctor: 'Error'};
+var _stil4m$elm_aui_css$Aui_Lozenge$Success = {ctor: 'Success'};
+var _stil4m$elm_aui_css$Aui_Lozenge$Generic = {ctor: 'Generic'};
+var _stil4m$elm_aui_css$Aui_Lozenge$Subtle = {ctor: 'Subtle'};
+var _stil4m$elm_aui_css$Aui_Lozenge$Normal = {ctor: 'Normal'};
 
-var _user$project$Aui_Messages$typeToString = function (_p0) {
+var _stil4m$elm_aui_css$Aui_Messages$typeToString = function (_p0) {
 	return A2(
 		F2(
 			function (x, y) {
@@ -9296,7 +9296,7 @@ var _user$project$Aui_Messages$typeToString = function (_p0) {
 		_elm_lang$core$String$toLower(
 			_elm_lang$core$Basics$toString(_p0)));
 };
-var _user$project$Aui_Messages$baseMessage = F4(
+var _stil4m$elm_aui_css$Aui_Messages$baseMessage = F4(
 	function (t, action, title, body) {
 		var closeNodes = function () {
 			var _p1 = action;
@@ -9328,7 +9328,7 @@ var _user$project$Aui_Messages$baseMessage = F4(
 					A2(
 						_elm_lang$core$Basics_ops['++'],
 						'aui-message closeable ',
-						_user$project$Aui_Messages$typeToString(t)))
+						_stil4m$elm_aui_css$Aui_Messages$typeToString(t)))
 				]),
 			A2(
 				_elm_lang$core$List_ops['::'],
@@ -9341,35 +9341,24 @@ var _user$project$Aui_Messages$baseMessage = F4(
 					title),
 				A2(_elm_lang$core$Basics_ops['++'], body, closeNodes)));
 	});
-var _user$project$Aui_Messages$closableMessage = F2(
+var _stil4m$elm_aui_css$Aui_Messages$closableMessage = F2(
 	function (t, action) {
 		return A2(
-			_user$project$Aui_Messages$baseMessage,
+			_stil4m$elm_aui_css$Aui_Messages$baseMessage,
 			t,
 			_elm_lang$core$Maybe$Just(action));
 	});
-var _user$project$Aui_Messages$message = function (t) {
-	return A2(_user$project$Aui_Messages$baseMessage, t, _elm_lang$core$Maybe$Nothing);
+var _stil4m$elm_aui_css$Aui_Messages$message = function (t) {
+	return A2(_stil4m$elm_aui_css$Aui_Messages$baseMessage, t, _elm_lang$core$Maybe$Nothing);
 };
-var _user$project$Aui_Messages$Hint = {ctor: 'Hint'};
-var _user$project$Aui_Messages$Info = {ctor: 'Info'};
-var _user$project$Aui_Messages$Success = {ctor: 'Success'};
-var _user$project$Aui_Messages$Warning = {ctor: 'Warning'};
-var _user$project$Aui_Messages$Error = {ctor: 'Error'};
-var _user$project$Aui_Messages$Generic = {ctor: 'Generic'};
+var _stil4m$elm_aui_css$Aui_Messages$Hint = {ctor: 'Hint'};
+var _stil4m$elm_aui_css$Aui_Messages$Info = {ctor: 'Info'};
+var _stil4m$elm_aui_css$Aui_Messages$Success = {ctor: 'Success'};
+var _stil4m$elm_aui_css$Aui_Messages$Warning = {ctor: 'Warning'};
+var _stil4m$elm_aui_css$Aui_Messages$Error = {ctor: 'Error'};
+var _stil4m$elm_aui_css$Aui_Messages$Generic = {ctor: 'Generic'};
 
-var _user$project$Aui_Ports$auiBlur = _elm_lang$core$Native_Platform.outgoingPort(
-	'auiBlur',
-	function (v) {
-		return v;
-	});
-var _user$project$Aui_Ports$auiFocus = _elm_lang$core$Native_Platform.outgoingPort(
-	'auiFocus',
-	function (v) {
-		return v;
-	});
-
-var _user$project$Aui_ProgressIndicator$progressIndicator = function (value) {
+var _stil4m$elm_aui_css$Aui_ProgressIndicator$progressIndicator = function (value) {
 	var _p0 = _elm_lang$core$Native_Utils.eq(value, 0.0) ? {
 		ctor: '_Tuple2',
 		_0: 100,
@@ -9416,7 +9405,7 @@ var _user$project$Aui_ProgressIndicator$progressIndicator = function (value) {
 			]));
 };
 
-var _user$project$Aui_ProgressTracker$itemToLi = F4(
+var _stil4m$elm_aui_css$Aui_ProgressTracker$itemToLi = F4(
 	function (itemWidth, current, index, item) {
 		var classString = _elm_lang$core$Native_Utils.eq(current, index) ? 'aui-progress-tracker-step aui-progress-tracker-step-current' : 'aui-progress-tracker-step';
 		return A2(
@@ -9442,7 +9431,7 @@ var _user$project$Aui_ProgressTracker$itemToLi = F4(
 						]))
 				]));
 	});
-var _user$project$Aui_ProgressTracker$baseTracker = F3(
+var _stil4m$elm_aui_css$Aui_ProgressTracker$baseTracker = F3(
 	function (trackerClass, items, current) {
 		var itemWidth = A2(
 			_elm_lang$core$Basics_ops['++'],
@@ -9458,13 +9447,13 @@ var _user$project$Aui_ProgressTracker$baseTracker = F3(
 				]),
 			A2(
 				_elm_lang$core$List$indexedMap,
-				A2(_user$project$Aui_ProgressTracker$itemToLi, itemWidth, current),
+				A2(_stil4m$elm_aui_css$Aui_ProgressTracker$itemToLi, itemWidth, current),
 				items));
 	});
-var _user$project$Aui_ProgressTracker$invertedProgressTracker = _user$project$Aui_ProgressTracker$baseTracker('aui-progress-tracker aui-progress-tracker-inverted');
-var _user$project$Aui_ProgressTracker$progressTracker = _user$project$Aui_ProgressTracker$baseTracker('aui-progress-tracker');
+var _stil4m$elm_aui_css$Aui_ProgressTracker$invertedProgressTracker = _stil4m$elm_aui_css$Aui_ProgressTracker$baseTracker('aui-progress-tracker aui-progress-tracker-inverted');
+var _stil4m$elm_aui_css$Aui_ProgressTracker$progressTracker = _stil4m$elm_aui_css$Aui_ProgressTracker$baseTracker('aui-progress-tracker');
 
-var _user$project$Aui_Select$activeOptionsForQuery = F2(
+var _stil4m$elm_aui_css$Aui_Select$activeOptionsForQuery = F2(
 	function (queryOpt, model) {
 		var _p0 = queryOpt;
 		if (_p0.ctor === 'Nothing') {
@@ -9481,33 +9470,33 @@ var _user$project$Aui_Select$activeOptionsForQuery = F2(
 				model.items);
 		}
 	});
-var _user$project$Aui_Select$activeOptionsForModel = function (model) {
-	return A2(_user$project$Aui_Select$activeOptionsForQuery, model.query, model);
+var _stil4m$elm_aui_css$Aui_Select$activeOptionsForModel = function (model) {
+	return A2(_stil4m$elm_aui_css$Aui_Select$activeOptionsForQuery, model.query, model);
 };
-var _user$project$Aui_Select$activeOptionForQuery = F2(
+var _stil4m$elm_aui_css$Aui_Select$activeOptionForQuery = F2(
 	function (queryOpt, model) {
 		return _elm_lang$core$List$head(
-			A2(_user$project$Aui_Select$activeOptionsForQuery, queryOpt, model));
+			A2(_stil4m$elm_aui_css$Aui_Select$activeOptionsForQuery, queryOpt, model));
 	});
-var _user$project$Aui_Select$handleSubmit = function (model) {
-	var activeOptions$ = _user$project$Aui_Select$activeOptionsForModel(model);
+var _stil4m$elm_aui_css$Aui_Select$handleSubmit = function (model) {
+	var activeOptions$ = _stil4m$elm_aui_css$Aui_Select$activeOptionsForModel(model);
 	return {
 		ctor: '_Tuple2',
 		_0: _elm_lang$core$Native_Utils.update(
 			model,
 			{open: false, query: _elm_lang$core$Maybe$Nothing, highlighted: _elm_lang$core$Maybe$Nothing, value: model.highlighted}),
-		_1: _user$project$Aui_Ports$auiBlur(
+		_1: model.ports.blur(
 			A2(
 				_elm_lang$core$Basics_ops['++'],
 				'#',
 				A2(_elm_lang$core$Basics_ops['++'], model.identifier, ' input')))
 	};
 };
-var _user$project$Aui_Select$handleQueryChange = F2(
+var _stil4m$elm_aui_css$Aui_Select$handleQueryChange = F2(
 	function (newQuery, oldModel) {
 		var highlighted = _elm_lang$core$List$head(
 			A2(
-				_user$project$Aui_Select$activeOptionsForQuery,
+				_stil4m$elm_aui_css$Aui_Select$activeOptionsForQuery,
 				_elm_lang$core$Maybe$Just(newQuery),
 				oldModel));
 		return {
@@ -9521,24 +9510,24 @@ var _user$project$Aui_Select$handleQueryChange = F2(
 			_1: _elm_lang$core$Platform_Cmd$none
 		};
 	});
-var _user$project$Aui_Select$handleOpen = function (model) {
+var _stil4m$elm_aui_css$Aui_Select$handleOpen = function (model) {
 	var newQuery = model.value;
-	var newHighlighted = A2(_user$project$Aui_Select$activeOptionForQuery, newQuery, model);
+	var newHighlighted = A2(_stil4m$elm_aui_css$Aui_Select$activeOptionForQuery, newQuery, model);
 	return {
 		ctor: '_Tuple2',
 		_0: _elm_lang$core$Native_Utils.update(
 			model,
 			{open: true, query: newQuery, highlighted: newHighlighted}),
-		_1: _user$project$Aui_Ports$auiFocus(
+		_1: model.ports.focus(
 			A2(
 				_elm_lang$core$Basics_ops['++'],
 				'#',
 				A2(_elm_lang$core$Basics_ops['++'], model.identifier, ' input')))
 	};
 };
-var _user$project$Aui_Select$changeHighlighted = F2(
+var _stil4m$elm_aui_css$Aui_Select$changeHighlighted = F2(
 	function (patch, oldModel) {
-		var activeOptionsForModel$ = _user$project$Aui_Select$activeOptionsForModel(oldModel);
+		var activeOptionsForModel$ = _stil4m$elm_aui_css$Aui_Select$activeOptionsForModel(oldModel);
 		var newHighlighted = function () {
 			var _p1 = oldModel.highlighted;
 			if (_p1.ctor === 'Nothing') {
@@ -9566,7 +9555,7 @@ var _user$project$Aui_Select$changeHighlighted = F2(
 			_1: _elm_lang$core$Platform_Cmd$none
 		};
 	});
-var _user$project$Aui_Select$update = F2(
+var _stil4m$elm_aui_css$Aui_Select$update = F2(
 	function (msg, model) {
 		var _p3 = msg;
 		switch (_p3.ctor) {
@@ -9595,7 +9584,7 @@ var _user$project$Aui_Select$update = F2(
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 			case 'Open':
-				return _user$project$Aui_Select$handleOpen(model);
+				return _stil4m$elm_aui_css$Aui_Select$handleOpen(model);
 			case 'Close':
 				var newValue = _elm_lang$core$Native_Utils.eq(model.value, model.query) ? model.value : _elm_lang$core$Maybe$Nothing;
 				return {
@@ -9606,9 +9595,9 @@ var _user$project$Aui_Select$update = F2(
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 			case 'ChangeQuery':
-				return A2(_user$project$Aui_Select$handleQueryChange, _p3._0, model);
+				return A2(_stil4m$elm_aui_css$Aui_Select$handleQueryChange, _p3._0, model);
 			case 'Submit':
-				return _user$project$Aui_Select$handleSubmit(model);
+				return _stil4m$elm_aui_css$Aui_Select$handleSubmit(model);
 			case 'Hover':
 				return {
 					ctor: '_Tuple2',
@@ -9620,50 +9609,54 @@ var _user$project$Aui_Select$update = F2(
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 			case 'Up':
-				return A2(_user$project$Aui_Select$changeHighlighted, -1, model);
+				return A2(_stil4m$elm_aui_css$Aui_Select$changeHighlighted, -1, model);
 			default:
-				return A2(_user$project$Aui_Select$changeHighlighted, 1, model);
+				return A2(_stil4m$elm_aui_css$Aui_Select$changeHighlighted, 1, model);
 		}
 	});
-var _user$project$Aui_Select$initialModel = F2(
-	function (identifier, items) {
+var _stil4m$elm_aui_css$Aui_Select$initialModel = F3(
+	function (ports, identifier, items) {
 		return {
 			ctor: '_Tuple2',
-			_0: {identifier: identifier, open: false, items: items, query: _elm_lang$core$Maybe$Nothing, value: _elm_lang$core$Maybe$Nothing, highlighted: _elm_lang$core$Maybe$Nothing},
+			_0: {ports: ports, identifier: identifier, open: false, items: items, query: _elm_lang$core$Maybe$Nothing, value: _elm_lang$core$Maybe$Nothing, highlighted: _elm_lang$core$Maybe$Nothing},
 			_1: _elm_lang$core$Platform_Cmd$none
 		};
 	});
-var _user$project$Aui_Select$baseConfig = {zIndexBackdrop: 99, placeholder: _elm_lang$core$Maybe$Nothing};
-var _user$project$Aui_Select$Config = F2(
+var _stil4m$elm_aui_css$Aui_Select$baseConfig = {zIndexBackdrop: 99, placeholder: _elm_lang$core$Maybe$Nothing};
+var _stil4m$elm_aui_css$Aui_Select$Config = F2(
 	function (a, b) {
 		return {zIndexBackdrop: a, placeholder: b};
 	});
-var _user$project$Aui_Select$Model = F6(
-	function (a, b, c, d, e, f) {
-		return {open: a, query: b, items: c, value: d, identifier: e, highlighted: f};
+var _stil4m$elm_aui_css$Aui_Select$Ports = F2(
+	function (a, b) {
+		return {blur: a, focus: b};
 	});
-var _user$project$Aui_Select$Hover = function (a) {
+var _stil4m$elm_aui_css$Aui_Select$Model = F7(
+	function (a, b, c, d, e, f, g) {
+		return {ports: a, open: b, query: c, items: d, value: e, identifier: f, highlighted: g};
+	});
+var _stil4m$elm_aui_css$Aui_Select$Hover = function (a) {
 	return {ctor: 'Hover', _0: a};
 };
-var _user$project$Aui_Select$Up = {ctor: 'Up'};
-var _user$project$Aui_Select$Down = {ctor: 'Down'};
-var _user$project$Aui_Select$Submit = {ctor: 'Submit'};
-var _user$project$Aui_Select$ChangeQuery = function (a) {
+var _stil4m$elm_aui_css$Aui_Select$Up = {ctor: 'Up'};
+var _stil4m$elm_aui_css$Aui_Select$Down = {ctor: 'Down'};
+var _stil4m$elm_aui_css$Aui_Select$Submit = {ctor: 'Submit'};
+var _stil4m$elm_aui_css$Aui_Select$ChangeQuery = function (a) {
 	return {ctor: 'ChangeQuery', _0: a};
 };
-var _user$project$Aui_Select$NoOp = {ctor: 'NoOp'};
-var _user$project$Aui_Select$onSpecialKeys = function () {
+var _stil4m$elm_aui_css$Aui_Select$NoOp = {ctor: 'NoOp'};
+var _stil4m$elm_aui_css$Aui_Select$onSpecialKeys = function () {
 	var tagger = function (code) {
-		return _elm_lang$core$Native_Utils.eq(code, 13) ? _user$project$Aui_Select$Submit : (_elm_lang$core$Native_Utils.eq(code, 40) ? _user$project$Aui_Select$Down : (_elm_lang$core$Native_Utils.eq(code, 38) ? _user$project$Aui_Select$Up : _user$project$Aui_Select$NoOp));
+		return _elm_lang$core$Native_Utils.eq(code, 13) ? _stil4m$elm_aui_css$Aui_Select$Submit : (_elm_lang$core$Native_Utils.eq(code, 40) ? _stil4m$elm_aui_css$Aui_Select$Down : (_elm_lang$core$Native_Utils.eq(code, 38) ? _stil4m$elm_aui_css$Aui_Select$Up : _stil4m$elm_aui_css$Aui_Select$NoOp));
 	};
 	return A2(
 		_elm_lang$html$Html_Events$on,
 		'keydown',
 		A2(_elm_lang$core$Json_Decode$map, tagger, _elm_lang$html$Html_Events$keyCode));
 }();
-var _user$project$Aui_Select$Close = {ctor: 'Close'};
-var _user$project$Aui_Select$Open = {ctor: 'Open'};
-var _user$project$Aui_Select$dropDownButton = F2(
+var _stil4m$elm_aui_css$Aui_Select$Close = {ctor: 'Close'};
+var _stil4m$elm_aui_css$Aui_Select$Open = {ctor: 'Open'};
+var _stil4m$elm_aui_css$Aui_Select$dropDownButton = F2(
 	function (zIndex, model) {
 		return A2(
 			_elm_lang$html$Html$button,
@@ -9679,12 +9672,12 @@ var _user$project$Aui_Select$dropDownButton = F2(
 						])),
 					_elm_lang$html$Html_Attributes$type$('button'),
 					_elm_lang$html$Html_Events$onClick(
-					model.open ? _user$project$Aui_Select$Close : _user$project$Aui_Select$Open)
+					model.open ? _stil4m$elm_aui_css$Aui_Select$Close : _stil4m$elm_aui_css$Aui_Select$Open)
 				]),
 			_elm_lang$core$Native_List.fromArray(
 				[]));
 	});
-var _user$project$Aui_Select$queryInput = F2(
+var _stil4m$elm_aui_css$Aui_Select$queryInput = F2(
 	function (zIndex, model) {
 		var inputValue = model.open ? A2(_elm_lang$core$Maybe$withDefault, '', model.query) : A2(_elm_lang$core$Maybe$withDefault, '', model.value);
 		return A2(
@@ -9705,17 +9698,17 @@ var _user$project$Aui_Select$queryInput = F2(
 					A2(
 					_elm_lang$html$Html_Events$on,
 					'input',
-					A2(_elm_lang$core$Json_Decode$map, _user$project$Aui_Select$ChangeQuery, _elm_lang$html$Html_Events$targetValue)),
-					_user$project$Aui_Select$onSpecialKeys,
-					_elm_lang$html$Html_Events$onFocus(_user$project$Aui_Select$Open)
+					A2(_elm_lang$core$Json_Decode$map, _stil4m$elm_aui_css$Aui_Select$ChangeQuery, _elm_lang$html$Html_Events$targetValue)),
+					_stil4m$elm_aui_css$Aui_Select$onSpecialKeys,
+					_elm_lang$html$Html_Events$onFocus(_stil4m$elm_aui_css$Aui_Select$Open)
 				]),
 			_elm_lang$core$Native_List.fromArray(
 				[]));
 	});
-var _user$project$Aui_Select$Select = function (a) {
+var _stil4m$elm_aui_css$Aui_Select$Select = function (a) {
 	return {ctor: 'Select', _0: a};
 };
-var _user$project$Aui_Select$asOption = F2(
+var _stil4m$elm_aui_css$Aui_Select$asOption = F2(
 	function (model, opt) {
 		var active = A2(
 			_elm_lang$core$Maybe$withDefault,
@@ -9735,19 +9728,19 @@ var _user$project$Aui_Select$asOption = F2(
 					_elm_lang$html$Html_Attributes$class(
 					active ? 'aui-select-active' : 'aui-select-suggestion'),
 					_elm_lang$html$Html_Events$onClick(
-					_user$project$Aui_Select$Select(opt)),
+					_stil4m$elm_aui_css$Aui_Select$Select(opt)),
 					_elm_lang$html$Html_Events$onMouseEnter(
-					_user$project$Aui_Select$Hover(opt))
+					_stil4m$elm_aui_css$Aui_Select$Hover(opt))
 				]),
 			_elm_lang$core$Native_List.fromArray(
 				[
 					_elm_lang$html$Html$text(opt)
 				]));
 	});
-var _user$project$Aui_Select$singleSelect = F2(
+var _stil4m$elm_aui_css$Aui_Select$singleSelect = F2(
 	function (config, model) {
 		var zIndexItems = _elm_lang$core$Basics$toString(config.zIndexBackdrop + 1);
-		var activeOptions$ = _user$project$Aui_Select$activeOptionsForModel(model);
+		var activeOptions$ = _stil4m$elm_aui_css$Aui_Select$activeOptionsForModel(model);
 		var popoverDisplay = model.open ? 'block' : 'none';
 		return A2(
 			_elm_lang$html$Html$div,
@@ -9777,13 +9770,13 @@ var _user$project$Aui_Select$singleSelect = F2(
 							_elm_lang$html$Html$form,
 							_elm_lang$core$Native_List.fromArray(
 								[
-									_elm_lang$html$Html_Events$onSubmit(_user$project$Aui_Select$NoOp)
+									_elm_lang$html$Html_Events$onSubmit(_stil4m$elm_aui_css$Aui_Select$NoOp)
 								]),
 							_elm_lang$core$Native_List.fromArray(
 								[
-									A3(_user$project$Aui_Backdrop$backdrop, config.zIndexBackdrop, _user$project$Aui_Select$Close, model.open),
-									A2(_user$project$Aui_Select$queryInput, zIndexItems, model),
-									A2(_user$project$Aui_Select$dropDownButton, zIndexItems, model),
+									A3(_stil4m$elm_aui_css$Aui_Backdrop$backdrop, config.zIndexBackdrop, _stil4m$elm_aui_css$Aui_Select$Close, model.open),
+									A2(_stil4m$elm_aui_css$Aui_Select$queryInput, zIndexItems, model),
+									A2(_stil4m$elm_aui_css$Aui_Select$dropDownButton, zIndexItems, model),
 									A2(
 									_elm_lang$html$Html$div,
 									_elm_lang$core$Native_List.fromArray(
@@ -9809,16 +9802,16 @@ var _user$project$Aui_Select$singleSelect = F2(
 												]),
 											A2(
 												_elm_lang$core$List$map,
-												_user$project$Aui_Select$asOption(model),
+												_stil4m$elm_aui_css$Aui_Select$asOption(model),
 												activeOptions$))
 										]))
 								]))
 						]))
 				]));
 	});
-var _user$project$Aui_Select$Toggle = {ctor: 'Toggle'};
+var _stil4m$elm_aui_css$Aui_Select$Toggle = {ctor: 'Toggle'};
 
-var _user$project$Aui_Tabs$tabContent = F2(
+var _stil4m$elm_aui_css$Aui_Tabs$tabContent = F2(
 	function (cb, model) {
 		var _p0 = model;
 		if (_p0.ctor === 'Nothing') {
@@ -9843,24 +9836,24 @@ var _user$project$Aui_Tabs$tabContent = F2(
 					]));
 		}
 	});
-var _user$project$Aui_Tabs$update = F2(
+var _stil4m$elm_aui_css$Aui_Tabs$update = F2(
 	function (msg, model) {
 		var _p1 = msg;
 		return _elm_lang$core$Maybe$Just(_p1._0.id);
 	});
-var _user$project$Aui_Tabs$modelWithActive = _elm_lang$core$Maybe$Just;
-var _user$project$Aui_Tabs$Config = F3(
+var _stil4m$elm_aui_css$Aui_Tabs$modelWithActive = _elm_lang$core$Maybe$Just;
+var _stil4m$elm_aui_css$Aui_Tabs$Config = F3(
 	function (a, b, c) {
 		return {horizontal: a, items: b, msgMap: c};
 	});
-var _user$project$Aui_Tabs$Item = F2(
+var _stil4m$elm_aui_css$Aui_Tabs$Item = F2(
 	function (a, b) {
 		return {id: a, name: b};
 	});
-var _user$project$Aui_Tabs$Select = function (a) {
+var _stil4m$elm_aui_css$Aui_Tabs$Select = function (a) {
 	return {ctor: 'Select', _0: a};
 };
-var _user$project$Aui_Tabs$asItem = F2(
+var _stil4m$elm_aui_css$Aui_Tabs$asItem = F2(
 	function (model, opt) {
 		var active = function () {
 			var _p2 = model;
@@ -9885,7 +9878,7 @@ var _user$project$Aui_Tabs$asItem = F2(
 						[
 							A2(_elm_lang$html$Html_Attributes$attribute, 'role', 'tab'),
 							_elm_lang$html$Html_Events$onClick(
-							_user$project$Aui_Tabs$Select(opt))
+							_stil4m$elm_aui_css$Aui_Tabs$Select(opt))
 						]),
 					_elm_lang$core$Native_List.fromArray(
 						[
@@ -9893,7 +9886,7 @@ var _user$project$Aui_Tabs$asItem = F2(
 						]))
 				]));
 	});
-var _user$project$Aui_Tabs$menu = F2(
+var _stil4m$elm_aui_css$Aui_Tabs$menu = F2(
 	function (items, model) {
 		return A2(
 			_elm_lang$html$Html$ul,
@@ -9904,10 +9897,10 @@ var _user$project$Aui_Tabs$menu = F2(
 				]),
 			A2(
 				_elm_lang$core$List$map,
-				_user$project$Aui_Tabs$asItem(model),
+				_stil4m$elm_aui_css$Aui_Tabs$asItem(model),
 				items));
 	});
-var _user$project$Aui_Tabs$tabs = F3(
+var _stil4m$elm_aui_css$Aui_Tabs$tabs = F3(
 	function (config, cb, model) {
 		var tabClass = config.horizontal ? 'aui-tabs horizontal-tabs' : 'aui-tabs vertical-tabs';
 		return A2(
@@ -9921,12 +9914,12 @@ var _user$project$Aui_Tabs$tabs = F3(
 					A2(
 					_elm_lang$html$Html_App$map,
 					config.msgMap,
-					A2(_user$project$Aui_Tabs$menu, config.items, model)),
-					A2(_user$project$Aui_Tabs$tabContent, cb, model)
+					A2(_stil4m$elm_aui_css$Aui_Tabs$menu, config.items, model)),
+					A2(_stil4m$elm_aui_css$Aui_Tabs$tabContent, cb, model)
 				]));
 	});
 
-var _user$project$Aui_Toggle$toggle = F3(
+var _stil4m$elm_aui_css$Aui_Toggle$toggle = F3(
 	function (enabled, toMsg, state) {
 		var attrs = _elm_lang$core$Native_List.fromArray(
 			[]);
@@ -9985,22 +9978,22 @@ var _user$project$Aui_Toggle$toggle = F3(
 				]));
 	});
 
-var _user$project$Aui_Toolbar$toolbarGroup = _elm_lang$html$Html$div(
+var _stil4m$elm_aui_css$Aui_Toolbar$toolbarGroup = _elm_lang$html$Html$div(
 	_elm_lang$core$Native_List.fromArray(
 		[
 			_elm_lang$html$Html_Attributes$class('aui-toolbar2-group')
 		]));
-var _user$project$Aui_Toolbar$toolbarSecondary = _elm_lang$html$Html$div(
+var _stil4m$elm_aui_css$Aui_Toolbar$toolbarSecondary = _elm_lang$html$Html$div(
 	_elm_lang$core$Native_List.fromArray(
 		[
 			_elm_lang$html$Html_Attributes$class('aui-toolbar2-secondary')
 		]));
-var _user$project$Aui_Toolbar$toolbarPrimary = _elm_lang$html$Html$div(
+var _stil4m$elm_aui_css$Aui_Toolbar$toolbarPrimary = _elm_lang$html$Html$div(
 	_elm_lang$core$Native_List.fromArray(
 		[
 			_elm_lang$html$Html_Attributes$class('aui-toolbar2-primary')
 		]));
-var _user$project$Aui_Toolbar$toolbar = function (inner) {
+var _stil4m$elm_aui_css$Aui_Toolbar$toolbar = function (inner) {
 	return A2(
 		_elm_lang$html$Html$div,
 		_elm_lang$core$Native_List.fromArray(
@@ -10020,7 +10013,7 @@ var _user$project$Aui_Toolbar$toolbar = function (inner) {
 			]));
 };
 
-var _user$project$Demo_Base$demoSection = F2(
+var _stil4m$elm_aui_css$Demo_Base$demoSection = F2(
 	function (title, content) {
 		return A2(
 			_elm_lang$html$Html$div,
@@ -10071,84 +10064,84 @@ var _user$project$Demo_Base$demoSection = F2(
 				]));
 	});
 
-var _user$project$Demo_Avatars$projectAvatar = '//docs.atlassian.com/aui/latest/docs/images/project-128.png';
-var _user$project$Demo_Avatars$personAvatar = '//docs.atlassian.com/aui/latest/docs/images/avatar-96.png';
-var _user$project$Demo_Avatars$view = A2(
-	_user$project$Demo_Base$demoSection,
+var _stil4m$elm_aui_css$Demo_Avatars$projectAvatar = '//docs.atlassian.com/aui/latest/docs/images/project-128.png';
+var _stil4m$elm_aui_css$Demo_Avatars$personAvatar = '//docs.atlassian.com/aui/latest/docs/images/avatar-96.png';
+var _stil4m$elm_aui_css$Demo_Avatars$view = A2(
+	_stil4m$elm_aui_css$Demo_Base$demoSection,
 	'Avatars',
 	_elm_lang$core$Native_List.fromArray(
 		[
 			A2(
-			_user$project$Aui_Avatars$avatar,
-			{size: _user$project$Aui_Avatars$XSmall, project: false},
-			_user$project$Demo_Avatars$personAvatar),
+			_stil4m$elm_aui_css$Aui_Avatars$avatar,
+			{size: _stil4m$elm_aui_css$Aui_Avatars$XSmall, project: false},
+			_stil4m$elm_aui_css$Demo_Avatars$personAvatar),
 			A2(
-			_user$project$Aui_Avatars$avatar,
-			{size: _user$project$Aui_Avatars$Small, project: false},
-			_user$project$Demo_Avatars$personAvatar),
+			_stil4m$elm_aui_css$Aui_Avatars$avatar,
+			{size: _stil4m$elm_aui_css$Aui_Avatars$Small, project: false},
+			_stil4m$elm_aui_css$Demo_Avatars$personAvatar),
 			A2(
-			_user$project$Aui_Avatars$avatar,
-			{size: _user$project$Aui_Avatars$Medium, project: false},
-			_user$project$Demo_Avatars$personAvatar),
+			_stil4m$elm_aui_css$Aui_Avatars$avatar,
+			{size: _stil4m$elm_aui_css$Aui_Avatars$Medium, project: false},
+			_stil4m$elm_aui_css$Demo_Avatars$personAvatar),
 			A2(
-			_user$project$Aui_Avatars$avatar,
-			{size: _user$project$Aui_Avatars$Large, project: false},
-			_user$project$Demo_Avatars$personAvatar),
+			_stil4m$elm_aui_css$Aui_Avatars$avatar,
+			{size: _stil4m$elm_aui_css$Aui_Avatars$Large, project: false},
+			_stil4m$elm_aui_css$Demo_Avatars$personAvatar),
 			A2(
-			_user$project$Aui_Avatars$avatar,
-			{size: _user$project$Aui_Avatars$XLarge, project: false},
-			_user$project$Demo_Avatars$personAvatar),
+			_stil4m$elm_aui_css$Aui_Avatars$avatar,
+			{size: _stil4m$elm_aui_css$Aui_Avatars$XLarge, project: false},
+			_stil4m$elm_aui_css$Demo_Avatars$personAvatar),
 			A2(
-			_user$project$Aui_Avatars$avatar,
-			{size: _user$project$Aui_Avatars$XXLarge, project: false},
-			_user$project$Demo_Avatars$personAvatar),
+			_stil4m$elm_aui_css$Aui_Avatars$avatar,
+			{size: _stil4m$elm_aui_css$Aui_Avatars$XXLarge, project: false},
+			_stil4m$elm_aui_css$Demo_Avatars$personAvatar),
 			A2(
-			_user$project$Aui_Avatars$avatar,
-			{size: _user$project$Aui_Avatars$XSmall, project: true},
-			_user$project$Demo_Avatars$projectAvatar),
+			_stil4m$elm_aui_css$Aui_Avatars$avatar,
+			{size: _stil4m$elm_aui_css$Aui_Avatars$XSmall, project: true},
+			_stil4m$elm_aui_css$Demo_Avatars$projectAvatar),
 			A2(
-			_user$project$Aui_Avatars$avatar,
-			{size: _user$project$Aui_Avatars$Small, project: true},
-			_user$project$Demo_Avatars$projectAvatar),
+			_stil4m$elm_aui_css$Aui_Avatars$avatar,
+			{size: _stil4m$elm_aui_css$Aui_Avatars$Small, project: true},
+			_stil4m$elm_aui_css$Demo_Avatars$projectAvatar),
 			A2(
-			_user$project$Aui_Avatars$avatar,
-			{size: _user$project$Aui_Avatars$Medium, project: true},
-			_user$project$Demo_Avatars$projectAvatar),
+			_stil4m$elm_aui_css$Aui_Avatars$avatar,
+			{size: _stil4m$elm_aui_css$Aui_Avatars$Medium, project: true},
+			_stil4m$elm_aui_css$Demo_Avatars$projectAvatar),
 			A2(
-			_user$project$Aui_Avatars$avatar,
-			{size: _user$project$Aui_Avatars$Large, project: true},
-			_user$project$Demo_Avatars$projectAvatar),
+			_stil4m$elm_aui_css$Aui_Avatars$avatar,
+			{size: _stil4m$elm_aui_css$Aui_Avatars$Large, project: true},
+			_stil4m$elm_aui_css$Demo_Avatars$projectAvatar),
 			A2(
-			_user$project$Aui_Avatars$avatar,
-			{size: _user$project$Aui_Avatars$XLarge, project: true},
-			_user$project$Demo_Avatars$projectAvatar),
+			_stil4m$elm_aui_css$Aui_Avatars$avatar,
+			{size: _stil4m$elm_aui_css$Aui_Avatars$XLarge, project: true},
+			_stil4m$elm_aui_css$Demo_Avatars$projectAvatar),
 			A2(
-			_user$project$Aui_Avatars$avatar,
-			{size: _user$project$Aui_Avatars$XXLarge, project: true},
-			_user$project$Demo_Avatars$projectAvatar)
+			_stil4m$elm_aui_css$Aui_Avatars$avatar,
+			{size: _stil4m$elm_aui_css$Aui_Avatars$XXLarge, project: true},
+			_stil4m$elm_aui_css$Demo_Avatars$projectAvatar)
 		]));
 
-var _user$project$Demo_Badges$presentBadge = function (n) {
+var _stil4m$elm_aui_css$Demo_Badges$presentBadge = function (n) {
 	return A2(
 		_elm_lang$html$Html$span,
 		_elm_lang$core$Native_List.fromArray(
 			[]),
 		_elm_lang$core$Native_List.fromArray(
 			[
-				_user$project$Aui_Badges$badge(
+				_stil4m$elm_aui_css$Aui_Badges$badge(
 				_elm_lang$core$Basics$toString(n)),
 				_elm_lang$html$Html$text(' ')
 			]));
 };
-var _user$project$Demo_Badges$view = A2(
-	_user$project$Demo_Base$demoSection,
+var _stil4m$elm_aui_css$Demo_Badges$view = A2(
+	_stil4m$elm_aui_css$Demo_Base$demoSection,
 	'Badges',
 	A2(
 		_elm_lang$core$List$map,
-		_user$project$Demo_Badges$presentBadge,
+		_stil4m$elm_aui_css$Demo_Badges$presentBadge,
 		_elm_lang$core$Native_List.range(1, 10)));
 
-var _user$project$Demo_Buttons$update = F2(
+var _stil4m$elm_aui_css$Demo_Buttons$update = F2(
 	function (msg, model) {
 		var _p0 = msg;
 		if (_p0.ctor === 'NoOp') {
@@ -10157,14 +10150,14 @@ var _user$project$Demo_Buttons$update = F2(
 			return _elm_lang$core$Maybe$Just(_p0._0);
 		}
 	});
-var _user$project$Demo_Buttons$model = _elm_lang$core$Maybe$Nothing;
-var _user$project$Demo_Buttons$NoOp = {ctor: 'NoOp'};
-var _user$project$Demo_Buttons$Clicked = function (a) {
+var _stil4m$elm_aui_css$Demo_Buttons$model = _elm_lang$core$Maybe$Nothing;
+var _stil4m$elm_aui_css$Demo_Buttons$NoOp = {ctor: 'NoOp'};
+var _stil4m$elm_aui_css$Demo_Buttons$Clicked = function (a) {
 	return {ctor: 'Clicked', _0: a};
 };
-var _user$project$Demo_Buttons$view = function (model) {
+var _stil4m$elm_aui_css$Demo_Buttons$view = function (model) {
 	return A2(
-		_user$project$Demo_Base$demoSection,
+		_stil4m$elm_aui_css$Demo_Base$demoSection,
 		'Buttons',
 		_elm_lang$core$Native_List.fromArray(
 			[
@@ -10215,17 +10208,17 @@ var _user$project$Demo_Buttons$view = function (model) {
 								_elm_lang$html$Html$text('Default')
 							])),
 						A3(
-						_user$project$Aui_Buttons$button,
-						_user$project$Aui_Buttons$baseConfig,
-						_user$project$Demo_Buttons$Clicked('Default'),
+						_stil4m$elm_aui_css$Aui_Buttons$button,
+						_stil4m$elm_aui_css$Aui_Buttons$baseConfig,
+						_stil4m$elm_aui_css$Demo_Buttons$Clicked('Default'),
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text('Default')
 							])),
 						A3(
-						_user$project$Aui_Buttons$button,
-						_user$project$Aui_Buttons$disable(_user$project$Aui_Buttons$baseConfig),
-						_user$project$Demo_Buttons$Clicked('Default Disabled'),
+						_stil4m$elm_aui_css$Aui_Buttons$button,
+						_stil4m$elm_aui_css$Aui_Buttons$disable(_stil4m$elm_aui_css$Aui_Buttons$baseConfig),
+						_stil4m$elm_aui_css$Demo_Buttons$Clicked('Default Disabled'),
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text('Default Disabled')
@@ -10252,18 +10245,18 @@ var _user$project$Demo_Buttons$view = function (model) {
 								_elm_lang$html$Html$text('Primary')
 							])),
 						A3(
-						_user$project$Aui_Buttons$button,
-						A2(_user$project$Aui_Buttons$withStyle, _user$project$Aui_Buttons$Primary, _user$project$Aui_Buttons$baseConfig),
-						_user$project$Demo_Buttons$Clicked('Primary'),
+						_stil4m$elm_aui_css$Aui_Buttons$button,
+						A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Primary, _stil4m$elm_aui_css$Aui_Buttons$baseConfig),
+						_stil4m$elm_aui_css$Demo_Buttons$Clicked('Primary'),
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text('Primary')
 							])),
 						A3(
-						_user$project$Aui_Buttons$button,
-						_user$project$Aui_Buttons$disable(
-							A2(_user$project$Aui_Buttons$withStyle, _user$project$Aui_Buttons$Primary, _user$project$Aui_Buttons$baseConfig)),
-						_user$project$Demo_Buttons$Clicked('Primary Disabled'),
+						_stil4m$elm_aui_css$Aui_Buttons$button,
+						_stil4m$elm_aui_css$Aui_Buttons$disable(
+							A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Primary, _stil4m$elm_aui_css$Aui_Buttons$baseConfig)),
+						_stil4m$elm_aui_css$Demo_Buttons$Clicked('Primary Disabled'),
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text('Primary Disabled')
@@ -10290,18 +10283,18 @@ var _user$project$Demo_Buttons$view = function (model) {
 								_elm_lang$html$Html$text('Light')
 							])),
 						A3(
-						_user$project$Aui_Buttons$button,
-						A2(_user$project$Aui_Buttons$withStyle, _user$project$Aui_Buttons$Light, _user$project$Aui_Buttons$baseConfig),
-						_user$project$Demo_Buttons$Clicked('Light'),
+						_stil4m$elm_aui_css$Aui_Buttons$button,
+						A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Light, _stil4m$elm_aui_css$Aui_Buttons$baseConfig),
+						_stil4m$elm_aui_css$Demo_Buttons$Clicked('Light'),
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text('Light')
 							])),
 						A3(
-						_user$project$Aui_Buttons$button,
-						_user$project$Aui_Buttons$disable(
-							A2(_user$project$Aui_Buttons$withStyle, _user$project$Aui_Buttons$Light, _user$project$Aui_Buttons$baseConfig)),
-						_user$project$Demo_Buttons$Clicked('Light Disabled'),
+						_stil4m$elm_aui_css$Aui_Buttons$button,
+						_stil4m$elm_aui_css$Aui_Buttons$disable(
+							A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Light, _stil4m$elm_aui_css$Aui_Buttons$baseConfig)),
+						_stil4m$elm_aui_css$Demo_Buttons$Clicked('Light Disabled'),
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text('Light Disabled')
@@ -10328,18 +10321,18 @@ var _user$project$Demo_Buttons$view = function (model) {
 								_elm_lang$html$Html$text('Subtle')
 							])),
 						A3(
-						_user$project$Aui_Buttons$button,
-						A2(_user$project$Aui_Buttons$withStyle, _user$project$Aui_Buttons$Subtle, _user$project$Aui_Buttons$baseConfig),
-						_user$project$Demo_Buttons$Clicked('Subtle'),
+						_stil4m$elm_aui_css$Aui_Buttons$button,
+						A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Subtle, _stil4m$elm_aui_css$Aui_Buttons$baseConfig),
+						_stil4m$elm_aui_css$Demo_Buttons$Clicked('Subtle'),
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text('Subtle')
 							])),
 						A3(
-						_user$project$Aui_Buttons$button,
-						_user$project$Aui_Buttons$disable(
-							A2(_user$project$Aui_Buttons$withStyle, _user$project$Aui_Buttons$Subtle, _user$project$Aui_Buttons$baseConfig)),
-						_user$project$Demo_Buttons$Clicked('Subtle Disabled'),
+						_stil4m$elm_aui_css$Aui_Buttons$button,
+						_stil4m$elm_aui_css$Aui_Buttons$disable(
+							A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Subtle, _stil4m$elm_aui_css$Aui_Buttons$baseConfig)),
+						_stil4m$elm_aui_css$Demo_Buttons$Clicked('Subtle Disabled'),
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text('Subtle Disabled')
@@ -10366,18 +10359,18 @@ var _user$project$Demo_Buttons$view = function (model) {
 								_elm_lang$html$Html$text('Link')
 							])),
 						A3(
-						_user$project$Aui_Buttons$button,
-						A2(_user$project$Aui_Buttons$withStyle, _user$project$Aui_Buttons$Link, _user$project$Aui_Buttons$baseConfig),
-						_user$project$Demo_Buttons$Clicked('Link'),
+						_stil4m$elm_aui_css$Aui_Buttons$button,
+						A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Link, _stil4m$elm_aui_css$Aui_Buttons$baseConfig),
+						_stil4m$elm_aui_css$Demo_Buttons$Clicked('Link'),
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text('Link')
 							])),
 						A3(
-						_user$project$Aui_Buttons$button,
-						_user$project$Aui_Buttons$disable(
-							A2(_user$project$Aui_Buttons$withStyle, _user$project$Aui_Buttons$Link, _user$project$Aui_Buttons$baseConfig)),
-						_user$project$Demo_Buttons$Clicked('Link Disabled'),
+						_stil4m$elm_aui_css$Aui_Buttons$button,
+						_stil4m$elm_aui_css$Aui_Buttons$disable(
+							A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Link, _stil4m$elm_aui_css$Aui_Buttons$baseConfig)),
+						_stil4m$elm_aui_css$Demo_Buttons$Clicked('Link Disabled'),
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text('Link Disabled')
@@ -10404,24 +10397,24 @@ var _user$project$Demo_Buttons$view = function (model) {
 								_elm_lang$html$Html$text('With href')
 							])),
 						A3(
-						_user$project$Aui_Buttons$button,
+						_stil4m$elm_aui_css$Aui_Buttons$button,
 						A2(
-							_user$project$Aui_Buttons$withHref,
+							_stil4m$elm_aui_css$Aui_Buttons$withHref,
 							'http://elm-lang.org/',
-							A2(_user$project$Aui_Buttons$withStyle, _user$project$Aui_Buttons$Link, _user$project$Aui_Buttons$baseConfig)),
-						_user$project$Demo_Buttons$NoOp,
+							A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Link, _stil4m$elm_aui_css$Aui_Buttons$baseConfig)),
+						_stil4m$elm_aui_css$Demo_Buttons$NoOp,
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text('Go to elm')
 							])),
 						A3(
-						_user$project$Aui_Buttons$button,
+						_stil4m$elm_aui_css$Aui_Buttons$button,
 						A2(
-							_user$project$Aui_Buttons$withHref,
+							_stil4m$elm_aui_css$Aui_Buttons$withHref,
 							'http://elm-lang.org/',
-							_user$project$Aui_Buttons$disable(
-								A2(_user$project$Aui_Buttons$withStyle, _user$project$Aui_Buttons$Link, _user$project$Aui_Buttons$baseConfig))),
-						_user$project$Demo_Buttons$NoOp,
+							_stil4m$elm_aui_css$Aui_Buttons$disable(
+								A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Link, _stil4m$elm_aui_css$Aui_Buttons$baseConfig))),
+						_stil4m$elm_aui_css$Demo_Buttons$NoOp,
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text('Go to elm (disabled)')
@@ -10447,29 +10440,29 @@ var _user$project$Demo_Buttons$view = function (model) {
 							[
 								_elm_lang$html$Html$text('Groups')
 							])),
-						_user$project$Aui_Buttons$buttonGroup(
+						_stil4m$elm_aui_css$Aui_Buttons$buttonGroup(
 						_elm_lang$core$Native_List.fromArray(
 							[
 								A3(
-								_user$project$Aui_Buttons$button,
-								_user$project$Aui_Buttons$baseConfig,
-								_user$project$Demo_Buttons$Clicked('Button 1'),
+								_stil4m$elm_aui_css$Aui_Buttons$button,
+								_stil4m$elm_aui_css$Aui_Buttons$baseConfig,
+								_stil4m$elm_aui_css$Demo_Buttons$Clicked('Button 1'),
 								_elm_lang$core$Native_List.fromArray(
 									[
 										_elm_lang$html$Html$text('Button 1')
 									])),
 								A3(
-								_user$project$Aui_Buttons$button,
-								_user$project$Aui_Buttons$baseConfig,
-								_user$project$Demo_Buttons$Clicked('Button 2'),
+								_stil4m$elm_aui_css$Aui_Buttons$button,
+								_stil4m$elm_aui_css$Aui_Buttons$baseConfig,
+								_stil4m$elm_aui_css$Demo_Buttons$Clicked('Button 2'),
 								_elm_lang$core$Native_List.fromArray(
 									[
 										_elm_lang$html$Html$text('Button 2')
 									])),
 								A3(
-								_user$project$Aui_Buttons$button,
-								_user$project$Aui_Buttons$baseConfig,
-								_user$project$Demo_Buttons$Clicked('Button 3'),
+								_stil4m$elm_aui_css$Aui_Buttons$button,
+								_stil4m$elm_aui_css$Aui_Buttons$baseConfig,
+								_stil4m$elm_aui_css$Demo_Buttons$Clicked('Button 3'),
 								_elm_lang$core$Native_List.fromArray(
 									[
 										_elm_lang$html$Html$text('Button 3')
@@ -10479,12 +10472,12 @@ var _user$project$Demo_Buttons$view = function (model) {
 			]));
 };
 
-var _user$project$Demo_Dropdown$update = F2(
+var _stil4m$elm_aui_css$Demo_Dropdown$update = F2(
 	function (msg, model) {
 		var _p0 = msg;
 		switch (_p0.ctor) {
 			case 'DropdownMsg1':
-				var newDropdown = A2(_user$project$Aui_Dropdown$update, _p0._0, model.dropdown1);
+				var newDropdown = A2(_stil4m$elm_aui_css$Aui_Dropdown$update, _p0._0, model.dropdown1);
 				return _elm_lang$core$Native_Utils.update(
 					model,
 					{dropdown1: newDropdown});
@@ -10492,10 +10485,10 @@ var _user$project$Demo_Dropdown$update = F2(
 				return _elm_lang$core$Native_Utils.update(
 					model,
 					{
-						dropdown1: _user$project$Aui_Dropdown$close(model.dropdown1)
+						dropdown1: _stil4m$elm_aui_css$Aui_Dropdown$close(model.dropdown1)
 					});
 			case 'DropdownMsg2':
-				var newDropdown = A2(_user$project$Aui_Dropdown$update, _p0._0, model.dropdown2);
+				var newDropdown = A2(_stil4m$elm_aui_css$Aui_Dropdown$update, _p0._0, model.dropdown2);
 				return _elm_lang$core$Native_Utils.update(
 					model,
 					{dropdown2: newDropdown});
@@ -10503,26 +10496,26 @@ var _user$project$Demo_Dropdown$update = F2(
 				return _elm_lang$core$Native_Utils.update(
 					model,
 					{
-						dropdown2: _user$project$Aui_Dropdown$close(model.dropdown2)
+						dropdown2: _stil4m$elm_aui_css$Aui_Dropdown$close(model.dropdown2)
 					});
 		}
 	});
-var _user$project$Demo_Dropdown$initialModel = {dropdown1: _user$project$Aui_Dropdown$initialModel, dropdown2: _user$project$Aui_Dropdown$initialModel};
-var _user$project$Demo_Dropdown$Model = F2(
+var _stil4m$elm_aui_css$Demo_Dropdown$initialModel = {dropdown1: _stil4m$elm_aui_css$Aui_Dropdown$initialModel, dropdown2: _stil4m$elm_aui_css$Aui_Dropdown$initialModel};
+var _stil4m$elm_aui_css$Demo_Dropdown$Model = F2(
 	function (a, b) {
 		return {dropdown1: a, dropdown2: b};
 	});
-var _user$project$Demo_Dropdown$SelectedItem2 = {ctor: 'SelectedItem2'};
-var _user$project$Demo_Dropdown$SelectedItem1 = {ctor: 'SelectedItem1'};
-var _user$project$Demo_Dropdown$DropdownMsg2 = function (a) {
+var _stil4m$elm_aui_css$Demo_Dropdown$SelectedItem2 = {ctor: 'SelectedItem2'};
+var _stil4m$elm_aui_css$Demo_Dropdown$SelectedItem1 = {ctor: 'SelectedItem1'};
+var _stil4m$elm_aui_css$Demo_Dropdown$DropdownMsg2 = function (a) {
 	return {ctor: 'DropdownMsg2', _0: a};
 };
-var _user$project$Demo_Dropdown$DropdownMsg1 = function (a) {
+var _stil4m$elm_aui_css$Demo_Dropdown$DropdownMsg1 = function (a) {
 	return {ctor: 'DropdownMsg1', _0: a};
 };
-var _user$project$Demo_Dropdown$view = function (model) {
+var _stil4m$elm_aui_css$Demo_Dropdown$view = function (model) {
 	return A2(
-		_user$project$Demo_Base$demoSection,
+		_stil4m$elm_aui_css$Demo_Base$demoSection,
 		'Dropdowns',
 		_elm_lang$core$Native_List.fromArray(
 			[
@@ -10539,14 +10532,14 @@ var _user$project$Demo_Dropdown$view = function (model) {
 				_elm_lang$core$Native_List.fromArray(
 					[
 						A4(
-						_user$project$Aui_Dropdown$dropdown,
+						_stil4m$elm_aui_css$Aui_Dropdown$dropdown,
 						A2(
-							_user$project$Aui_Dropdown$withStyle,
-							_user$project$Aui_Buttons$Primary,
+							_stil4m$elm_aui_css$Aui_Dropdown$withStyle,
+							_stil4m$elm_aui_css$Aui_Buttons$Primary,
 							A2(
-								_user$project$Aui_Dropdown$withAlignment,
-								_user$project$Aui_Dropdown$Left,
-								_user$project$Aui_Dropdown$baseConfig(_user$project$Demo_Dropdown$DropdownMsg1))),
+								_stil4m$elm_aui_css$Aui_Dropdown$withAlignment,
+								_stil4m$elm_aui_css$Aui_Dropdown$Left,
+								_stil4m$elm_aui_css$Aui_Dropdown$baseConfig(_stil4m$elm_aui_css$Demo_Dropdown$DropdownMsg1))),
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text('The Crimson Short One')
@@ -10554,7 +10547,7 @@ var _user$project$Demo_Dropdown$view = function (model) {
 						_elm_lang$core$Native_List.fromArray(
 							[
 								A2(
-								_user$project$Aui_Dropdown$dropdownSection,
+								_stil4m$elm_aui_css$Aui_Dropdown$dropdownSection,
 								_elm_lang$core$Maybe$Nothing,
 								_elm_lang$core$Native_List.fromArray(
 									[
@@ -10574,7 +10567,7 @@ var _user$project$Demo_Dropdown$view = function (model) {
 														_elm_lang$html$Html$a,
 														_elm_lang$core$Native_List.fromArray(
 															[
-																_elm_lang$html$Html_Events$onClick(_user$project$Demo_Dropdown$SelectedItem1)
+																_elm_lang$html$Html_Events$onClick(_stil4m$elm_aui_css$Demo_Dropdown$SelectedItem1)
 															]),
 														_elm_lang$core$Native_List.fromArray(
 															[
@@ -10591,7 +10584,7 @@ var _user$project$Demo_Dropdown$view = function (model) {
 														_elm_lang$html$Html$a,
 														_elm_lang$core$Native_List.fromArray(
 															[
-																_elm_lang$html$Html_Events$onClick(_user$project$Demo_Dropdown$SelectedItem1)
+																_elm_lang$html$Html_Events$onClick(_stil4m$elm_aui_css$Demo_Dropdown$SelectedItem1)
 															]),
 														_elm_lang$core$Native_List.fromArray(
 															[
@@ -10608,7 +10601,7 @@ var _user$project$Demo_Dropdown$view = function (model) {
 														_elm_lang$html$Html$a,
 														_elm_lang$core$Native_List.fromArray(
 															[
-																_elm_lang$html$Html_Events$onClick(_user$project$Demo_Dropdown$SelectedItem1)
+																_elm_lang$html$Html_Events$onClick(_stil4m$elm_aui_css$Demo_Dropdown$SelectedItem1)
 															]),
 														_elm_lang$core$Native_List.fromArray(
 															[
@@ -10625,7 +10618,7 @@ var _user$project$Demo_Dropdown$view = function (model) {
 														_elm_lang$html$Html$a,
 														_elm_lang$core$Native_List.fromArray(
 															[
-																_elm_lang$html$Html_Events$onClick(_user$project$Demo_Dropdown$SelectedItem1)
+																_elm_lang$html$Html_Events$onClick(_stil4m$elm_aui_css$Demo_Dropdown$SelectedItem1)
 															]),
 														_elm_lang$core$Native_List.fromArray(
 															[
@@ -10635,7 +10628,7 @@ var _user$project$Demo_Dropdown$view = function (model) {
 											]))
 									])),
 								A2(
-								_user$project$Aui_Dropdown$dropdownSection,
+								_stil4m$elm_aui_css$Aui_Dropdown$dropdownSection,
 								_elm_lang$core$Maybe$Just('Support Ships'),
 								_elm_lang$core$Native_List.fromArray(
 									[
@@ -10655,7 +10648,7 @@ var _user$project$Demo_Dropdown$view = function (model) {
 														_elm_lang$html$Html$a,
 														_elm_lang$core$Native_List.fromArray(
 															[
-																_elm_lang$html$Html_Events$onClick(_user$project$Demo_Dropdown$SelectedItem1)
+																_elm_lang$html$Html_Events$onClick(_stil4m$elm_aui_css$Demo_Dropdown$SelectedItem1)
 															]),
 														_elm_lang$core$Native_List.fromArray(
 															[
@@ -10672,7 +10665,7 @@ var _user$project$Demo_Dropdown$view = function (model) {
 														_elm_lang$html$Html$a,
 														_elm_lang$core$Native_List.fromArray(
 															[
-																_elm_lang$html$Html_Events$onClick(_user$project$Demo_Dropdown$SelectedItem1)
+																_elm_lang$html$Html_Events$onClick(_stil4m$elm_aui_css$Demo_Dropdown$SelectedItem1)
 															]),
 														_elm_lang$core$Native_List.fromArray(
 															[
@@ -10689,7 +10682,7 @@ var _user$project$Demo_Dropdown$view = function (model) {
 														_elm_lang$html$Html$a,
 														_elm_lang$core$Native_List.fromArray(
 															[
-																_elm_lang$html$Html_Events$onClick(_user$project$Demo_Dropdown$SelectedItem1)
+																_elm_lang$html$Html_Events$onClick(_stil4m$elm_aui_css$Demo_Dropdown$SelectedItem1)
 															]),
 														_elm_lang$core$Native_List.fromArray(
 															[
@@ -10699,7 +10692,7 @@ var _user$project$Demo_Dropdown$view = function (model) {
 											]))
 									])),
 								A2(
-								_user$project$Aui_Dropdown$dropdownSection,
+								_stil4m$elm_aui_css$Aui_Dropdown$dropdownSection,
 								_elm_lang$core$Maybe$Just('Other Ships'),
 								_elm_lang$core$Native_List.fromArray(
 									[
@@ -10719,7 +10712,7 @@ var _user$project$Demo_Dropdown$view = function (model) {
 														_elm_lang$html$Html$a,
 														_elm_lang$core$Native_List.fromArray(
 															[
-																_elm_lang$html$Html_Events$onClick(_user$project$Demo_Dropdown$SelectedItem1)
+																_elm_lang$html$Html_Events$onClick(_stil4m$elm_aui_css$Demo_Dropdown$SelectedItem1)
 															]),
 														_elm_lang$core$Native_List.fromArray(
 															[
@@ -10736,7 +10729,7 @@ var _user$project$Demo_Dropdown$view = function (model) {
 														_elm_lang$html$Html$a,
 														_elm_lang$core$Native_List.fromArray(
 															[
-																_elm_lang$html$Html_Events$onClick(_user$project$Demo_Dropdown$SelectedItem1)
+																_elm_lang$html$Html_Events$onClick(_stil4m$elm_aui_css$Demo_Dropdown$SelectedItem1)
 															]),
 														_elm_lang$core$Native_List.fromArray(
 															[
@@ -10753,7 +10746,7 @@ var _user$project$Demo_Dropdown$view = function (model) {
 														_elm_lang$html$Html$a,
 														_elm_lang$core$Native_List.fromArray(
 															[
-																_elm_lang$html$Html_Events$onClick(_user$project$Demo_Dropdown$SelectedItem1)
+																_elm_lang$html$Html_Events$onClick(_stil4m$elm_aui_css$Demo_Dropdown$SelectedItem1)
 															]),
 														_elm_lang$core$Native_List.fromArray(
 															[
@@ -10778,11 +10771,11 @@ var _user$project$Demo_Dropdown$view = function (model) {
 				_elm_lang$core$Native_List.fromArray(
 					[
 						A4(
-						_user$project$Aui_Dropdown$dropdown,
+						_stil4m$elm_aui_css$Aui_Dropdown$dropdown,
 						A2(
-							_user$project$Aui_Dropdown$withAlignment,
-							_user$project$Aui_Dropdown$Right,
-							_user$project$Aui_Dropdown$baseConfig(_user$project$Demo_Dropdown$DropdownMsg2)),
+							_stil4m$elm_aui_css$Aui_Dropdown$withAlignment,
+							_stil4m$elm_aui_css$Aui_Dropdown$Right,
+							_stil4m$elm_aui_css$Aui_Dropdown$baseConfig(_stil4m$elm_aui_css$Demo_Dropdown$DropdownMsg2)),
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text('Button')
@@ -10790,7 +10783,7 @@ var _user$project$Demo_Dropdown$view = function (model) {
 						_elm_lang$core$Native_List.fromArray(
 							[
 								A2(
-								_user$project$Aui_Dropdown$dropdownSection,
+								_stil4m$elm_aui_css$Aui_Dropdown$dropdownSection,
 								_elm_lang$core$Maybe$Just('Support '),
 								_elm_lang$core$Native_List.fromArray(
 									[
@@ -10810,7 +10803,7 @@ var _user$project$Demo_Dropdown$view = function (model) {
 														_elm_lang$html$Html$a,
 														_elm_lang$core$Native_List.fromArray(
 															[
-																_elm_lang$html$Html_Events$onClick(_user$project$Demo_Dropdown$SelectedItem2)
+																_elm_lang$html$Html_Events$onClick(_stil4m$elm_aui_css$Demo_Dropdown$SelectedItem2)
 															]),
 														_elm_lang$core$Native_List.fromArray(
 															[
@@ -10825,34 +10818,34 @@ var _user$project$Demo_Dropdown$view = function (model) {
 			]));
 };
 
-var _user$project$Demo_Expander$longText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
-var _user$project$Demo_Expander$update = F2(
+var _stil4m$elm_aui_css$Demo_Expander$longText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+var _stil4m$elm_aui_css$Demo_Expander$update = F2(
 	function (msg, model) {
 		var _p0 = msg;
-		return A2(_user$project$Aui_Expander$update, _p0._0, model);
+		return A2(_stil4m$elm_aui_css$Aui_Expander$update, _p0._0, model);
 	});
-var _user$project$Demo_Expander$initialModel = _user$project$Aui_Expander$initialModel;
-var _user$project$Demo_Expander$ExpanderMsg = function (a) {
+var _stil4m$elm_aui_css$Demo_Expander$initialModel = _stil4m$elm_aui_css$Aui_Expander$initialModel;
+var _stil4m$elm_aui_css$Demo_Expander$ExpanderMsg = function (a) {
 	return {ctor: 'ExpanderMsg', _0: a};
 };
-var _user$project$Demo_Expander$view = function (model) {
+var _stil4m$elm_aui_css$Demo_Expander$view = function (model) {
 	return A2(
-		_user$project$Demo_Base$demoSection,
+		_stil4m$elm_aui_css$Demo_Base$demoSection,
 		'Expander',
 		_elm_lang$core$Native_List.fromArray(
 			[
 				A3(
-				_user$project$Aui_Expander$expander,
-				_user$project$Aui_Expander$baseConfig(_user$project$Demo_Expander$ExpanderMsg),
-				_user$project$Demo_Expander$longText,
+				_stil4m$elm_aui_css$Aui_Expander$expander,
+				_stil4m$elm_aui_css$Aui_Expander$baseConfig(_stil4m$elm_aui_css$Demo_Expander$ExpanderMsg),
+				_stil4m$elm_aui_css$Demo_Expander$longText,
 				model)
 			]));
 };
 
-var _user$project$Demo_Icons$samples = _elm_lang$core$Native_List.fromArray(
-	[_user$project$Aui_Icons$Add, _user$project$Aui_Icons$CustomBullet, _user$project$Aui_Icons$ArrowsDown, _user$project$Aui_Icons$ArrowsLeft, _user$project$Aui_Icons$ArrowsRight, _user$project$Aui_Icons$ArrowsUp, _user$project$Aui_Icons$Layout3colLarge]);
-var _user$project$Demo_Icons$view = A2(
-	_user$project$Demo_Base$demoSection,
+var _stil4m$elm_aui_css$Demo_Icons$samples = _elm_lang$core$Native_List.fromArray(
+	[_stil4m$elm_aui_css$Aui_Icons$Add, _stil4m$elm_aui_css$Aui_Icons$CustomBullet, _stil4m$elm_aui_css$Aui_Icons$ArrowsDown, _stil4m$elm_aui_css$Aui_Icons$ArrowsLeft, _stil4m$elm_aui_css$Aui_Icons$ArrowsRight, _stil4m$elm_aui_css$Aui_Icons$ArrowsUp, _stil4m$elm_aui_css$Aui_Icons$Layout3colLarge]);
+var _stil4m$elm_aui_css$Demo_Icons$view = A2(
+	_stil4m$elm_aui_css$Demo_Base$demoSection,
 	'Icons',
 	_elm_lang$core$Native_List.fromArray(
 		[
@@ -10870,7 +10863,7 @@ var _user$project$Demo_Icons$view = A2(
 						[
 							_elm_lang$html$Html$text('Small Icons')
 						])),
-				A2(_elm_lang$core$List$map, _user$project$Aui_Icons$iconSmall, _user$project$Demo_Icons$samples))),
+				A2(_elm_lang$core$List$map, _stil4m$elm_aui_css$Aui_Icons$iconSmall, _stil4m$elm_aui_css$Demo_Icons$samples))),
 			A2(
 			_elm_lang$html$Html$div,
 			_elm_lang$core$Native_List.fromArray(
@@ -10885,7 +10878,7 @@ var _user$project$Demo_Icons$view = A2(
 						[
 							_elm_lang$html$Html$text('Large Icons')
 						])),
-				A2(_elm_lang$core$List$map, _user$project$Aui_Icons$iconLarge, _user$project$Demo_Icons$samples))),
+				A2(_elm_lang$core$List$map, _stil4m$elm_aui_css$Aui_Icons$iconLarge, _stil4m$elm_aui_css$Demo_Icons$samples))),
 			A2(
 			_elm_lang$html$Html$p,
 			_elm_lang$core$Native_List.fromArray(
@@ -10903,7 +10896,7 @@ var _user$project$Demo_Icons$view = A2(
 				]))
 		]));
 
-var _user$project$Demo_Labels$update = F2(
+var _stil4m$elm_aui_css$Demo_Labels$update = F2(
 	function (msg, model) {
 		var _p0 = msg;
 		if (_p0.ctor === 'Remove') {
@@ -10935,7 +10928,7 @@ var _user$project$Demo_Labels$update = F2(
 				{counter: model.counter + 1});
 		}
 	});
-var _user$project$Demo_Labels$model = {
+var _stil4m$elm_aui_css$Demo_Labels$model = {
 	removedItems: _elm_lang$core$Native_List.fromArray(
 		[]),
 	items: A2(
@@ -10949,17 +10942,17 @@ var _user$project$Demo_Labels$model = {
 		_elm_lang$core$Native_List.range(1, 5)),
 	counter: 0
 };
-var _user$project$Demo_Labels$Model = F3(
+var _stil4m$elm_aui_css$Demo_Labels$Model = F3(
 	function (a, b, c) {
 		return {removedItems: a, items: b, counter: c};
 	});
-var _user$project$Demo_Labels$Clicked = {ctor: 'Clicked'};
-var _user$project$Demo_Labels$Remove = function (a) {
+var _stil4m$elm_aui_css$Demo_Labels$Clicked = {ctor: 'Clicked'};
+var _stil4m$elm_aui_css$Demo_Labels$Remove = function (a) {
 	return {ctor: 'Remove', _0: a};
 };
-var _user$project$Demo_Labels$view = function (model) {
+var _stil4m$elm_aui_css$Demo_Labels$view = function (model) {
 	return A2(
-		_user$project$Demo_Base$demoSection,
+		_stil4m$elm_aui_css$Demo_Base$demoSection,
 		'Labels',
 		_elm_lang$core$Native_List.fromArray(
 			[
@@ -10982,22 +10975,22 @@ var _user$project$Demo_Labels$view = function (model) {
 				_elm_lang$core$Native_List.fromArray(
 					[
 						A2(
-						_user$project$Aui_Labels$label,
-						_user$project$Aui_Labels$baseConfig,
+						_stil4m$elm_aui_css$Aui_Labels$label,
+						_stil4m$elm_aui_css$Aui_Labels$baseConfig,
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text('Label text')
 							])),
 						A2(
-						_user$project$Aui_Labels$label,
-						A2(_user$project$Aui_Labels$withNavigate, 'http://elm-lang.org/', _user$project$Aui_Labels$baseConfig),
+						_stil4m$elm_aui_css$Aui_Labels$label,
+						A2(_stil4m$elm_aui_css$Aui_Labels$withNavigate, 'http://elm-lang.org/', _stil4m$elm_aui_css$Aui_Labels$baseConfig),
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text('To elm lang')
 							])),
 						A2(
-						_user$project$Aui_Labels$label,
-						A2(_user$project$Aui_Labels$onClick, _user$project$Demo_Labels$Clicked, _user$project$Aui_Labels$baseConfig),
+						_stil4m$elm_aui_css$Aui_Labels$label,
+						A2(_stil4m$elm_aui_css$Aui_Labels$onClick, _stil4m$elm_aui_css$Demo_Labels$Clicked, _stil4m$elm_aui_css$Aui_Labels$baseConfig),
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text('Clickable label')
@@ -11027,11 +11020,11 @@ var _user$project$Demo_Labels$view = function (model) {
 							_elm_lang$core$List$map,
 							function (x) {
 								return A2(
-									_user$project$Aui_Labels$label,
+									_stil4m$elm_aui_css$Aui_Labels$label,
 									A2(
-										_user$project$Aui_Labels$onRemove,
-										_user$project$Demo_Labels$Remove(x),
-										_user$project$Aui_Labels$baseConfig),
+										_stil4m$elm_aui_css$Aui_Labels$onRemove,
+										_stil4m$elm_aui_css$Demo_Labels$Remove(x),
+										_stil4m$elm_aui_css$Aui_Labels$baseConfig),
 									_elm_lang$core$Native_List.fromArray(
 										[
 											_elm_lang$html$Html$text(x)
@@ -11042,9 +11035,9 @@ var _user$project$Demo_Labels$view = function (model) {
 			]));
 };
 
-var _user$project$Demo_Lozenge$types = _elm_lang$core$Native_List.fromArray(
-	[_user$project$Aui_Lozenge$Generic, _user$project$Aui_Lozenge$Success, _user$project$Aui_Lozenge$Error, _user$project$Aui_Lozenge$Current, _user$project$Aui_Lozenge$Complete, _user$project$Aui_Lozenge$Moved]);
-var _user$project$Demo_Lozenge$presentLozenge = F2(
+var _stil4m$elm_aui_css$Demo_Lozenge$types = _elm_lang$core$Native_List.fromArray(
+	[_stil4m$elm_aui_css$Aui_Lozenge$Generic, _stil4m$elm_aui_css$Aui_Lozenge$Success, _stil4m$elm_aui_css$Aui_Lozenge$Error, _stil4m$elm_aui_css$Aui_Lozenge$Current, _stil4m$elm_aui_css$Aui_Lozenge$Complete, _stil4m$elm_aui_css$Aui_Lozenge$Moved]);
+var _stil4m$elm_aui_css$Demo_Lozenge$presentLozenge = F2(
 	function (p, t) {
 		return A2(
 			_elm_lang$html$Html$span,
@@ -11053,7 +11046,7 @@ var _user$project$Demo_Lozenge$presentLozenge = F2(
 			_elm_lang$core$Native_List.fromArray(
 				[
 					A3(
-					_user$project$Aui_Lozenge$lozenge,
+					_stil4m$elm_aui_css$Aui_Lozenge$lozenge,
 					p,
 					t,
 					_elm_lang$core$Native_List.fromArray(
@@ -11064,8 +11057,8 @@ var _user$project$Demo_Lozenge$presentLozenge = F2(
 					_elm_lang$html$Html$text(' ')
 				]));
 	});
-var _user$project$Demo_Lozenge$view = A2(
-	_user$project$Demo_Base$demoSection,
+var _stil4m$elm_aui_css$Demo_Lozenge$view = A2(
+	_stil4m$elm_aui_css$Demo_Base$demoSection,
 	'Lozenge',
 	_elm_lang$core$Native_List.fromArray(
 		[
@@ -11085,8 +11078,8 @@ var _user$project$Demo_Lozenge$view = A2(
 						])),
 				A2(
 					_elm_lang$core$List$map,
-					_user$project$Demo_Lozenge$presentLozenge(_user$project$Aui_Lozenge$Normal),
-					_user$project$Demo_Lozenge$types))),
+					_stil4m$elm_aui_css$Demo_Lozenge$presentLozenge(_stil4m$elm_aui_css$Aui_Lozenge$Normal),
+					_stil4m$elm_aui_css$Demo_Lozenge$types))),
 			A2(
 			_elm_lang$html$Html$div,
 			_elm_lang$core$Native_List.fromArray(
@@ -11103,15 +11096,15 @@ var _user$project$Demo_Lozenge$view = A2(
 						])),
 				A2(
 					_elm_lang$core$List$map,
-					_user$project$Demo_Lozenge$presentLozenge(_user$project$Aui_Lozenge$Subtle),
-					_user$project$Demo_Lozenge$types)))
+					_stil4m$elm_aui_css$Demo_Lozenge$presentLozenge(_stil4m$elm_aui_css$Aui_Lozenge$Subtle),
+					_stil4m$elm_aui_css$Demo_Lozenge$types)))
 		]));
 
-var _user$project$Demo_Messages$allTypes = _elm_lang$core$Native_List.fromArray(
-	[_user$project$Aui_Messages$Generic, _user$project$Aui_Messages$Error, _user$project$Aui_Messages$Warning, _user$project$Aui_Messages$Success, _user$project$Aui_Messages$Info, _user$project$Aui_Messages$Hint]);
-var _user$project$Demo_Messages$asMessage = function (t) {
+var _stil4m$elm_aui_css$Demo_Messages$allTypes = _elm_lang$core$Native_List.fromArray(
+	[_stil4m$elm_aui_css$Aui_Messages$Generic, _stil4m$elm_aui_css$Aui_Messages$Error, _stil4m$elm_aui_css$Aui_Messages$Warning, _stil4m$elm_aui_css$Aui_Messages$Success, _stil4m$elm_aui_css$Aui_Messages$Info, _stil4m$elm_aui_css$Aui_Messages$Hint]);
+var _stil4m$elm_aui_css$Demo_Messages$asMessage = function (t) {
 	return A3(
-		_user$project$Aui_Messages$message,
+		_stil4m$elm_aui_css$Aui_Messages$message,
 		t,
 		_elm_lang$core$Native_List.fromArray(
 			[
@@ -11123,7 +11116,7 @@ var _user$project$Demo_Messages$asMessage = function (t) {
 				_elm_lang$html$Html$text('Something important')
 			]));
 };
-var _user$project$Demo_Messages$update = F2(
+var _stil4m$elm_aui_css$Demo_Messages$update = F2(
 	function (msg, model) {
 		var _p0 = msg;
 		return A2(
@@ -11134,15 +11127,15 @@ var _user$project$Demo_Messages$update = F2(
 				})(_p0._0),
 			model);
 	});
-var _user$project$Demo_Messages$model = _user$project$Demo_Messages$allTypes;
-var _user$project$Demo_Messages$Close = function (a) {
+var _stil4m$elm_aui_css$Demo_Messages$model = _stil4m$elm_aui_css$Demo_Messages$allTypes;
+var _stil4m$elm_aui_css$Demo_Messages$Close = function (a) {
 	return {ctor: 'Close', _0: a};
 };
-var _user$project$Demo_Messages$asClosableMessage = function (t) {
+var _stil4m$elm_aui_css$Demo_Messages$asClosableMessage = function (t) {
 	return A4(
-		_user$project$Aui_Messages$closableMessage,
+		_stil4m$elm_aui_css$Aui_Messages$closableMessage,
 		t,
-		_user$project$Demo_Messages$Close(t),
+		_stil4m$elm_aui_css$Demo_Messages$Close(t),
 		_elm_lang$core$Native_List.fromArray(
 			[
 				_elm_lang$html$Html$text(
@@ -11153,9 +11146,9 @@ var _user$project$Demo_Messages$asClosableMessage = function (t) {
 				_elm_lang$html$Html$text('Something important')
 			]));
 };
-var _user$project$Demo_Messages$view = function (model) {
+var _stil4m$elm_aui_css$Demo_Messages$view = function (model) {
 	return A2(
-		_user$project$Demo_Base$demoSection,
+		_stil4m$elm_aui_css$Demo_Base$demoSection,
 		'Messages',
 		_elm_lang$core$Native_List.fromArray(
 			[
@@ -11173,7 +11166,7 @@ var _user$project$Demo_Messages$view = function (model) {
 							[
 								_elm_lang$html$Html$text('Stale messages')
 							])),
-					A2(_elm_lang$core$List$map, _user$project$Demo_Messages$asMessage, _user$project$Demo_Messages$allTypes))),
+					A2(_elm_lang$core$List$map, _stil4m$elm_aui_css$Demo_Messages$asMessage, _stil4m$elm_aui_css$Demo_Messages$allTypes))),
 				A2(
 				_elm_lang$html$Html$div,
 				_elm_lang$core$Native_List.fromArray(
@@ -11188,11 +11181,11 @@ var _user$project$Demo_Messages$view = function (model) {
 							[
 								_elm_lang$html$Html$text('Closable messages')
 							])),
-					A2(_elm_lang$core$List$map, _user$project$Demo_Messages$asClosableMessage, model)))
+					A2(_elm_lang$core$List$map, _stil4m$elm_aui_css$Demo_Messages$asClosableMessage, model)))
 			]));
 };
 
-var _user$project$Demo_ProgressIndicator$asIndicator = function (f) {
+var _stil4m$elm_aui_css$Demo_ProgressIndicator$asIndicator = function (f) {
 	return A2(
 		_elm_lang$html$Html$div,
 		_elm_lang$core$Native_List.fromArray(
@@ -11205,16 +11198,16 @@ var _user$project$Demo_ProgressIndicator$asIndicator = function (f) {
 			]),
 		_elm_lang$core$Native_List.fromArray(
 			[
-				_user$project$Aui_ProgressIndicator$progressIndicator(f)
+				_stil4m$elm_aui_css$Aui_ProgressIndicator$progressIndicator(f)
 			]));
 };
-var _user$project$Demo_ProgressIndicator$view = A2(
-	_user$project$Demo_Base$demoSection,
+var _stil4m$elm_aui_css$Demo_ProgressIndicator$view = A2(
+	_stil4m$elm_aui_css$Demo_Base$demoSection,
 	'Progress Indicators',
 	A2(
 		_elm_lang$core$List$map,
 		function (_p0) {
-			return _user$project$Demo_ProgressIndicator$asIndicator(
+			return _stil4m$elm_aui_css$Demo_ProgressIndicator$asIndicator(
 				A3(
 					_elm_lang$core$Basics$flip,
 					F2(
@@ -11226,8 +11219,8 @@ var _user$project$Demo_ProgressIndicator$view = A2(
 		},
 		_elm_lang$core$Native_List.range(0, 10)));
 
-var _user$project$Demo_ProgressTracker$view = A2(
-	_user$project$Demo_Base$demoSection,
+var _stil4m$elm_aui_css$Demo_ProgressTracker$view = A2(
+	_stil4m$elm_aui_css$Demo_Base$demoSection,
 	'Progress Trackers',
 	_elm_lang$core$Native_List.fromArray(
 		[
@@ -11244,17 +11237,17 @@ var _user$project$Demo_ProgressTracker$view = A2(
 			_elm_lang$core$Native_List.fromArray(
 				[
 					A2(
-					_user$project$Aui_ProgressTracker$progressTracker,
+					_stil4m$elm_aui_css$Aui_ProgressTracker$progressTracker,
 					_elm_lang$core$Native_List.fromArray(
 						['Step 1', 'Step 2', 'Step 3']),
 					0),
 					A2(
-					_user$project$Aui_ProgressTracker$progressTracker,
+					_stil4m$elm_aui_css$Aui_ProgressTracker$progressTracker,
 					_elm_lang$core$Native_List.fromArray(
 						['Step 1', 'Step 2', 'Step 3']),
 					1),
 					A2(
-					_user$project$Aui_ProgressTracker$progressTracker,
+					_stil4m$elm_aui_css$Aui_ProgressTracker$progressTracker,
 					_elm_lang$core$Native_List.fromArray(
 						['Step 1', 'Step 2', 'Step 3']),
 					2)
@@ -11273,32 +11266,45 @@ var _user$project$Demo_ProgressTracker$view = A2(
 			_elm_lang$core$Native_List.fromArray(
 				[
 					A2(
-					_user$project$Aui_ProgressTracker$invertedProgressTracker,
+					_stil4m$elm_aui_css$Aui_ProgressTracker$invertedProgressTracker,
 					_elm_lang$core$Native_List.fromArray(
 						['Step 1', 'Step 2', 'Step 3']),
 					0),
 					A2(
-					_user$project$Aui_ProgressTracker$invertedProgressTracker,
+					_stil4m$elm_aui_css$Aui_ProgressTracker$invertedProgressTracker,
 					_elm_lang$core$Native_List.fromArray(
 						['Step 1', 'Step 2', 'Step 3']),
 					1),
 					A2(
-					_user$project$Aui_ProgressTracker$invertedProgressTracker,
+					_stil4m$elm_aui_css$Aui_ProgressTracker$invertedProgressTracker,
 					_elm_lang$core$Native_List.fromArray(
 						['Step 1', 'Step 2', 'Step 3']),
 					2)
 				]))
 		]));
 
-var _user$project$Demo_Select$Model = function (a) {
+var _stil4m$elm_aui_css$Demo_Ports$blur = _elm_lang$core$Native_Platform.outgoingPort(
+	'blur',
+	function (v) {
+		return v;
+	});
+var _stil4m$elm_aui_css$Demo_Ports$focus = _elm_lang$core$Native_Platform.outgoingPort(
+	'focus',
+	function (v) {
+		return v;
+	});
+
+var _stil4m$elm_aui_css$Demo_Select$ports = {blur: _stil4m$elm_aui_css$Demo_Ports$blur, focus: _stil4m$elm_aui_css$Demo_Ports$focus};
+var _stil4m$elm_aui_css$Demo_Select$Model = function (a) {
 	return {selectModel: a};
 };
-var _user$project$Demo_Select$SelectMsg = function (a) {
+var _stil4m$elm_aui_css$Demo_Select$SelectMsg = function (a) {
 	return {ctor: 'SelectMsg', _0: a};
 };
-var _user$project$Demo_Select$model = function () {
-	var _p0 = A2(
-		_user$project$Aui_Select$initialModel,
+var _stil4m$elm_aui_css$Demo_Select$model = function () {
+	var _p0 = A3(
+		_stil4m$elm_aui_css$Aui_Select$initialModel,
+		_stil4m$elm_aui_css$Demo_Select$ports,
 		'product-select',
 		_elm_lang$core$Native_List.fromArray(
 			['JIRA', 'Confluence', 'Bamboo']));
@@ -11307,13 +11313,13 @@ var _user$project$Demo_Select$model = function () {
 	return {
 		ctor: '_Tuple2',
 		_0: {selectModel: selectModel},
-		_1: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Demo_Select$SelectMsg, selectCmds)
+		_1: A2(_elm_lang$core$Platform_Cmd$map, _stil4m$elm_aui_css$Demo_Select$SelectMsg, selectCmds)
 	};
 }();
-var _user$project$Demo_Select$update = F2(
+var _stil4m$elm_aui_css$Demo_Select$update = F2(
 	function (msg, model) {
 		var _p1 = msg;
-		var _p2 = A2(_user$project$Aui_Select$update, _p1._0, model.selectModel);
+		var _p2 = A2(_stil4m$elm_aui_css$Aui_Select$update, _p1._0, model.selectModel);
 		var newSelectModel = _p2._0;
 		var selectCmds = _p2._1;
 		return {
@@ -11321,12 +11327,12 @@ var _user$project$Demo_Select$update = F2(
 			_0: _elm_lang$core$Native_Utils.update(
 				model,
 				{selectModel: newSelectModel}),
-			_1: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Demo_Select$SelectMsg, selectCmds)
+			_1: A2(_elm_lang$core$Platform_Cmd$map, _stil4m$elm_aui_css$Demo_Select$SelectMsg, selectCmds)
 		};
 	});
-var _user$project$Demo_Select$view = function (model) {
+var _stil4m$elm_aui_css$Demo_Select$view = function (model) {
 	return A2(
-		_user$project$Demo_Base$demoSection,
+		_stil4m$elm_aui_css$Demo_Base$demoSection,
 		'Selects',
 		_elm_lang$core$Native_List.fromArray(
 			[
@@ -11340,11 +11346,11 @@ var _user$project$Demo_Select$view = function (model) {
 					[
 						A2(
 						_elm_lang$html$Html_App$map,
-						_user$project$Demo_Select$SelectMsg,
+						_stil4m$elm_aui_css$Demo_Select$SelectMsg,
 						A2(
-							_user$project$Aui_Select$singleSelect,
+							_stil4m$elm_aui_css$Aui_Select$singleSelect,
 							_elm_lang$core$Native_Utils.update(
-								_user$project$Aui_Select$baseConfig,
+								_stil4m$elm_aui_css$Aui_Select$baseConfig,
 								{
 									placeholder: _elm_lang$core$Maybe$Just('Select placeholder')
 								}),
@@ -11353,7 +11359,7 @@ var _user$project$Demo_Select$view = function (model) {
 			]));
 };
 
-var _user$project$Demo_Tabs$tabView = function (t) {
+var _stil4m$elm_aui_css$Demo_Tabs$tabView = function (t) {
 	var _p0 = t;
 	switch (_p0.ctor) {
 		case 'Lorem':
@@ -11385,45 +11391,45 @@ var _user$project$Demo_Tabs$tabView = function (t) {
 					]));
 	}
 };
-var _user$project$Demo_Tabs$update = F2(
+var _stil4m$elm_aui_css$Demo_Tabs$update = F2(
 	function (msg, model) {
 		var _p1 = msg;
-		return A2(_user$project$Aui_Tabs$update, _p1._0, model);
+		return A2(_stil4m$elm_aui_css$Aui_Tabs$update, _p1._0, model);
 	});
-var _user$project$Demo_Tabs$At = {ctor: 'At'};
-var _user$project$Demo_Tabs$Sed = {ctor: 'Sed'};
-var _user$project$Demo_Tabs$Lorem = {ctor: 'Lorem'};
-var _user$project$Demo_Tabs$initialModel = _user$project$Aui_Tabs$modelWithActive(_user$project$Demo_Tabs$Lorem);
-var _user$project$Demo_Tabs$items = _elm_lang$core$Native_List.fromArray(
+var _stil4m$elm_aui_css$Demo_Tabs$At = {ctor: 'At'};
+var _stil4m$elm_aui_css$Demo_Tabs$Sed = {ctor: 'Sed'};
+var _stil4m$elm_aui_css$Demo_Tabs$Lorem = {ctor: 'Lorem'};
+var _stil4m$elm_aui_css$Demo_Tabs$initialModel = _stil4m$elm_aui_css$Aui_Tabs$modelWithActive(_stil4m$elm_aui_css$Demo_Tabs$Lorem);
+var _stil4m$elm_aui_css$Demo_Tabs$items = _elm_lang$core$Native_List.fromArray(
 	[
-		{id: _user$project$Demo_Tabs$Lorem, name: 'Lorem'},
-		{id: _user$project$Demo_Tabs$Sed, name: 'Sed'},
-		{id: _user$project$Demo_Tabs$At, name: 'At'}
+		{id: _stil4m$elm_aui_css$Demo_Tabs$Lorem, name: 'Lorem'},
+		{id: _stil4m$elm_aui_css$Demo_Tabs$Sed, name: 'Sed'},
+		{id: _stil4m$elm_aui_css$Demo_Tabs$At, name: 'At'}
 	]);
-var _user$project$Demo_Tabs$TabsMsg = function (a) {
+var _stil4m$elm_aui_css$Demo_Tabs$TabsMsg = function (a) {
 	return {ctor: 'TabsMsg', _0: a};
 };
-var _user$project$Demo_Tabs$config = {horizontal: false, items: _user$project$Demo_Tabs$items, msgMap: _user$project$Demo_Tabs$TabsMsg};
-var _user$project$Demo_Tabs$view = function (model) {
+var _stil4m$elm_aui_css$Demo_Tabs$config = {horizontal: false, items: _stil4m$elm_aui_css$Demo_Tabs$items, msgMap: _stil4m$elm_aui_css$Demo_Tabs$TabsMsg};
+var _stil4m$elm_aui_css$Demo_Tabs$view = function (model) {
 	return A2(
-		_user$project$Demo_Base$demoSection,
+		_stil4m$elm_aui_css$Demo_Base$demoSection,
 		'Tabs',
 		_elm_lang$core$Native_List.fromArray(
 			[
-				A3(_user$project$Aui_Tabs$tabs, _user$project$Demo_Tabs$config, _user$project$Demo_Tabs$tabView, model),
+				A3(_stil4m$elm_aui_css$Aui_Tabs$tabs, _stil4m$elm_aui_css$Demo_Tabs$config, _stil4m$elm_aui_css$Demo_Tabs$tabView, model),
 				A3(
-				_user$project$Aui_Tabs$tabs,
+				_stil4m$elm_aui_css$Aui_Tabs$tabs,
 				_elm_lang$core$Native_Utils.update(
-					_user$project$Demo_Tabs$config,
+					_stil4m$elm_aui_css$Demo_Tabs$config,
 					{horizontal: true}),
-				_user$project$Demo_Tabs$tabView,
+				_stil4m$elm_aui_css$Demo_Tabs$tabView,
 				model)
 			]));
 };
 
-var _user$project$Demo_Toolbar$NoOp = {ctor: 'NoOp'};
-var _user$project$Demo_Toolbar$view = A2(
-	_user$project$Demo_Base$demoSection,
+var _stil4m$elm_aui_css$Demo_Toolbar$NoOp = {ctor: 'NoOp'};
+var _stil4m$elm_aui_css$Demo_Toolbar$view = A2(
+	_stil4m$elm_aui_css$Demo_Base$demoSection,
 	'Toolbar',
 	_elm_lang$core$Native_List.fromArray(
 		[
@@ -11440,86 +11446,86 @@ var _user$project$Demo_Toolbar$view = A2(
 				]),
 			_elm_lang$core$Native_List.fromArray(
 				[
-					_user$project$Aui_Toolbar$toolbar(
+					_stil4m$elm_aui_css$Aui_Toolbar$toolbar(
 					_elm_lang$core$Native_List.fromArray(
 						[
-							_user$project$Aui_Toolbar$toolbarPrimary(
+							_stil4m$elm_aui_css$Aui_Toolbar$toolbarPrimary(
 							_elm_lang$core$Native_List.fromArray(
 								[
-									_user$project$Aui_Buttons$buttonGroup(
+									_stil4m$elm_aui_css$Aui_Buttons$buttonGroup(
 									_elm_lang$core$Native_List.fromArray(
 										[
 											A3(
-											_user$project$Aui_Buttons$button,
-											_user$project$Aui_Buttons$baseConfig,
-											_user$project$Demo_Toolbar$NoOp,
+											_stil4m$elm_aui_css$Aui_Buttons$button,
+											_stil4m$elm_aui_css$Aui_Buttons$baseConfig,
+											_stil4m$elm_aui_css$Demo_Toolbar$NoOp,
 											_elm_lang$core$Native_List.fromArray(
 												[
 													_elm_lang$html$Html$text('Edit')
 												]))
 										])),
-									_user$project$Aui_Buttons$buttonGroup(
+									_stil4m$elm_aui_css$Aui_Buttons$buttonGroup(
 									_elm_lang$core$Native_List.fromArray(
 										[
 											A3(
-											_user$project$Aui_Buttons$button,
-											_user$project$Aui_Buttons$baseConfig,
-											_user$project$Demo_Toolbar$NoOp,
+											_stil4m$elm_aui_css$Aui_Buttons$button,
+											_stil4m$elm_aui_css$Aui_Buttons$baseConfig,
+											_stil4m$elm_aui_css$Demo_Toolbar$NoOp,
 											_elm_lang$core$Native_List.fromArray(
 												[
 													_elm_lang$html$Html$text('Assign')
 												])),
 											A3(
-											_user$project$Aui_Buttons$button,
-											_user$project$Aui_Buttons$baseConfig,
-											_user$project$Demo_Toolbar$NoOp,
+											_stil4m$elm_aui_css$Aui_Buttons$button,
+											_stil4m$elm_aui_css$Aui_Buttons$baseConfig,
+											_stil4m$elm_aui_css$Demo_Toolbar$NoOp,
 											_elm_lang$core$Native_List.fromArray(
 												[
 													_elm_lang$html$Html$text('Assign to me')
 												])),
 											A3(
-											_user$project$Aui_Buttons$button,
-											_user$project$Aui_Buttons$baseConfig,
-											_user$project$Demo_Toolbar$NoOp,
+											_stil4m$elm_aui_css$Aui_Buttons$button,
+											_stil4m$elm_aui_css$Aui_Buttons$baseConfig,
+											_stil4m$elm_aui_css$Demo_Toolbar$NoOp,
 											_elm_lang$core$Native_List.fromArray(
 												[
 													_elm_lang$html$Html$text('Assign to me')
 												])),
 											A3(
-											_user$project$Aui_Buttons$button,
-											_user$project$Aui_Buttons$baseConfig,
-											_user$project$Demo_Toolbar$NoOp,
+											_stil4m$elm_aui_css$Aui_Buttons$button,
+											_stil4m$elm_aui_css$Aui_Buttons$baseConfig,
+											_stil4m$elm_aui_css$Demo_Toolbar$NoOp,
 											_elm_lang$core$Native_List.fromArray(
 												[
 													_elm_lang$html$Html$text('Comment')
 												])),
 											A3(
-											_user$project$Aui_Buttons$button,
-											_user$project$Aui_Buttons$baseConfig,
-											_user$project$Demo_Toolbar$NoOp,
+											_stil4m$elm_aui_css$Aui_Buttons$button,
+											_stil4m$elm_aui_css$Aui_Buttons$baseConfig,
+											_stil4m$elm_aui_css$Demo_Toolbar$NoOp,
 											_elm_lang$core$Native_List.fromArray(
 												[
 													_elm_lang$html$Html$text('More')
 												]))
 										]))
 								])),
-							_user$project$Aui_Toolbar$toolbarSecondary(
+							_stil4m$elm_aui_css$Aui_Toolbar$toolbarSecondary(
 							_elm_lang$core$Native_List.fromArray(
 								[
 									A3(
-									_user$project$Aui_Buttons$button,
-									_user$project$Aui_Buttons$baseConfig,
-									_user$project$Demo_Toolbar$NoOp,
+									_stil4m$elm_aui_css$Aui_Buttons$button,
+									_stil4m$elm_aui_css$Aui_Buttons$baseConfig,
+									_stil4m$elm_aui_css$Demo_Toolbar$NoOp,
 									_elm_lang$core$Native_List.fromArray(
 										[
-											A2(_user$project$Aui_Icons$icon, _user$project$Aui_Icons$Small, _user$project$Aui_Icons$Configure)
+											A2(_stil4m$elm_aui_css$Aui_Icons$icon, _stil4m$elm_aui_css$Aui_Icons$Small, _stil4m$elm_aui_css$Aui_Icons$Configure)
 										]))
 								]))
 						]))
 				]))
 		]));
 
-var _user$project$Demo_Toggle$update = F2(
+var _stil4m$elm_aui_css$Demo_Toggle$update = F2(
 	function (msg, model) {
 		var _p0 = msg;
 		if (_p0.ctor === 'Switch1') {
@@ -11532,20 +11538,20 @@ var _user$project$Demo_Toggle$update = F2(
 				{toggle2: _p0._0});
 		}
 	});
-var _user$project$Demo_Toggle$initialModel = {toggle1: false, toggle2: true};
-var _user$project$Demo_Toggle$Model = F2(
+var _stil4m$elm_aui_css$Demo_Toggle$initialModel = {toggle1: false, toggle2: true};
+var _stil4m$elm_aui_css$Demo_Toggle$Model = F2(
 	function (a, b) {
 		return {toggle1: a, toggle2: b};
 	});
-var _user$project$Demo_Toggle$Switch2 = function (a) {
+var _stil4m$elm_aui_css$Demo_Toggle$Switch2 = function (a) {
 	return {ctor: 'Switch2', _0: a};
 };
-var _user$project$Demo_Toggle$Switch1 = function (a) {
+var _stil4m$elm_aui_css$Demo_Toggle$Switch1 = function (a) {
 	return {ctor: 'Switch1', _0: a};
 };
-var _user$project$Demo_Toggle$view = function (model) {
+var _stil4m$elm_aui_css$Demo_Toggle$view = function (model) {
 	return A2(
-		_user$project$Demo_Base$demoSection,
+		_stil4m$elm_aui_css$Demo_Base$demoSection,
 		'Toggles',
 		_elm_lang$core$Native_List.fromArray(
 			[
@@ -11561,7 +11567,7 @@ var _user$project$Demo_Toggle$view = function (model) {
 					]),
 				_elm_lang$core$Native_List.fromArray(
 					[
-						A3(_user$project$Aui_Toggle$toggle, true, _user$project$Demo_Toggle$Switch1, model.toggle1)
+						A3(_stil4m$elm_aui_css$Aui_Toggle$toggle, true, _stil4m$elm_aui_css$Demo_Toggle$Switch1, model.toggle1)
 					])),
 				A2(
 				_elm_lang$html$Html$div,
@@ -11575,7 +11581,7 @@ var _user$project$Demo_Toggle$view = function (model) {
 					]),
 				_elm_lang$core$Native_List.fromArray(
 					[
-						A3(_user$project$Aui_Toggle$toggle, true, _user$project$Demo_Toggle$Switch2, model.toggle2)
+						A3(_stil4m$elm_aui_css$Aui_Toggle$toggle, true, _stil4m$elm_aui_css$Demo_Toggle$Switch2, model.toggle2)
 					])),
 				A2(
 				_elm_lang$html$Html$div,
@@ -11589,13 +11595,13 @@ var _user$project$Demo_Toggle$view = function (model) {
 					]),
 				_elm_lang$core$Native_List.fromArray(
 					[
-						A3(_user$project$Aui_Toggle$toggle, false, _user$project$Demo_Toggle$Switch1, model.toggle1)
+						A3(_stil4m$elm_aui_css$Aui_Toggle$toggle, false, _stil4m$elm_aui_css$Demo_Toggle$Switch1, model.toggle1)
 					]))
 			]));
 };
 
-var _user$project$Demo_Main$intro = A2(
-	_user$project$Demo_Base$demoSection,
+var _stil4m$elm_aui_css$Demo_Main$intro = A2(
+	_stil4m$elm_aui_css$Demo_Base$demoSection,
 	'elm-aui-css',
 	_elm_lang$core$Native_List.fromArray(
 		[
@@ -11616,33 +11622,33 @@ var _user$project$Demo_Main$intro = A2(
 					_elm_lang$html$Html$text('If you find any bugs or request other components please file an issue in the repo.')
 				]))
 		]));
-var _user$project$Demo_Main$Model = F8(
+var _stil4m$elm_aui_css$Demo_Main$Model = F8(
 	function (a, b, c, d, e, f, g, h) {
 		return {buttons: a, labels: b, expander: c, messages: d, selects: e, tabs: f, toggles: g, dropdowns: h};
 	});
-var _user$project$Demo_Main$DropdownMsg = function (a) {
+var _stil4m$elm_aui_css$Demo_Main$DropdownMsg = function (a) {
 	return {ctor: 'DropdownMsg', _0: a};
 };
-var _user$project$Demo_Main$ToggleMsg = function (a) {
+var _stil4m$elm_aui_css$Demo_Main$ToggleMsg = function (a) {
 	return {ctor: 'ToggleMsg', _0: a};
 };
-var _user$project$Demo_Main$TabsMsg = function (a) {
+var _stil4m$elm_aui_css$Demo_Main$TabsMsg = function (a) {
 	return {ctor: 'TabsMsg', _0: a};
 };
-var _user$project$Demo_Main$SelectMsg = function (a) {
+var _stil4m$elm_aui_css$Demo_Main$SelectMsg = function (a) {
 	return {ctor: 'SelectMsg', _0: a};
 };
-var _user$project$Demo_Main$init = function () {
-	var _p0 = _user$project$Demo_Select$model;
+var _stil4m$elm_aui_css$Demo_Main$init = function () {
+	var _p0 = _stil4m$elm_aui_css$Demo_Select$model;
 	var selects = _p0._0;
 	var selectsCmds = _p0._1;
 	return {
 		ctor: '_Tuple2',
-		_0: {buttons: _user$project$Demo_Buttons$model, labels: _user$project$Demo_Labels$model, expander: _user$project$Demo_Expander$initialModel, messages: _user$project$Demo_Messages$model, selects: selects, tabs: _user$project$Demo_Tabs$initialModel, toggles: _user$project$Demo_Toggle$initialModel, dropdowns: _user$project$Demo_Dropdown$initialModel},
-		_1: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Demo_Main$SelectMsg, selectsCmds)
+		_0: {buttons: _stil4m$elm_aui_css$Demo_Buttons$model, labels: _stil4m$elm_aui_css$Demo_Labels$model, expander: _stil4m$elm_aui_css$Demo_Expander$initialModel, messages: _stil4m$elm_aui_css$Demo_Messages$model, selects: selects, tabs: _stil4m$elm_aui_css$Demo_Tabs$initialModel, toggles: _stil4m$elm_aui_css$Demo_Toggle$initialModel, dropdowns: _stil4m$elm_aui_css$Demo_Dropdown$initialModel},
+		_1: A2(_elm_lang$core$Platform_Cmd$map, _stil4m$elm_aui_css$Demo_Main$SelectMsg, selectsCmds)
 	};
 }();
-var _user$project$Demo_Main$update = F2(
+var _stil4m$elm_aui_css$Demo_Main$update = F2(
 	function (msg, model) {
 		var _p1 = msg;
 		switch (_p1.ctor) {
@@ -11654,7 +11660,7 @@ var _user$project$Demo_Main$update = F2(
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
 						{
-							buttons: A2(_user$project$Demo_Buttons$update, _p1._0, model.buttons)
+							buttons: A2(_stil4m$elm_aui_css$Demo_Buttons$update, _p1._0, model.buttons)
 						}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
@@ -11664,7 +11670,7 @@ var _user$project$Demo_Main$update = F2(
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
 						{
-							labels: A2(_user$project$Demo_Labels$update, _p1._0, model.labels)
+							labels: A2(_stil4m$elm_aui_css$Demo_Labels$update, _p1._0, model.labels)
 						}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
@@ -11674,7 +11680,7 @@ var _user$project$Demo_Main$update = F2(
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
 						{
-							expander: A2(_user$project$Demo_Expander$update, _p1._0, model.expander)
+							expander: A2(_stil4m$elm_aui_css$Demo_Expander$update, _p1._0, model.expander)
 						}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
@@ -11684,7 +11690,7 @@ var _user$project$Demo_Main$update = F2(
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
 						{
-							messages: A2(_user$project$Demo_Messages$update, _p1._0, model.messages)
+							messages: A2(_stil4m$elm_aui_css$Demo_Messages$update, _p1._0, model.messages)
 						}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
@@ -11694,7 +11700,7 @@ var _user$project$Demo_Main$update = F2(
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
 						{
-							tabs: A2(_user$project$Demo_Tabs$update, _p1._0, model.tabs)
+							tabs: A2(_stil4m$elm_aui_css$Demo_Tabs$update, _p1._0, model.tabs)
 						}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
@@ -11704,7 +11710,7 @@ var _user$project$Demo_Main$update = F2(
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
 						{
-							toggles: A2(_user$project$Demo_Toggle$update, _p1._0, model.toggles)
+							toggles: A2(_stil4m$elm_aui_css$Demo_Toggle$update, _p1._0, model.toggles)
 						}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
@@ -11714,12 +11720,12 @@ var _user$project$Demo_Main$update = F2(
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
 						{
-							dropdowns: A2(_user$project$Demo_Dropdown$update, _p1._0, model.dropdowns)
+							dropdowns: A2(_stil4m$elm_aui_css$Demo_Dropdown$update, _p1._0, model.dropdowns)
 						}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 			default:
-				var _p2 = A2(_user$project$Demo_Select$update, _p1._0, model.selects);
+				var _p2 = A2(_stil4m$elm_aui_css$Demo_Select$update, _p1._0, model.selects);
 				var newSelects = _p2._0;
 				var selectsCmds = _p2._1;
 				return {
@@ -11727,24 +11733,24 @@ var _user$project$Demo_Main$update = F2(
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
 						{selects: newSelects}),
-					_1: A2(_elm_lang$core$Platform_Cmd$map, _user$project$Demo_Main$SelectMsg, selectsCmds)
+					_1: A2(_elm_lang$core$Platform_Cmd$map, _stil4m$elm_aui_css$Demo_Main$SelectMsg, selectsCmds)
 				};
 		}
 	});
-var _user$project$Demo_Main$MessagesMsg = function (a) {
+var _stil4m$elm_aui_css$Demo_Main$MessagesMsg = function (a) {
 	return {ctor: 'MessagesMsg', _0: a};
 };
-var _user$project$Demo_Main$ExpanderMsg = function (a) {
+var _stil4m$elm_aui_css$Demo_Main$ExpanderMsg = function (a) {
 	return {ctor: 'ExpanderMsg', _0: a};
 };
-var _user$project$Demo_Main$LabelsMsg = function (a) {
+var _stil4m$elm_aui_css$Demo_Main$LabelsMsg = function (a) {
 	return {ctor: 'LabelsMsg', _0: a};
 };
-var _user$project$Demo_Main$ButtonMsg = function (a) {
+var _stil4m$elm_aui_css$Demo_Main$ButtonMsg = function (a) {
 	return {ctor: 'ButtonMsg', _0: a};
 };
-var _user$project$Demo_Main$NoOp = {ctor: 'NoOp'};
-var _user$project$Demo_Main$view = function (model) {
+var _stil4m$elm_aui_css$Demo_Main$NoOp = {ctor: 'NoOp'};
+var _stil4m$elm_aui_css$Demo_Main$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
 		_elm_lang$core$Native_List.fromArray(
@@ -11759,90 +11765,90 @@ var _user$project$Demo_Main$view = function (model) {
 					[]),
 				_elm_lang$core$Native_List.fromArray(
 					[
-						_user$project$Demo_Main$intro,
+						_stil4m$elm_aui_css$Demo_Main$intro,
 						A2(
 						_elm_lang$html$Html_App$map,
 						function (x) {
-							return _user$project$Demo_Main$NoOp;
+							return _stil4m$elm_aui_css$Demo_Main$NoOp;
 						},
-						_user$project$Demo_Avatars$view),
+						_stil4m$elm_aui_css$Demo_Avatars$view),
 						A2(
 						_elm_lang$html$Html_App$map,
 						function (x) {
-							return _user$project$Demo_Main$NoOp;
+							return _stil4m$elm_aui_css$Demo_Main$NoOp;
 						},
-						_user$project$Demo_Toolbar$view),
+						_stil4m$elm_aui_css$Demo_Toolbar$view),
 						A2(
 						_elm_lang$html$Html_App$map,
-						_user$project$Demo_Main$DropdownMsg,
-						_user$project$Demo_Dropdown$view(model.dropdowns)),
+						_stil4m$elm_aui_css$Demo_Main$DropdownMsg,
+						_stil4m$elm_aui_css$Demo_Dropdown$view(model.dropdowns)),
 						A2(
 						_elm_lang$html$Html_App$map,
-						_user$project$Demo_Main$ToggleMsg,
-						_user$project$Demo_Toggle$view(model.toggles)),
+						_stil4m$elm_aui_css$Demo_Main$ToggleMsg,
+						_stil4m$elm_aui_css$Demo_Toggle$view(model.toggles)),
 						A2(
 						_elm_lang$html$Html_App$map,
-						_user$project$Demo_Main$TabsMsg,
-						_user$project$Demo_Tabs$view(model.tabs)),
+						_stil4m$elm_aui_css$Demo_Main$TabsMsg,
+						_stil4m$elm_aui_css$Demo_Tabs$view(model.tabs)),
 						A2(
 						_elm_lang$html$Html_App$map,
-						_user$project$Demo_Main$SelectMsg,
-						_user$project$Demo_Select$view(model.selects)),
+						_stil4m$elm_aui_css$Demo_Main$SelectMsg,
+						_stil4m$elm_aui_css$Demo_Select$view(model.selects)),
 						A2(
 						_elm_lang$html$Html_App$map,
 						function (x) {
-							return _user$project$Demo_Main$NoOp;
+							return _stil4m$elm_aui_css$Demo_Main$NoOp;
 						},
-						_user$project$Demo_Badges$view),
+						_stil4m$elm_aui_css$Demo_Badges$view),
 						A2(
 						_elm_lang$html$Html_App$map,
-						_user$project$Demo_Main$ButtonMsg,
-						_user$project$Demo_Buttons$view(model.buttons)),
+						_stil4m$elm_aui_css$Demo_Main$ButtonMsg,
+						_stil4m$elm_aui_css$Demo_Buttons$view(model.buttons)),
 						A2(
 						_elm_lang$html$Html_App$map,
-						_user$project$Demo_Main$LabelsMsg,
-						_user$project$Demo_Labels$view(model.labels)),
+						_stil4m$elm_aui_css$Demo_Main$LabelsMsg,
+						_stil4m$elm_aui_css$Demo_Labels$view(model.labels)),
 						A2(
 						_elm_lang$html$Html_App$map,
-						_user$project$Demo_Main$ExpanderMsg,
-						_user$project$Demo_Expander$view(model.expander)),
+						_stil4m$elm_aui_css$Demo_Main$ExpanderMsg,
+						_stil4m$elm_aui_css$Demo_Expander$view(model.expander)),
 						A2(
 						_elm_lang$html$Html_App$map,
 						function (x) {
-							return _user$project$Demo_Main$NoOp;
+							return _stil4m$elm_aui_css$Demo_Main$NoOp;
 						},
-						_user$project$Demo_Icons$view),
+						_stil4m$elm_aui_css$Demo_Icons$view),
 						A2(
 						_elm_lang$html$Html_App$map,
 						function (x) {
-							return _user$project$Demo_Main$NoOp;
+							return _stil4m$elm_aui_css$Demo_Main$NoOp;
 						},
-						_user$project$Demo_Lozenge$view),
+						_stil4m$elm_aui_css$Demo_Lozenge$view),
 						A2(
 						_elm_lang$html$Html_App$map,
-						_user$project$Demo_Main$MessagesMsg,
-						_user$project$Demo_Messages$view(model.messages)),
-						A2(
-						_elm_lang$html$Html_App$map,
-						function (x) {
-							return _user$project$Demo_Main$NoOp;
-						},
-						_user$project$Demo_ProgressIndicator$view),
+						_stil4m$elm_aui_css$Demo_Main$MessagesMsg,
+						_stil4m$elm_aui_css$Demo_Messages$view(model.messages)),
 						A2(
 						_elm_lang$html$Html_App$map,
 						function (x) {
-							return _user$project$Demo_Main$NoOp;
+							return _stil4m$elm_aui_css$Demo_Main$NoOp;
 						},
-						_user$project$Demo_ProgressTracker$view)
+						_stil4m$elm_aui_css$Demo_ProgressIndicator$view),
+						A2(
+						_elm_lang$html$Html_App$map,
+						function (x) {
+							return _stil4m$elm_aui_css$Demo_Main$NoOp;
+						},
+						_stil4m$elm_aui_css$Demo_ProgressTracker$view)
 					]))
 			]));
 };
-var _user$project$Demo_Main$main = {
+var _stil4m$elm_aui_css$Demo_Main$main = {
 	main: _elm_lang$html$Html_App$program(
 		{
-			init: _user$project$Demo_Main$init,
-			view: _user$project$Demo_Main$view,
-			update: _user$project$Demo_Main$update,
+			init: _stil4m$elm_aui_css$Demo_Main$init,
+			view: _stil4m$elm_aui_css$Demo_Main$view,
+			update: _stil4m$elm_aui_css$Demo_Main$update,
 			subscriptions: function (x) {
 				return _elm_lang$core$Platform_Sub$none;
 			}
@@ -11852,7 +11858,7 @@ var _user$project$Demo_Main$main = {
 var Elm = {};
 Elm['Demo'] = Elm['Demo'] || {};
 Elm['Demo']['Main'] = Elm['Demo']['Main'] || {};
-_elm_lang$core$Native_Platform.addPublicModule(Elm['Demo']['Main'], 'Demo.Main', typeof _user$project$Demo_Main$main === 'undefined' ? null : _user$project$Demo_Main$main);
+_elm_lang$core$Native_Platform.addPublicModule(Elm['Demo']['Main'], 'Demo.Main', typeof _stil4m$elm_aui_css$Demo_Main$main === 'undefined' ? null : _stil4m$elm_aui_css$Demo_Main$main);
 
 if (typeof define === "function" && define['amd'])
 {

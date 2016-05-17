@@ -10,18 +10,22 @@ elm package install stil4m/elm-aui-css
 
 ## Notes
 
-Currently there is one component that uses ports (Single Select) to focus and blur input,
-thus to set up the usage of this component properly you need to add the following Javascript to the Elm bootstrap:
+Currently there is one component that requires ports (Single Select) to focus and blur input. You should setup this for example as follows:
 
 ```
-var app = Elm.YourApp.fullscreen();
-app.ports.auiBlur.subscribe(function(selector) {
-    document.querySelector(selector).blur();
-});
-app.ports.auiFocus.subscribe(function(selector) {
-    document.querySelector(selector).focus();
-});
+port module MyModule (..)
+
+port blur : String -> Cmd msg
+port focus : String -> Cmd msg
+
+initialModel =
+    { selectModel =
+        initialModel { blur = blur, focus = focus } ...
+    , ...
+    }
 ```
+
+See `Demo/Select.elm` for more details. `index.html` contains information how to set up the ports.
 
 ## Supported Components
 
