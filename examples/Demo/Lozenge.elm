@@ -10,11 +10,11 @@ view =
     demoSection "Lozenge"
         [ div []
             (h3 [] [ text "Normal Lozenges" ]
-                :: (List.map (presentLozenge Normal) types)
+                :: (List.map (presentLozenge normal) types)
             )
         , div []
             (h3 [] [ text "Subtle Lozenges" ]
-                :: (List.map (presentLozenge Subtle) types)
+                :: (List.map (presentLozenge subtle) types)
             )
         ]
 
@@ -29,4 +29,4 @@ presentLozenge p t =
 
 types : List Type
 types =
-    [ Generic, Success, Error, Current, Complete, Moved ]
+    [ generic, success, error, current, complete, moved ]

@@ -1,11 +1,15 @@
-module Aui.Dropdown exposing (dropdown, dropdownSection, Style, Model, initialModel, Msg, Alignment(..), baseConfig, withAlignment, withStyle, update, Config, open, close)
+module Aui.Dropdown exposing (dropdown, dropdownSection, Model, initialModel, Msg, Alignment, leftAlignment, rightAlignment, baseConfig, withAlignment, withStyle, update, Config, open, close)
 
 {-| Functions to present AUI buttons and groups.
 
 
+# Alignment
+
+@docs Alignment, leftAlignment, rightAlignment
+
 # Types
 
-@docs Style, Alignment, Config
+@docs Config
 
 # Model
 
@@ -24,17 +28,17 @@ module Aui.Dropdown exposing (dropdown, dropdownSection, Style, Model, initialMo
 @docs baseConfig, withAlignment, withStyle
 -}
 
-import Aui.Buttons exposing (Style(Normal), forceAnchor, withAdditionalClass, withActive)
+import Aui.Buttons exposing (normalStyle, baseConfig, forceAnchor, withAdditionalClass, withActive)
 import Aui.Backdrop exposing (backdrop)
 import Html exposing (Html, div, strong, text, ul, li, a)
 import Html.Attributes exposing (style, class, tabindex)
 import Html.App as HA
 
 
-{-| Style for the dropdown.
--}
-type alias Style =
-    Aui.Buttons.Style
+-- {-| Style for the dropdown.
+-- -}
+-- type alias Style =
+-- Aui.Buttons.Style
 
 
 {-| Alignment relative to the button for the dropdown container.
@@ -44,15 +48,33 @@ type Alignment
     | Right
 
 
-{-| Configuration record to show a dropdown component.
+{-| Left alignment of the dropdown respectively to the button
 -}
-type alias Config a =
+leftAlignment : Alignment
+leftAlignment =
+    Left
+
+
+{-| Right alignment of the dropdown respectively to the button
+-}
+rightAlignment : Alignment
+rightAlignment =
+    Right
+
+
+type alias InnerConfig a =
     { zIndexBackdrop : Int
-    , style : Style
+    , style : Aui.Buttons.Style
     , disabled : Bool
     , msgMap : Msg -> a
     , alignment : Alignment
     }
+
+
+{-| Configuration type to show a dropdown component.
+-}
+type Config a
+    = Config (InnerConfig a)
 
 
 {-| Messages being sent by the dropdown component
@@ -111,7 +133,7 @@ update msg model =
         dropdownModel
 -}
 dropdown : Config a -> List (Html Msg) -> List (Html a) -> Model -> Html a
-dropdown config buttonInner dropdownInner model =
+dropdown (Config config) buttonInner dropdownInner model =
     let
         contentDisplay =
             if model.open then
@@ -175,23 +197,24 @@ dropdownSection title inner =
 -}
 baseConfig : (Msg -> a) -> Config a
 baseConfig msgMap =
-    { zIndexBackdrop = 99
-    , style = Normal
-    , disabled = False
-    , msgMap = msgMap
-    , alignment = Left
-    }
+    Config
+        { zIndexBackdrop = 99
+        , style = normalStyle
+        , disabled = False
+        , msgMap = msgMap
+        , alignment = Left
+        }
 
 
 {-| Align the container for the dropdown to the side of the dropdown button.
 -}
 withAlignment : Alignment -> Config a -> Config a
-withAlignment x config =
-    { config | alignment = x }
+withAlignment x (Config config) =
+    Config { config | alignment = x }
 
 
 {-| Set the style of the dropdown button.
 -}
-withStyle : Style -> Config a -> Config a
-withStyle x config =
-    { config | style = x }
+withStyle : Aui.Buttons.Style -> Config a -> Config a
+withStyle x (Config config) =
+    Config { config | style = x }

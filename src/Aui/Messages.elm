@@ -1,15 +1,16 @@
-module Aui.Messages exposing (Type(..), message, closableMessage)
+module Aui.Messages exposing (message, closableMessage, Type, generic, error, warning, success, info, hint)
 
 {-| Functions to present AUI messages.
 
 
-# Types
-
-@docs Type
-
 # Presentation
 
 @docs message, closableMessage
+
+# Types
+
+@docs Type, generic, error, warning, success, info, hint
+
 
 -}
 
@@ -28,6 +29,48 @@ type Type
     | Success
     | Info
     | Hint
+
+
+{-| Generic type for message
+-}
+generic : Type
+generic =
+    Generic
+
+
+{-| Error type for message
+-}
+error : Type
+error =
+    Error
+
+
+{-| Warning type for message
+-}
+warning : Type
+warning =
+    Warning
+
+
+{-| Success type for message
+-}
+success : Type
+success =
+    Success
+
+
+{-| Info type for message
+-}
+info : Type
+info =
+    Info
+
+
+{-| Hint type for message
+-}
+hint : Type
+hint =
+    Hint
 
 
 {-| Create a message.

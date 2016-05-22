@@ -1,4 +1,4 @@
-module Aui.ProgressIndicator exposing (progressIndicator,activeProgressIndicator)
+module Aui.ProgressIndicator exposing (progressIndicator, activeProgressIndicator)
 
 {-| Functions to present AUI progress indicator.
 
@@ -19,12 +19,13 @@ progressIndicator : Float -> Html a
 progressIndicator value =
     let
         ( w, attrs ) =
-                ( value * 100.0, [ class "aui-progress-indicator", attribute "data-value" "" ] )
+            ( value * 100.0, [ class "aui-progress-indicator", attribute "data-value" "" ] )
     in
         div attrs
             [ span [ class "aui-progress-indicator-value", style [ ( "width", toString w ++ "%" ) ] ]
                 []
             ]
+
 
 {-| Create a progress indicator that represents an active loading state.
 -}

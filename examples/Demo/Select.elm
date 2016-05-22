@@ -49,7 +49,7 @@ view model =
     demoSection "Selects"
         [ form [ class "aui" ]
             [ Html.App.map SelectMsg
-                <| singleSelect { baseConfig | placeholder = Just "Select placeholder" }
+                <| singleSelect (baseConfig |> withPlaceholder "Select placeholder")
                     model.selectModel
             ]
         ]

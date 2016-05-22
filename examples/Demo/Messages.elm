@@ -52,4 +52,4 @@ asMessage t =
 
 allTypes : List Type
 allTypes =
-    [ Generic, Error, Warning, Success, Info, Hint ]
+    [ generic, error, warning, success, info, hint ]

@@ -1,7 +1,7 @@
 module Demo.Dropdown exposing (view, initialModel, update, Model, Msg)
 
 import Aui.Dropdown exposing (..)
-import Aui.Buttons exposing (Style(Primary))
+import Aui.Buttons exposing (primaryStyle)
 import Demo.Base exposing (demoSection)
 import Html exposing (Html, text, ul, li, a, div, span)
 import Html.Attributes exposing (style)
@@ -32,7 +32,7 @@ view : Model -> Html Msg
 view model =
     demoSection "Dropdowns"
         [ span [ style [ ( "padding", "5px" ) ] ]
-            [ dropdown (baseConfig DropdownMsg1 |> withAlignment Left |> withStyle Primary)
+            [ dropdown (baseConfig DropdownMsg1 |> withAlignment leftAlignment |> withStyle primaryStyle)
                 [ text "The Crimson Short One" ]
                 [ dropdownSection Nothing
                     [ ul []
@@ -60,7 +60,7 @@ view model =
                 model.dropdown1
             ]
         , span [ style [ ( "padding", "5px" ) ] ]
-            [ dropdown (baseConfig DropdownMsg2 |> withAlignment Right)
+            [ dropdown (baseConfig DropdownMsg2 |> withAlignment rightAlignment)
                 [ text "Button" ]
                 [ dropdownSection (Just "Support ")
                     [ ul []

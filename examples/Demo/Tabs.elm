@@ -27,8 +27,8 @@ initialModel =
 view : Model -> Html Msg
 view model =
     demoSection "Tabs"
-        [ tabs config tabView model
-        , tabs { config | horizontal = True } tabView model
+        [ tabs (baseConfig TabsMsg |> horizontal |> withItems headers) tabView model
+        , tabs (baseConfig TabsMsg |> vertical |> withItems headers) tabView model
         ]
 
 
@@ -39,17 +39,12 @@ update msg model =
             Aui.Tabs.update x model
 
 
-items : List (Item ItemId)
-items =
-    [ { id = Lorem, name = "Lorem" }
-    , { id = Sed, name = "Sed" }
-    , { id = At, name = "At" }
+headers : List (Item ItemId)
+headers =
+    [ item Lorem "Lorem"
+    , item Sed "Sed"
+    , item At "At"
     ]
-
-
-config : Config Msg ItemId
-config =
-    { horizontal = False, items = items, msgMap = TabsMsg }
 
 
 tabView : ItemId -> Html a

@@ -1,10 +1,10 @@
-module Aui.Tabs exposing (tabs, Config, Item, Msg, Model, modelWithActive, update)
+module Aui.Tabs exposing (tabs, Msg, Model, modelWithActive, update, Item, item, Config, baseConfig, horizontal, vertical, withItems)
 
 {-| Functions to present AUI tabs.
 
 # Types
 
-@docs Msg, Config, Item
+@docs Msg, Config
 
 # Model
 
@@ -18,6 +18,15 @@ module Aui.Tabs exposing (tabs, Config, Item, Msg, Model, modelWithActive, updat
 
 @docs tabs
 
+# ITems
+
+@docs Item, item
+
+
+# Config
+
+@docs Config, baseConfig, horizontal, vertical, withItems
+
 -}
 
 import Html exposing (Html, div, ul, li, a, text)
@@ -28,11 +37,47 @@ import Html.App as HA
 
 {-| Configuration record to show a tabs component.
 -}
-type alias Config a itemId =
+type Config a itemId
+    = Config (InnerConfig a itemId)
+
+
+type alias InnerConfig a itemId =
     { horizontal : Bool
     , items : List (Item itemId)
     , msgMap : Msg itemId -> a
     }
+
+
+{-| Basic configuration for the tabs
+-}
+baseConfig : (Msg itemId -> a) -> Config a itemId
+baseConfig msgMap =
+    Config
+        { horizontal = True
+        , items = []
+        , msgMap = msgMap
+        }
+
+
+{-| Make configuration have horizontal tabs
+-}
+horizontal : Config a itemId -> Config a itemId
+horizontal (Config config) =
+    Config { config | horizontal = True }
+
+
+{-| Make configuration have vertical tabs
+-}
+vertical : Config a itemId -> Config a itemId
+vertical (Config config) =
+    Config { config | horizontal = False }
+
+
+{-| Set items for tab
+-}
+withItems : List (Item itemId) -> Config a itemId -> Config a itemId
+withItems items (Config config) =
+    Config { config | items = items }
 
 
 {-| Model for the tabs component.
@@ -43,8 +88,15 @@ type alias Model itemId =
 
 {-| Representation of a single tab.
 -}
-type alias Item itemId =
-    { id : itemId, name : String }
+type Item itemId
+    = Item { id : itemId, name : String }
+
+
+{-| Creates an item
+-}
+item : itemId -> String -> Item itemId
+item id name =
+    Item { id = id, name = name }
 
 
 {-| Messages being sent by the tabs component
@@ -63,7 +115,7 @@ modelWithActive =
 {-| Create a tabs component with a given configuration, a mapper from itemId to tab content and a model
 -}
 tabs : Config a itemId -> (itemId -> Html a) -> Model itemId -> Html a
-tabs config cb model =
+tabs (Config config) cb model =
     let
         tabClass =
             if config.horizontal then
@@ -82,7 +134,7 @@ tabs config cb model =
 update : Msg itemId -> Model itemId -> Model itemId
 update msg model =
     case msg of
-        Select x ->
+        Select (Item x) ->
             Just x.id
 
 
@@ -104,7 +156,7 @@ menu items model =
 
 
 asItem : Model itemId -> Item itemId -> Html (Msg itemId)
-asItem model opt =
+asItem model (Item opt) =
     let
         active =
             case model of
@@ -121,6 +173,6 @@ asItem model opt =
                 "menu-item"
     in
         li [ class activeClass ]
-            [ a [ attribute "role" "tab", onClick (Select opt) ]
+            [ a [ attribute "role" "tab", onClick (Select (Item opt)) ]
                 [ text opt.name ]
             ]

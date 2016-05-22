@@ -1,19 +1,22 @@
-module Aui.Labels exposing (label, baseConfig, withNavigate, onClick, onRemove, Config, Action(..))
+module Aui.Labels exposing (label, Action, navigate, trigger, Config, baseConfig, onClick, onRemove)
 
 {-| Functions to present AUI labels.
 
-
-# Types
-
-@docs Action, Config
 
 # Presentation
 
 @docs label
 
+# Actions
+
+@docs Action, navigate, trigger
+# Types
+
+@docs Config
+
 # Utility
 
-@docs baseConfig, withNavigate, onClick, onRemove
+@docs baseConfig, onClick, onRemove
 -}
 
 import Html exposing (Html, span, a, text)
@@ -28,12 +31,45 @@ type Action a
     | Trigger a
 
 
+{-| Action to navigate to an url
+-}
+navigate : String -> Action a
+navigate url =
+    Navigate url
+
+
+{-| Action to trigger an action on click
+-}
+trigger : a -> Action a
+trigger x =
+    Trigger x
+
+
 {-| Configuration to present a label.
 -}
-type alias Config a =
-    { onRemove : Maybe a
-    , onClick : Maybe (Action a)
-    }
+type Config a
+    = Config (Maybe a) (Maybe (Action a))
+
+
+{-| Base configuration to show a label. No actions are bound by default.
+-}
+baseConfig : Config a
+baseConfig =
+    Config Nothing Nothing
+
+
+{-| Bind action to click on label
+-}
+onClick : Action a -> Config a -> Config a
+onClick x (Config onRemove _) =
+    Config onRemove (Just x)
+
+
+{-| Allow the label to be removed triggering the given message.
+-}
+onRemove : a -> Config a -> Config a
+onRemove x (Config _ onClick) =
+    Config (Just x) onClick
 
 
 {-| Show a label with a given configuration and content .
@@ -44,7 +80,7 @@ type alias Config a =
         [ text "Please remove or click me!" ]
 -}
 label : Config a -> List (Html a) -> Html a
-label { onClick, onRemove } inner =
+label (Config onRemove onClick) inner =
     let
         classString =
             if onRemove == Nothing then
@@ -73,36 +109,6 @@ label { onClick, onRemove } inner =
     in
         elem (class classString :: actionAttrs')
             inner'
-
-
-{-| Base configuration to show a label. No actions are bound by default.
--}
-baseConfig : Config a
-baseConfig =
-    { onRemove = Nothing
-    , onClick = Nothing
-    }
-
-
-{-| Allow navigation to a given link by clicking the label text.
--}
-withNavigate : String -> Config a -> Config a
-withNavigate x config =
-    { config | onClick = Just (Navigate x) }
-
-
-{-| Allow navigation to a given link by clicking the label text.
--}
-onClick : a -> Config a -> Config a
-onClick x config =
-    { config | onClick = Just (Trigger x) }
-
-
-{-| Allow the label to be removed triggering the given message.
--}
-onRemove : a -> Config a -> Config a
-onRemove x config =
-    { config | onRemove = Just x }
 
 
 labelRemoveSpan : a -> Html a

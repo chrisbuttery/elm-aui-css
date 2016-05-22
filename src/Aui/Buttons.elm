@@ -1,19 +1,22 @@
-module Aui.Buttons exposing (baseConfig, buttonGroup, disable, button, withStyle, withHref, withActive, withAdditionalClass, forceAnchor, Config, Style(..))
+module Aui.Buttons exposing (baseConfig, buttonGroup, disable, button, withStyle, withHref, withActive, withAdditionalClass, forceAnchor, Config, Style, primaryStyle, normalStyle, subtleStyle, lightStyle, linkStyle)
 
 {-| Functions to present AUI buttons and groups.
 
 
-# Types
+# Style
 
-@docs Style, Config
+@docs Style, primaryStyle, normalStyle, subtleStyle, lightStyle, linkStyle
+
+# Config
+
+@docs Config, baseConfig, disable, withStyle, withHref, withActive, withAdditionalClass, forceAnchor
+
+# Config
 
 # Presentation
 
 @docs button, buttonGroup
 
-# Utility
-
-@docs baseConfig, disable, withStyle, withHref, withActive, withAdditionalClass, forceAnchor
 -}
 
 import Html exposing (Html, p)
@@ -31,9 +34,37 @@ type Style
     | Link
 
 
-{-| Configuration record for presenting a button.
--}
-type alias Config =
+{-| -}
+primaryStyle : Style
+primaryStyle =
+    Primary
+
+
+{-| -}
+normalStyle : Style
+normalStyle =
+    Normal
+
+
+{-| -}
+subtleStyle : Style
+subtleStyle =
+    Subtle
+
+
+{-| -}
+lightStyle : Style
+lightStyle =
+    Light
+
+
+{-| -}
+linkStyle : Style
+linkStyle =
+    Link
+
+
+type alias InnerConfig =
     { style : Style
     , forceAnchor : Bool
     , disabled : Bool
@@ -41,6 +72,12 @@ type alias Config =
     , active : Bool
     , additionalClass : Maybe String
     }
+
+
+{-| Configuration type for presenting a button.
+-}
+type Config
+    = Config InnerConfig
 
 
 {-| Button container that will add the correct classes to make a button group.
@@ -64,7 +101,7 @@ buttonGroup buttons =
         [ text "Click me!"]
 -}
 button : Config -> a -> List (Html a) -> Html a
-button config click inner =
+button (Config config) click inner =
     let
         classAttr =
             class <| config2buttonClass config
@@ -97,7 +134,7 @@ button config click inner =
         elem attrs inner
 
 
-config2buttonClass : Config -> String
+config2buttonClass : InnerConfig -> String
 config2buttonClass { style, active, additionalClass } =
     let
         styleClass =
@@ -135,13 +172,14 @@ config2buttonClass { style, active, additionalClass } =
 -}
 baseConfig : Config
 baseConfig =
-    { style = Normal
-    , forceAnchor = False
-    , disabled = False
-    , href = Nothing
-    , active = False
-    , additionalClass = Nothing
-    }
+    Config
+        { style = Normal
+        , forceAnchor = False
+        , disabled = False
+        , href = Nothing
+        , active = False
+        , additionalClass = Nothing
+        }
 
 
 {-| Add the disabled state to a button.
@@ -149,8 +187,8 @@ baseConfig =
     baseConfig |> disable
 -}
 disable : Config -> Config
-disable c =
-    { c | disabled = True }
+disable (Config c) =
+    Config { c | disabled = True }
 
 
 {-| Add a button style to the configuration.
@@ -158,8 +196,8 @@ disable c =
     baseConfig |> withStyle Subtle
 -}
 withStyle : Style -> Config -> Config
-withStyle s config =
-    { config | style = s }
+withStyle s (Config config) =
+    Config { config | style = s }
 
 
 {-| Add a href to the buttons configuration.
@@ -167,8 +205,8 @@ withStyle s config =
     baseConfig |> withHref "http://elm-lang.org/"
 -}
 withHref : String -> Config -> Config
-withHref href config =
-    { config | href = Just href }
+withHref href (Config config) =
+    Config { config | href = Just href }
 
 
 {-| Make a button active or not active.
@@ -176,8 +214,8 @@ withHref href config =
     baseConfig |> withActive True
 -}
 withActive : Bool -> Config -> Config
-withActive active config =
-    { config | active = active }
+withActive active (Config config) =
+    Config { config | active = active }
 
 
 {-| Add additional classes to the button
@@ -185,8 +223,8 @@ withActive active config =
     baseConfig |> additionalClass "my-button"
 -}
 withAdditionalClass : String -> Config -> Config
-withAdditionalClass cl config =
-    { config | additionalClass = Just cl }
+withAdditionalClass cl (Config config) =
+    Config { config | additionalClass = Just cl }
 
 
 {-| Forces the anchor tag to be used instead of the default button tag (only if no href is specified).
@@ -194,5 +232,5 @@ withAdditionalClass cl config =
     baseConfig |> forceAnchor
 -}
 forceAnchor : Config -> Config
-forceAnchor config =
-    { config | forceAnchor = True }
+forceAnchor (Config config) =
+    Config { config | forceAnchor = True }

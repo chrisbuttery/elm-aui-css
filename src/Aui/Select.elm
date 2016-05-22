@@ -1,8 +1,8 @@
-module Aui.Select exposing (singleSelect, Config, Model, initialModel, update, Ports, Msg, baseConfig)
+module Aui.Select exposing (singleSelect, Model, initialModel, update, Ports, Msg, Config, baseConfig, withPlaceholder, withZIndex)
 
 {-| Functions to present AUI select.
 
-# Types
+# Type
 
 @docs Msg, Config, Ports
 
@@ -18,9 +18,9 @@ module Aui.Select exposing (singleSelect, Config, Model, initialModel, update, P
 
 @docs singleSelect
 
-# Utility
+# Config
 
-@docs baseConfig
+@docs Config, baseConfig, withPlaceholder, withZIndex
 
 -}
 
@@ -50,7 +50,11 @@ type Msg
 
 {-| Configuration record to show a dropdown component.
 -}
-type alias Config =
+type Config
+    = Config InnerConfig
+
+
+type alias InnerConfig =
     { zIndexBackdrop : Int
     , placeholder : Maybe String
     }
@@ -79,9 +83,24 @@ type alias Model =
 -}
 baseConfig : Config
 baseConfig =
-    { zIndexBackdrop = 99
-    , placeholder = Nothing
-    }
+    Config
+        { zIndexBackdrop = 99
+        , placeholder = Nothing
+        }
+
+
+{-| Change backdrop z index of select
+-}
+withZIndex : Int -> Config -> Config
+withZIndex x (Config config) =
+    Config { config | zIndexBackdrop = x }
+
+
+{-| Change placeholder of select
+-}
+withPlaceholder : String -> Config -> Config
+withPlaceholder x (Config config) =
+    Config { config | placeholder = Just x }
 
 
 {-| Initial model for a select.
@@ -103,7 +122,7 @@ initialModel ports identifier items =
 {-| Create a single select with a configuration and a model.
 -}
 singleSelect : Config -> Model -> Html Msg
-singleSelect config model =
+singleSelect (Config config) model =
     let
         popoverDisplay =
             if model.open then

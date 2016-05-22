@@ -1,11 +1,11 @@
-module Aui.Expander exposing (expander, Config, baseConfig, Model, initialModel, Msg, update)
+module Aui.Expander exposing (expander, Model, initialModel, Msg, update, Config, baseConfig, withMoreText, withLessText, withMinHeight)
 
 {-| Functions to present AUI expander.
 
 
-# Types
+# Config
 
-@docs Config
+@docs Config, withMinHeight, withMoreText, withLessText`
 
 # Model
 
@@ -33,11 +33,15 @@ import String exposing (toLower)
 
 {-| Configuration record for presenting an expander.
 -}
-type alias Config a =
+type Config a
+    = Config (InnerConfig a)
+
+
+type alias InnerConfig a =
     { moreText : String
     , lessText : String
     , msgMap : Msg -> a
-    , minHeight : Maybe String
+    , minHeight : String
     }
 
 
@@ -77,11 +81,11 @@ update msg model =
             model.expander
 -}
 expander : Config a -> String -> Model -> Html a
-expander config body model =
+expander (Config config) body model =
     div
         [ class "aui-expander-content"
         , attribute "aria-expanded" (toLower <| toString model)
-        , style [ ( "min-height", Maybe.withDefault "" config.minHeight ) ]
+        , style [ ( "min-height", config.minHeight ) ]
         ]
         [ text body
         , HA.map config.msgMap
@@ -103,8 +107,30 @@ expander config body model =
 -}
 baseConfig : (Msg -> a) -> Config a
 baseConfig x =
-    { moreText = "Show more"
-    , lessText = "Show less"
-    , msgMap = x
-    , minHeight = Just "1.5em"
-    }
+    Config
+        { moreText = "Show more"
+        , lessText = "Show less"
+        , msgMap = x
+        , minHeight = "1.5em"
+        }
+
+
+{-| Set more text for configuration
+-}
+withMoreText : String -> Config a -> Config a
+withMoreText x (Config config) =
+    Config { config | moreText = x }
+
+
+{-| Set less text for configuration
+-}
+withLessText : String -> Config a -> Config a
+withLessText x (Config config) =
+    Config { config | lessText = x }
+
+
+{-| Set less text for configuration
+-}
+withMinHeight : String -> Config a -> Config a
+withMinHeight x (Config config) =
+    Config { config | minHeight = x }

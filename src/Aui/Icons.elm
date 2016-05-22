@@ -1,15 +1,19 @@
-module Aui.Icons exposing (Icon(..), icon, iconSmall, iconLarge, Size(..))
+module Aui.Icons exposing (Icon(..), icon, iconSmall, iconLarge, rawIcon, Size, large, small)
 
 {-| Functions to present AUI icons.
 
 
-# Types
+# Size
 
-@docs Icon, Size
+@docs Size, large, small
 
 # Presentation
 
-@docs icon, iconSmall, iconLarge
+@docs icon, iconSmall, iconLarge, rawIcon
+
+# Icon
+
+@docs Icon
 
 -}
 
@@ -17,6 +21,23 @@ import Html exposing (Html, span)
 import Html.Attributes exposing (class)
 import Regex exposing (regex, replace, HowMany(All))
 import String exposing (toLower)
+
+
+{-| Create an icon with an icon class that is not included in the api
+
+    rawIcon small "aui-iconfont-add"
+-}
+rawIcon : Size -> String -> Html a
+rawIcon size i =
+    let
+        sizeClass =
+            if size == Large then
+                "large"
+            else
+                "small"
+    in
+        span [ class ("aui-icon aui-icon-" ++ sizeClass ++ " " ++ i) ]
+            []
 
 
 {-| Create an icon with a given size and type.
@@ -66,6 +87,20 @@ icon2class i =
 type Size
     = Large
     | Small
+
+
+{-| Large sized icon
+-}
+large : Size
+large =
+    Large
+
+
+{-| Small sized icon
+-}
+small : Size
+small =
+    Small
 
 
 {-| Available icon types. See official configuration for icon names. For all icon names the following convention is applied: from `add-comment` to `AddComment`
