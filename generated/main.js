@@ -8428,8 +8428,8 @@ var _stil4m$elm_aui_css$Aui_Avatars$size2class = function (s) {
 var _stil4m$elm_aui_css$Aui_Avatars$avatar = F2(
 	function (_p1, source) {
 		var _p2 = _p1;
-		var sizeClass = _stil4m$elm_aui_css$Aui_Avatars$size2class(_p2.size);
-		var projectClass = _p2.project ? 'aui-avatar-project ' : '';
+		var sizeClass = _stil4m$elm_aui_css$Aui_Avatars$size2class(_p2._0);
+		var projectClass = _p2._1 ? 'aui-avatar-project ' : '';
 		return A2(
 			_elm_lang$html$Html$span,
 			_elm_lang$core$Native_List.fromArray(
@@ -8461,10 +8461,6 @@ var _stil4m$elm_aui_css$Aui_Avatars$avatar = F2(
 						]))
 				]));
 	});
-var _stil4m$elm_aui_css$Aui_Avatars$Config = F2(
-	function (a, b) {
-		return {size: a, project: b};
-	});
 var _stil4m$elm_aui_css$Aui_Avatars$XXXLarge = {ctor: 'XXXLarge'};
 var _stil4m$elm_aui_css$Aui_Avatars$XXLarge = {ctor: 'XXLarge'};
 var _stil4m$elm_aui_css$Aui_Avatars$XLarge = {ctor: 'XLarge'};
@@ -8472,6 +8468,43 @@ var _stil4m$elm_aui_css$Aui_Avatars$Large = {ctor: 'Large'};
 var _stil4m$elm_aui_css$Aui_Avatars$Medium = {ctor: 'Medium'};
 var _stil4m$elm_aui_css$Aui_Avatars$Small = {ctor: 'Small'};
 var _stil4m$elm_aui_css$Aui_Avatars$XSmall = {ctor: 'XSmall'};
+var _stil4m$elm_aui_css$Aui_Avatars$Config = F2(
+	function (a, b) {
+		return {ctor: 'Config', _0: a, _1: b};
+	});
+var _stil4m$elm_aui_css$Aui_Avatars$config = A2(_stil4m$elm_aui_css$Aui_Avatars$Config, _stil4m$elm_aui_css$Aui_Avatars$Medium, false);
+var _stil4m$elm_aui_css$Aui_Avatars$xsmall = function (_p3) {
+	var _p4 = _p3;
+	return A2(_stil4m$elm_aui_css$Aui_Avatars$Config, _stil4m$elm_aui_css$Aui_Avatars$XSmall, _p4._1);
+};
+var _stil4m$elm_aui_css$Aui_Avatars$small = function (_p5) {
+	var _p6 = _p5;
+	return A2(_stil4m$elm_aui_css$Aui_Avatars$Config, _stil4m$elm_aui_css$Aui_Avatars$Small, _p6._1);
+};
+var _stil4m$elm_aui_css$Aui_Avatars$medium = function (_p7) {
+	var _p8 = _p7;
+	return A2(_stil4m$elm_aui_css$Aui_Avatars$Config, _stil4m$elm_aui_css$Aui_Avatars$Medium, _p8._1);
+};
+var _stil4m$elm_aui_css$Aui_Avatars$large = function (_p9) {
+	var _p10 = _p9;
+	return A2(_stil4m$elm_aui_css$Aui_Avatars$Config, _stil4m$elm_aui_css$Aui_Avatars$Large, _p10._1);
+};
+var _stil4m$elm_aui_css$Aui_Avatars$xlarge = function (_p11) {
+	var _p12 = _p11;
+	return A2(_stil4m$elm_aui_css$Aui_Avatars$Config, _stil4m$elm_aui_css$Aui_Avatars$XLarge, _p12._1);
+};
+var _stil4m$elm_aui_css$Aui_Avatars$xxlarge = function (_p13) {
+	var _p14 = _p13;
+	return A2(_stil4m$elm_aui_css$Aui_Avatars$Config, _stil4m$elm_aui_css$Aui_Avatars$XXLarge, _p14._1);
+};
+var _stil4m$elm_aui_css$Aui_Avatars$xxxlarge = function (_p15) {
+	var _p16 = _p15;
+	return A2(_stil4m$elm_aui_css$Aui_Avatars$Config, _stil4m$elm_aui_css$Aui_Avatars$XXXLarge, _p16._1);
+};
+var _stil4m$elm_aui_css$Aui_Avatars$project = function (_p17) {
+	var _p18 = _p17;
+	return A2(_stil4m$elm_aui_css$Aui_Avatars$Config, _p18._0, true);
+};
 
 var _stil4m$elm_aui_css$Aui_Backdrop$backdrop = F3(
 	function (zIndex, msg, visible) {
@@ -8518,44 +8551,6 @@ var _stil4m$elm_aui_css$Aui_Badges$badge = function (inner) {
 			]));
 };
 
-var _stil4m$elm_aui_css$Aui_Buttons$forceAnchor = function (config) {
-	return _elm_lang$core$Native_Utils.update(
-		config,
-		{forceAnchor: true});
-};
-var _stil4m$elm_aui_css$Aui_Buttons$withAdditionalClass = F2(
-	function (cl, config) {
-		return _elm_lang$core$Native_Utils.update(
-			config,
-			{
-				additionalClass: _elm_lang$core$Maybe$Just(cl)
-			});
-	});
-var _stil4m$elm_aui_css$Aui_Buttons$withActive = F2(
-	function (active, config) {
-		return _elm_lang$core$Native_Utils.update(
-			config,
-			{active: active});
-	});
-var _stil4m$elm_aui_css$Aui_Buttons$withHref = F2(
-	function (href, config) {
-		return _elm_lang$core$Native_Utils.update(
-			config,
-			{
-				href: _elm_lang$core$Maybe$Just(href)
-			});
-	});
-var _stil4m$elm_aui_css$Aui_Buttons$withStyle = F2(
-	function (s, config) {
-		return _elm_lang$core$Native_Utils.update(
-			config,
-			{style: s});
-	});
-var _stil4m$elm_aui_css$Aui_Buttons$disable = function (c) {
-	return _elm_lang$core$Native_Utils.update(
-		c,
-		{disabled: true});
-};
 var _stil4m$elm_aui_css$Aui_Buttons$config2buttonClass = function (_p0) {
 	var _p1 = _p0;
 	var styleClass = function () {
@@ -8585,13 +8580,15 @@ var _stil4m$elm_aui_css$Aui_Buttons$config2buttonClass = function (_p0) {
 	}
 };
 var _stil4m$elm_aui_css$Aui_Buttons$button = F3(
-	function (config, click, inner) {
+	function (_p4, click, inner) {
+		var _p5 = _p4;
+		var _p8 = _p5._0;
 		var elem = function () {
-			if (config.forceAnchor) {
+			if (_p8.forceAnchor) {
 				return _elm_lang$html$Html$a;
 			} else {
-				var _p4 = config.href;
-				if (_p4.ctor === 'Just') {
+				var _p6 = _p8.href;
+				if (_p6.ctor === 'Just') {
 					return _elm_lang$html$Html$a;
 				} else {
 					return _elm_lang$html$Html$button;
@@ -8599,19 +8596,19 @@ var _stil4m$elm_aui_css$Aui_Buttons$button = F3(
 			}
 		}();
 		var clickOrDisabled = function () {
-			if (config.disabled) {
+			if (_p8.disabled) {
 				return A2(_elm_lang$html$Html_Attributes$attribute, 'aria-disabled', 'true');
 			} else {
-				var _p5 = config.href;
-				if (_p5.ctor === 'Just') {
-					return _elm_lang$html$Html_Attributes$href(_p5._0);
+				var _p7 = _p8.href;
+				if (_p7.ctor === 'Just') {
+					return _elm_lang$html$Html_Attributes$href(_p7._0);
 				} else {
 					return _elm_lang$html$Html_Events$onClick(click);
 				}
 			}
 		}();
 		var classAttr = _elm_lang$html$Html_Attributes$class(
-			_stil4m$elm_aui_css$Aui_Buttons$config2buttonClass(config));
+			_stil4m$elm_aui_css$Aui_Buttons$config2buttonClass(_p8));
 		var attrs = _elm_lang$core$Native_List.fromArray(
 			[clickOrDisabled, classAttr]);
 		return A2(elem, attrs, inner);
@@ -8625,29 +8622,76 @@ var _stil4m$elm_aui_css$Aui_Buttons$buttonGroup = function (buttons) {
 			]),
 		buttons);
 };
-var _stil4m$elm_aui_css$Aui_Buttons$Config = F6(
+var _stil4m$elm_aui_css$Aui_Buttons$InnerConfig = F6(
 	function (a, b, c, d, e, f) {
 		return {style: a, forceAnchor: b, disabled: c, href: d, active: e, additionalClass: f};
 	});
 var _stil4m$elm_aui_css$Aui_Buttons$Link = {ctor: 'Link'};
+var _stil4m$elm_aui_css$Aui_Buttons$linkStyle = _stil4m$elm_aui_css$Aui_Buttons$Link;
 var _stil4m$elm_aui_css$Aui_Buttons$Light = {ctor: 'Light'};
+var _stil4m$elm_aui_css$Aui_Buttons$lightStyle = _stil4m$elm_aui_css$Aui_Buttons$Light;
 var _stil4m$elm_aui_css$Aui_Buttons$Subtle = {ctor: 'Subtle'};
+var _stil4m$elm_aui_css$Aui_Buttons$subtleStyle = _stil4m$elm_aui_css$Aui_Buttons$Subtle;
 var _stil4m$elm_aui_css$Aui_Buttons$Primary = {ctor: 'Primary'};
+var _stil4m$elm_aui_css$Aui_Buttons$primaryStyle = _stil4m$elm_aui_css$Aui_Buttons$Primary;
 var _stil4m$elm_aui_css$Aui_Buttons$Normal = {ctor: 'Normal'};
-var _stil4m$elm_aui_css$Aui_Buttons$baseConfig = {style: _stil4m$elm_aui_css$Aui_Buttons$Normal, forceAnchor: false, disabled: false, href: _elm_lang$core$Maybe$Nothing, active: false, additionalClass: _elm_lang$core$Maybe$Nothing};
+var _stil4m$elm_aui_css$Aui_Buttons$normalStyle = _stil4m$elm_aui_css$Aui_Buttons$Normal;
+var _stil4m$elm_aui_css$Aui_Buttons$Config = function (a) {
+	return {ctor: 'Config', _0: a};
+};
+var _stil4m$elm_aui_css$Aui_Buttons$baseConfig = _stil4m$elm_aui_css$Aui_Buttons$Config(
+	{style: _stil4m$elm_aui_css$Aui_Buttons$Normal, forceAnchor: false, disabled: false, href: _elm_lang$core$Maybe$Nothing, active: false, additionalClass: _elm_lang$core$Maybe$Nothing});
+var _stil4m$elm_aui_css$Aui_Buttons$disable = function (_p9) {
+	var _p10 = _p9;
+	return _stil4m$elm_aui_css$Aui_Buttons$Config(
+		_elm_lang$core$Native_Utils.update(
+			_p10._0,
+			{disabled: true}));
+};
+var _stil4m$elm_aui_css$Aui_Buttons$withStyle = F2(
+	function (s, _p11) {
+		var _p12 = _p11;
+		return _stil4m$elm_aui_css$Aui_Buttons$Config(
+			_elm_lang$core$Native_Utils.update(
+				_p12._0,
+				{style: s}));
+	});
+var _stil4m$elm_aui_css$Aui_Buttons$withHref = F2(
+	function (href, _p13) {
+		var _p14 = _p13;
+		return _stil4m$elm_aui_css$Aui_Buttons$Config(
+			_elm_lang$core$Native_Utils.update(
+				_p14._0,
+				{
+					href: _elm_lang$core$Maybe$Just(href)
+				}));
+	});
+var _stil4m$elm_aui_css$Aui_Buttons$withActive = F2(
+	function (active, _p15) {
+		var _p16 = _p15;
+		return _stil4m$elm_aui_css$Aui_Buttons$Config(
+			_elm_lang$core$Native_Utils.update(
+				_p16._0,
+				{active: active}));
+	});
+var _stil4m$elm_aui_css$Aui_Buttons$withAdditionalClass = F2(
+	function (cl, _p17) {
+		var _p18 = _p17;
+		return _stil4m$elm_aui_css$Aui_Buttons$Config(
+			_elm_lang$core$Native_Utils.update(
+				_p18._0,
+				{
+					additionalClass: _elm_lang$core$Maybe$Just(cl)
+				}));
+	});
+var _stil4m$elm_aui_css$Aui_Buttons$forceAnchor = function (_p19) {
+	var _p20 = _p19;
+	return _stil4m$elm_aui_css$Aui_Buttons$Config(
+		_elm_lang$core$Native_Utils.update(
+			_p20._0,
+			{forceAnchor: true}));
+};
 
-var _stil4m$elm_aui_css$Aui_Dropdown$withStyle = F2(
-	function (x, config) {
-		return _elm_lang$core$Native_Utils.update(
-			config,
-			{style: x});
-	});
-var _stil4m$elm_aui_css$Aui_Dropdown$withAlignment = F2(
-	function (x, config) {
-		return _elm_lang$core$Native_Utils.update(
-			config,
-			{alignment: x});
-	});
 var _stil4m$elm_aui_css$Aui_Dropdown$dropdownSection = F2(
 	function (title, inner) {
 		var _p0 = title;
@@ -8706,7 +8750,7 @@ var _stil4m$elm_aui_css$Aui_Dropdown$close = function (model) {
 		{open: false});
 };
 var _stil4m$elm_aui_css$Aui_Dropdown$initialModel = {open: false};
-var _stil4m$elm_aui_css$Aui_Dropdown$Config = F5(
+var _stil4m$elm_aui_css$Aui_Dropdown$InnerConfig = F5(
 	function (a, b, c, d, e) {
 		return {zIndexBackdrop: a, style: b, disabled: c, msgMap: d, alignment: e};
 	});
@@ -8714,14 +8758,38 @@ var _stil4m$elm_aui_css$Aui_Dropdown$Model = function (a) {
 	return {open: a};
 };
 var _stil4m$elm_aui_css$Aui_Dropdown$Right = {ctor: 'Right'};
+var _stil4m$elm_aui_css$Aui_Dropdown$rightAlignment = _stil4m$elm_aui_css$Aui_Dropdown$Right;
 var _stil4m$elm_aui_css$Aui_Dropdown$Left = {ctor: 'Left'};
-var _stil4m$elm_aui_css$Aui_Dropdown$baseConfig = function (msgMap) {
-	return {zIndexBackdrop: 99, style: _stil4m$elm_aui_css$Aui_Buttons$Normal, disabled: false, msgMap: msgMap, alignment: _stil4m$elm_aui_css$Aui_Dropdown$Left};
+var _stil4m$elm_aui_css$Aui_Dropdown$leftAlignment = _stil4m$elm_aui_css$Aui_Dropdown$Left;
+var _stil4m$elm_aui_css$Aui_Dropdown$Config = function (a) {
+	return {ctor: 'Config', _0: a};
 };
+var _stil4m$elm_aui_css$Aui_Dropdown$baseConfig = function (msgMap) {
+	return _stil4m$elm_aui_css$Aui_Dropdown$Config(
+		{zIndexBackdrop: 99, style: _stil4m$elm_aui_css$Aui_Buttons$normalStyle, disabled: false, msgMap: msgMap, alignment: _stil4m$elm_aui_css$Aui_Dropdown$Left});
+};
+var _stil4m$elm_aui_css$Aui_Dropdown$withAlignment = F2(
+	function (x, _p2) {
+		var _p3 = _p2;
+		return _stil4m$elm_aui_css$Aui_Dropdown$Config(
+			_elm_lang$core$Native_Utils.update(
+				_p3._0,
+				{alignment: x}));
+	});
+var _stil4m$elm_aui_css$Aui_Dropdown$withStyle = F2(
+	function (x, _p4) {
+		var _p5 = _p4;
+		return _stil4m$elm_aui_css$Aui_Dropdown$Config(
+			_elm_lang$core$Native_Utils.update(
+				_p5._0,
+				{style: x}));
+	});
 var _stil4m$elm_aui_css$Aui_Dropdown$Toggle = {ctor: 'Toggle'};
 var _stil4m$elm_aui_css$Aui_Dropdown$dropdown = F4(
-	function (config, buttonInner, dropdownInner, model) {
-		var itemsZIndex = _elm_lang$core$Basics$toString(config.zIndexBackdrop + 1);
+	function (_p6, buttonInner, dropdownInner, model) {
+		var _p7 = _p6;
+		var _p8 = _p7._0;
+		var itemsZIndex = _elm_lang$core$Basics$toString(_p8.zIndexBackdrop + 1);
 		var contentDisplay = model.open ? 'inline-block' : 'none';
 		return A2(
 			_elm_lang$html$Html$div,
@@ -8738,8 +8806,8 @@ var _stil4m$elm_aui_css$Aui_Dropdown$dropdown = F4(
 				[
 					A2(
 					_elm_lang$html$Html_App$map,
-					config.msgMap,
-					A3(_stil4m$elm_aui_css$Aui_Backdrop$backdrop, config.zIndexBackdrop, _stil4m$elm_aui_css$Aui_Dropdown$Toggle, model.open)),
+					_p8.msgMap,
+					A3(_stil4m$elm_aui_css$Aui_Backdrop$backdrop, _p8.zIndexBackdrop, _stil4m$elm_aui_css$Aui_Dropdown$Toggle, model.open)),
 					A2(
 					_elm_lang$html$Html$div,
 					_elm_lang$core$Native_List.fromArray(
@@ -8755,7 +8823,7 @@ var _stil4m$elm_aui_css$Aui_Dropdown$dropdown = F4(
 						[
 							A2(
 							_elm_lang$html$Html_App$map,
-							config.msgMap,
+							_p8.msgMap,
 							A3(
 								_stil4m$elm_aui_css$Aui_Buttons$button,
 								A2(
@@ -8763,7 +8831,7 @@ var _stil4m$elm_aui_css$Aui_Dropdown$dropdown = F4(
 									model.open,
 									A2(
 										_stil4m$elm_aui_css$Aui_Buttons$withStyle,
-										config.style,
+										_p8.style,
 										A2(
 											_stil4m$elm_aui_css$Aui_Buttons$withAdditionalClass,
 											'aui-dropdown2-trigger',
@@ -8784,7 +8852,7 @@ var _stil4m$elm_aui_css$Aui_Dropdown$dropdown = F4(
 									{ctor: '_Tuple2', _0: 'top', _1: '30px'},
 									{
 									ctor: '_Tuple2',
-									_0: _elm_lang$core$Native_Utils.eq(config.alignment, _stil4m$elm_aui_css$Aui_Dropdown$Left) ? 'left' : 'right',
+									_0: _elm_lang$core$Native_Utils.eq(_p8.alignment, _stil4m$elm_aui_css$Aui_Dropdown$Left) ? 'left' : 'right',
 									_1: '0'
 								}
 								])),
@@ -8794,27 +8862,52 @@ var _stil4m$elm_aui_css$Aui_Dropdown$dropdown = F4(
 				]));
 	});
 
-var _stil4m$elm_aui_css$Aui_Expander$baseConfig = function (x) {
-	return {
-		moreText: 'Show more',
-		lessText: 'Show less',
-		msgMap: x,
-		minHeight: _elm_lang$core$Maybe$Just('1.5em')
-	};
-};
 var _stil4m$elm_aui_css$Aui_Expander$update = F2(
 	function (msg, model) {
 		var _p0 = msg;
 		return _elm_lang$core$Basics$not(model);
 	});
 var _stil4m$elm_aui_css$Aui_Expander$initialModel = false;
-var _stil4m$elm_aui_css$Aui_Expander$Config = F4(
+var _stil4m$elm_aui_css$Aui_Expander$InnerConfig = F4(
 	function (a, b, c, d) {
 		return {moreText: a, lessText: b, msgMap: c, minHeight: d};
 	});
+var _stil4m$elm_aui_css$Aui_Expander$Config = function (a) {
+	return {ctor: 'Config', _0: a};
+};
+var _stil4m$elm_aui_css$Aui_Expander$baseConfig = function (x) {
+	return _stil4m$elm_aui_css$Aui_Expander$Config(
+		{moreText: 'Show more', lessText: 'Show less', msgMap: x, minHeight: '1.5em'});
+};
+var _stil4m$elm_aui_css$Aui_Expander$withMoreText = F2(
+	function (x, _p1) {
+		var _p2 = _p1;
+		return _stil4m$elm_aui_css$Aui_Expander$Config(
+			_elm_lang$core$Native_Utils.update(
+				_p2._0,
+				{moreText: x}));
+	});
+var _stil4m$elm_aui_css$Aui_Expander$withLessText = F2(
+	function (x, _p3) {
+		var _p4 = _p3;
+		return _stil4m$elm_aui_css$Aui_Expander$Config(
+			_elm_lang$core$Native_Utils.update(
+				_p4._0,
+				{lessText: x}));
+	});
+var _stil4m$elm_aui_css$Aui_Expander$withMinHeight = F2(
+	function (x, _p5) {
+		var _p6 = _p5;
+		return _stil4m$elm_aui_css$Aui_Expander$Config(
+			_elm_lang$core$Native_Utils.update(
+				_p6._0,
+				{minHeight: x}));
+	});
 var _stil4m$elm_aui_css$Aui_Expander$Toggle = {ctor: 'Toggle'};
 var _stil4m$elm_aui_css$Aui_Expander$expander = F3(
-	function (config, body, model) {
+	function (_p7, body, model) {
+		var _p8 = _p7;
+		var _p9 = _p8._0;
 		return A2(
 			_elm_lang$html$Html$div,
 			_elm_lang$core$Native_List.fromArray(
@@ -8828,11 +8921,7 @@ var _stil4m$elm_aui_css$Aui_Expander$expander = F3(
 					_elm_lang$html$Html_Attributes$style(
 					_elm_lang$core$Native_List.fromArray(
 						[
-							{
-							ctor: '_Tuple2',
-							_0: 'min-height',
-							_1: A2(_elm_lang$core$Maybe$withDefault, '', config.minHeight)
-						}
+							{ctor: '_Tuple2', _0: 'min-height', _1: _p9.minHeight}
 						]))
 				]),
 			_elm_lang$core$Native_List.fromArray(
@@ -8840,7 +8929,7 @@ var _stil4m$elm_aui_css$Aui_Expander$expander = F3(
 					_elm_lang$html$Html$text(body),
 					A2(
 					_elm_lang$html$Html_App$map,
-					config.msgMap,
+					_p9.msgMap,
 					A2(
 						_elm_lang$html$Html$a,
 						_elm_lang$core$Native_List.fromArray(
@@ -8851,7 +8940,7 @@ var _stil4m$elm_aui_css$Aui_Expander$expander = F3(
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text(
-								model ? config.lessText : config.moreText)
+								model ? _p9.lessText : _p9.moreText)
 							])))
 				]));
 	});
@@ -8870,7 +8959,27 @@ var _stil4m$elm_aui_css$Aui_Icons$icon2class = function (i) {
 		_elm_lang$core$Basics$toString(i));
 };
 var _stil4m$elm_aui_css$Aui_Icons$Small = {ctor: 'Small'};
+var _stil4m$elm_aui_css$Aui_Icons$small = _stil4m$elm_aui_css$Aui_Icons$Small;
 var _stil4m$elm_aui_css$Aui_Icons$Large = {ctor: 'Large'};
+var _stil4m$elm_aui_css$Aui_Icons$rawIcon = F2(
+	function (size, i) {
+		var sizeClass = _elm_lang$core$Native_Utils.eq(size, _stil4m$elm_aui_css$Aui_Icons$Large) ? 'large' : 'small';
+		return A2(
+			_elm_lang$html$Html$span,
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html_Attributes$class(
+					A2(
+						_elm_lang$core$Basics_ops['++'],
+						'aui-icon aui-icon-',
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							sizeClass,
+							A2(_elm_lang$core$Basics_ops['++'], ' ', i))))
+				]),
+			_elm_lang$core$Native_List.fromArray(
+				[]));
+	});
 var _stil4m$elm_aui_css$Aui_Icons$icon = F2(
 	function (size, i) {
 		var cl = _stil4m$elm_aui_css$Aui_Icons$icon2class(i);
@@ -8893,6 +9002,7 @@ var _stil4m$elm_aui_css$Aui_Icons$icon = F2(
 	});
 var _stil4m$elm_aui_css$Aui_Icons$iconSmall = _stil4m$elm_aui_css$Aui_Icons$icon(_stil4m$elm_aui_css$Aui_Icons$Small);
 var _stil4m$elm_aui_css$Aui_Icons$iconLarge = _stil4m$elm_aui_css$Aui_Icons$icon(_stil4m$elm_aui_css$Aui_Icons$Large);
+var _stil4m$elm_aui_css$Aui_Icons$large = _stil4m$elm_aui_css$Aui_Icons$Large;
 var _stil4m$elm_aui_css$Aui_Icons$JiraTestSession = {ctor: 'JiraTestSession'};
 var _stil4m$elm_aui_css$Aui_Icons$JiraCompletedTask = {ctor: 'JiraCompletedTask'};
 var _stil4m$elm_aui_css$Aui_Icons$Jira = {ctor: 'Jira'};
@@ -9162,20 +9272,11 @@ var _stil4m$elm_aui_css$Aui_Labels$labelRemoveSpan = function (x) {
 					[]))
 			]));
 };
-var _stil4m$elm_aui_css$Aui_Labels$onRemove = F2(
-	function (x, config) {
-		return _elm_lang$core$Native_Utils.update(
-			config,
-			{
-				onRemove: _elm_lang$core$Maybe$Just(x)
-			});
-	});
-var _stil4m$elm_aui_css$Aui_Labels$baseConfig = {onRemove: _elm_lang$core$Maybe$Nothing, onClick: _elm_lang$core$Maybe$Nothing};
 var _stil4m$elm_aui_css$Aui_Labels$label = F2(
 	function (_p2, inner) {
 		var _p3 = _p2;
-		var _p6 = _p3.onRemove;
-		var _p5 = _p3.onClick;
+		var _p6 = _p3._0;
+		var _p5 = _p3._1;
 		var elem = _elm_lang$core$Native_Utils.eq(_p5, _elm_lang$core$Maybe$Nothing) ? _elm_lang$html$Html$span : _elm_lang$html$Html$a;
 		var actionAttrs$ = _stil4m$elm_aui_css$Aui_Labels$actionAttrs(_p5);
 		var inner$ = function () {
@@ -9205,33 +9306,38 @@ var _stil4m$elm_aui_css$Aui_Labels$label = F2(
 				actionAttrs$),
 			inner$);
 	});
-var _stil4m$elm_aui_css$Aui_Labels$Config = F2(
-	function (a, b) {
-		return {onRemove: a, onClick: b};
-	});
 var _stil4m$elm_aui_css$Aui_Labels$Trigger = function (a) {
 	return {ctor: 'Trigger', _0: a};
 };
-var _stil4m$elm_aui_css$Aui_Labels$onClick = F2(
-	function (x, config) {
-		return _elm_lang$core$Native_Utils.update(
-			config,
-			{
-				onClick: _elm_lang$core$Maybe$Just(
-					_stil4m$elm_aui_css$Aui_Labels$Trigger(x))
-			});
-	});
+var _stil4m$elm_aui_css$Aui_Labels$trigger = function (x) {
+	return _stil4m$elm_aui_css$Aui_Labels$Trigger(x);
+};
 var _stil4m$elm_aui_css$Aui_Labels$Navigate = function (a) {
 	return {ctor: 'Navigate', _0: a};
 };
-var _stil4m$elm_aui_css$Aui_Labels$withNavigate = F2(
-	function (x, config) {
-		return _elm_lang$core$Native_Utils.update(
-			config,
-			{
-				onClick: _elm_lang$core$Maybe$Just(
-					_stil4m$elm_aui_css$Aui_Labels$Navigate(x))
-			});
+var _stil4m$elm_aui_css$Aui_Labels$navigate = function (url) {
+	return _stil4m$elm_aui_css$Aui_Labels$Navigate(url);
+};
+var _stil4m$elm_aui_css$Aui_Labels$Config = F2(
+	function (a, b) {
+		return {ctor: 'Config', _0: a, _1: b};
+	});
+var _stil4m$elm_aui_css$Aui_Labels$baseConfig = A2(_stil4m$elm_aui_css$Aui_Labels$Config, _elm_lang$core$Maybe$Nothing, _elm_lang$core$Maybe$Nothing);
+var _stil4m$elm_aui_css$Aui_Labels$onClick = F2(
+	function (x, _p7) {
+		var _p8 = _p7;
+		return A2(
+			_stil4m$elm_aui_css$Aui_Labels$Config,
+			_p8._0,
+			_elm_lang$core$Maybe$Just(x));
+	});
+var _stil4m$elm_aui_css$Aui_Labels$onRemove = F2(
+	function (x, _p9) {
+		var _p10 = _p9;
+		return A2(
+			_stil4m$elm_aui_css$Aui_Labels$Config,
+			_elm_lang$core$Maybe$Just(x),
+			_p10._1);
 	});
 
 var _stil4m$elm_aui_css$Aui_Lozenge$type2class = function (t) {
@@ -9278,13 +9384,21 @@ var _stil4m$elm_aui_css$Aui_Lozenge$lozenge = F2(
 				]));
 	});
 var _stil4m$elm_aui_css$Aui_Lozenge$Moved = {ctor: 'Moved'};
+var _stil4m$elm_aui_css$Aui_Lozenge$moved = _stil4m$elm_aui_css$Aui_Lozenge$Moved;
 var _stil4m$elm_aui_css$Aui_Lozenge$Complete = {ctor: 'Complete'};
+var _stil4m$elm_aui_css$Aui_Lozenge$complete = _stil4m$elm_aui_css$Aui_Lozenge$Complete;
 var _stil4m$elm_aui_css$Aui_Lozenge$Current = {ctor: 'Current'};
+var _stil4m$elm_aui_css$Aui_Lozenge$current = _stil4m$elm_aui_css$Aui_Lozenge$Current;
 var _stil4m$elm_aui_css$Aui_Lozenge$Error = {ctor: 'Error'};
+var _stil4m$elm_aui_css$Aui_Lozenge$error = _stil4m$elm_aui_css$Aui_Lozenge$Error;
 var _stil4m$elm_aui_css$Aui_Lozenge$Success = {ctor: 'Success'};
+var _stil4m$elm_aui_css$Aui_Lozenge$success = _stil4m$elm_aui_css$Aui_Lozenge$Success;
 var _stil4m$elm_aui_css$Aui_Lozenge$Generic = {ctor: 'Generic'};
+var _stil4m$elm_aui_css$Aui_Lozenge$generic = _stil4m$elm_aui_css$Aui_Lozenge$Generic;
 var _stil4m$elm_aui_css$Aui_Lozenge$Subtle = {ctor: 'Subtle'};
+var _stil4m$elm_aui_css$Aui_Lozenge$subtle = _stil4m$elm_aui_css$Aui_Lozenge$Subtle;
 var _stil4m$elm_aui_css$Aui_Lozenge$Normal = {ctor: 'Normal'};
+var _stil4m$elm_aui_css$Aui_Lozenge$normal = _stil4m$elm_aui_css$Aui_Lozenge$Normal;
 
 var _stil4m$elm_aui_css$Aui_Messages$typeToString = function (_p0) {
 	return A2(
@@ -9352,21 +9466,42 @@ var _stil4m$elm_aui_css$Aui_Messages$message = function (t) {
 	return A2(_stil4m$elm_aui_css$Aui_Messages$baseMessage, t, _elm_lang$core$Maybe$Nothing);
 };
 var _stil4m$elm_aui_css$Aui_Messages$Hint = {ctor: 'Hint'};
+var _stil4m$elm_aui_css$Aui_Messages$hint = _stil4m$elm_aui_css$Aui_Messages$Hint;
 var _stil4m$elm_aui_css$Aui_Messages$Info = {ctor: 'Info'};
+var _stil4m$elm_aui_css$Aui_Messages$info = _stil4m$elm_aui_css$Aui_Messages$Info;
 var _stil4m$elm_aui_css$Aui_Messages$Success = {ctor: 'Success'};
+var _stil4m$elm_aui_css$Aui_Messages$success = _stil4m$elm_aui_css$Aui_Messages$Success;
 var _stil4m$elm_aui_css$Aui_Messages$Warning = {ctor: 'Warning'};
+var _stil4m$elm_aui_css$Aui_Messages$warning = _stil4m$elm_aui_css$Aui_Messages$Warning;
 var _stil4m$elm_aui_css$Aui_Messages$Error = {ctor: 'Error'};
+var _stil4m$elm_aui_css$Aui_Messages$error = _stil4m$elm_aui_css$Aui_Messages$Error;
 var _stil4m$elm_aui_css$Aui_Messages$Generic = {ctor: 'Generic'};
+var _stil4m$elm_aui_css$Aui_Messages$generic = _stil4m$elm_aui_css$Aui_Messages$Generic;
 
+var _stil4m$elm_aui_css$Aui_ProgressIndicator$activeProgressIndicator = A2(
+	_elm_lang$html$Html$div,
+	_elm_lang$core$Native_List.fromArray(
+		[
+			_elm_lang$html$Html_Attributes$class('aui-progress-indicator')
+		]),
+	_elm_lang$core$Native_List.fromArray(
+		[
+			A2(
+			_elm_lang$html$Html$span,
+			_elm_lang$core$Native_List.fromArray(
+				[
+					_elm_lang$html$Html_Attributes$class('aui-progress-indicator-value'),
+					_elm_lang$html$Html_Attributes$style(
+					_elm_lang$core$Native_List.fromArray(
+						[
+							{ctor: '_Tuple2', _0: 'width', _1: '100%'}
+						]))
+				]),
+			_elm_lang$core$Native_List.fromArray(
+				[]))
+		]));
 var _stil4m$elm_aui_css$Aui_ProgressIndicator$progressIndicator = function (value) {
-	var _p0 = _elm_lang$core$Native_Utils.eq(value, 0.0) ? {
-		ctor: '_Tuple2',
-		_0: 100,
-		_1: _elm_lang$core$Native_List.fromArray(
-			[
-				_elm_lang$html$Html_Attributes$class('aui-progress-indicator')
-			])
-	} : {
+	var _p0 = {
 		ctor: '_Tuple2',
 		_0: value * 100.0,
 		_1: _elm_lang$core$Native_List.fromArray(
@@ -9622,8 +9757,7 @@ var _stil4m$elm_aui_css$Aui_Select$initialModel = F3(
 			_1: _elm_lang$core$Platform_Cmd$none
 		};
 	});
-var _stil4m$elm_aui_css$Aui_Select$baseConfig = {zIndexBackdrop: 99, placeholder: _elm_lang$core$Maybe$Nothing};
-var _stil4m$elm_aui_css$Aui_Select$Config = F2(
+var _stil4m$elm_aui_css$Aui_Select$InnerConfig = F2(
 	function (a, b) {
 		return {zIndexBackdrop: a, placeholder: b};
 	});
@@ -9738,8 +9872,10 @@ var _stil4m$elm_aui_css$Aui_Select$asOption = F2(
 				]));
 	});
 var _stil4m$elm_aui_css$Aui_Select$singleSelect = F2(
-	function (config, model) {
-		var zIndexItems = _elm_lang$core$Basics$toString(config.zIndexBackdrop + 1);
+	function (_p4, model) {
+		var _p5 = _p4;
+		var _p6 = _p5._0;
+		var zIndexItems = _elm_lang$core$Basics$toString(_p6.zIndexBackdrop + 1);
 		var activeOptions$ = _stil4m$elm_aui_css$Aui_Select$activeOptionsForModel(model);
 		var popoverDisplay = model.open ? 'block' : 'none';
 		return A2(
@@ -9756,7 +9892,7 @@ var _stil4m$elm_aui_css$Aui_Select$singleSelect = F2(
 					_elm_lang$core$Native_List.fromArray(
 						[
 							_elm_lang$html$Html_Attributes$placeholder(
-							A2(_elm_lang$core$Maybe$withDefault, '', config.placeholder)),
+							A2(_elm_lang$core$Maybe$withDefault, '', _p6.placeholder)),
 							_elm_lang$html$Html_Attributes$tabindex(-1),
 							_elm_lang$html$Html_Attributes$style(
 							_elm_lang$core$Native_List.fromArray(
@@ -9774,7 +9910,7 @@ var _stil4m$elm_aui_css$Aui_Select$singleSelect = F2(
 								]),
 							_elm_lang$core$Native_List.fromArray(
 								[
-									A3(_stil4m$elm_aui_css$Aui_Backdrop$backdrop, config.zIndexBackdrop, _stil4m$elm_aui_css$Aui_Select$Close, model.open),
+									A3(_stil4m$elm_aui_css$Aui_Backdrop$backdrop, _p6.zIndexBackdrop, _stil4m$elm_aui_css$Aui_Select$Close, model.open),
 									A2(_stil4m$elm_aui_css$Aui_Select$queryInput, zIndexItems, model),
 									A2(_stil4m$elm_aui_css$Aui_Select$dropDownButton, zIndexItems, model),
 									A2(
@@ -9810,6 +9946,29 @@ var _stil4m$elm_aui_css$Aui_Select$singleSelect = F2(
 				]));
 	});
 var _stil4m$elm_aui_css$Aui_Select$Toggle = {ctor: 'Toggle'};
+var _stil4m$elm_aui_css$Aui_Select$Config = function (a) {
+	return {ctor: 'Config', _0: a};
+};
+var _stil4m$elm_aui_css$Aui_Select$baseConfig = _stil4m$elm_aui_css$Aui_Select$Config(
+	{zIndexBackdrop: 99, placeholder: _elm_lang$core$Maybe$Nothing});
+var _stil4m$elm_aui_css$Aui_Select$withZIndex = F2(
+	function (x, _p7) {
+		var _p8 = _p7;
+		return _stil4m$elm_aui_css$Aui_Select$Config(
+			_elm_lang$core$Native_Utils.update(
+				_p8._0,
+				{zIndexBackdrop: x}));
+	});
+var _stil4m$elm_aui_css$Aui_Select$withPlaceholder = F2(
+	function (x, _p9) {
+		var _p10 = _p9;
+		return _stil4m$elm_aui_css$Aui_Select$Config(
+			_elm_lang$core$Native_Utils.update(
+				_p10._0,
+				{
+					placeholder: _elm_lang$core$Maybe$Just(x)
+				}));
+	});
 
 var _stil4m$elm_aui_css$Aui_Tabs$tabContent = F2(
 	function (cb, model) {
@@ -9839,28 +9998,68 @@ var _stil4m$elm_aui_css$Aui_Tabs$tabContent = F2(
 var _stil4m$elm_aui_css$Aui_Tabs$update = F2(
 	function (msg, model) {
 		var _p1 = msg;
-		return _elm_lang$core$Maybe$Just(_p1._0.id);
+		return _elm_lang$core$Maybe$Just(_p1._0._0.id);
 	});
 var _stil4m$elm_aui_css$Aui_Tabs$modelWithActive = _elm_lang$core$Maybe$Just;
-var _stil4m$elm_aui_css$Aui_Tabs$Config = F3(
+var _stil4m$elm_aui_css$Aui_Tabs$InnerConfig = F3(
 	function (a, b, c) {
 		return {horizontal: a, items: b, msgMap: c};
 	});
-var _stil4m$elm_aui_css$Aui_Tabs$Item = F2(
-	function (a, b) {
-		return {id: a, name: b};
+var _stil4m$elm_aui_css$Aui_Tabs$Config = function (a) {
+	return {ctor: 'Config', _0: a};
+};
+var _stil4m$elm_aui_css$Aui_Tabs$baseConfig = function (msgMap) {
+	return _stil4m$elm_aui_css$Aui_Tabs$Config(
+		{
+			horizontal: true,
+			items: _elm_lang$core$Native_List.fromArray(
+				[]),
+			msgMap: msgMap
+		});
+};
+var _stil4m$elm_aui_css$Aui_Tabs$horizontal = function (_p2) {
+	var _p3 = _p2;
+	return _stil4m$elm_aui_css$Aui_Tabs$Config(
+		_elm_lang$core$Native_Utils.update(
+			_p3._0,
+			{horizontal: true}));
+};
+var _stil4m$elm_aui_css$Aui_Tabs$vertical = function (_p4) {
+	var _p5 = _p4;
+	return _stil4m$elm_aui_css$Aui_Tabs$Config(
+		_elm_lang$core$Native_Utils.update(
+			_p5._0,
+			{horizontal: false}));
+};
+var _stil4m$elm_aui_css$Aui_Tabs$withItems = F2(
+	function (items, _p6) {
+		var _p7 = _p6;
+		return _stil4m$elm_aui_css$Aui_Tabs$Config(
+			_elm_lang$core$Native_Utils.update(
+				_p7._0,
+				{items: items}));
+	});
+var _stil4m$elm_aui_css$Aui_Tabs$Item = function (a) {
+	return {ctor: 'Item', _0: a};
+};
+var _stil4m$elm_aui_css$Aui_Tabs$item = F2(
+	function (id, name) {
+		return _stil4m$elm_aui_css$Aui_Tabs$Item(
+			{id: id, name: name});
 	});
 var _stil4m$elm_aui_css$Aui_Tabs$Select = function (a) {
 	return {ctor: 'Select', _0: a};
 };
 var _stil4m$elm_aui_css$Aui_Tabs$asItem = F2(
-	function (model, opt) {
+	function (model, _p8) {
+		var _p9 = _p8;
+		var _p11 = _p9._0;
 		var active = function () {
-			var _p2 = model;
-			if (_p2.ctor === 'Nothing') {
+			var _p10 = model;
+			if (_p10.ctor === 'Nothing') {
 				return false;
 			} else {
-				return _elm_lang$core$Native_Utils.eq(_p2._0, opt.id);
+				return _elm_lang$core$Native_Utils.eq(_p10._0, _p11.id);
 			}
 		}();
 		var activeClass = active ? 'menu-item active-tab' : 'menu-item';
@@ -9878,11 +10077,12 @@ var _stil4m$elm_aui_css$Aui_Tabs$asItem = F2(
 						[
 							A2(_elm_lang$html$Html_Attributes$attribute, 'role', 'tab'),
 							_elm_lang$html$Html_Events$onClick(
-							_stil4m$elm_aui_css$Aui_Tabs$Select(opt))
+							_stil4m$elm_aui_css$Aui_Tabs$Select(
+								_stil4m$elm_aui_css$Aui_Tabs$Item(_p11)))
 						]),
 					_elm_lang$core$Native_List.fromArray(
 						[
-							_elm_lang$html$Html$text(opt.name)
+							_elm_lang$html$Html$text(_p11.name)
 						]))
 				]));
 	});
@@ -9901,8 +10101,10 @@ var _stil4m$elm_aui_css$Aui_Tabs$menu = F2(
 				items));
 	});
 var _stil4m$elm_aui_css$Aui_Tabs$tabs = F3(
-	function (config, cb, model) {
-		var tabClass = config.horizontal ? 'aui-tabs horizontal-tabs' : 'aui-tabs vertical-tabs';
+	function (_p12, cb, model) {
+		var _p13 = _p12;
+		var _p14 = _p13._0;
+		var tabClass = _p14.horizontal ? 'aui-tabs horizontal-tabs' : 'aui-tabs vertical-tabs';
 		return A2(
 			_elm_lang$html$Html$div,
 			_elm_lang$core$Native_List.fromArray(
@@ -9913,8 +10115,8 @@ var _stil4m$elm_aui_css$Aui_Tabs$tabs = F3(
 				[
 					A2(
 					_elm_lang$html$Html_App$map,
-					config.msgMap,
-					A2(_stil4m$elm_aui_css$Aui_Tabs$menu, config.items, model)),
+					_p14.msgMap,
+					A2(_stil4m$elm_aui_css$Aui_Tabs$menu, _p14.items, model)),
 					A2(_stil4m$elm_aui_css$Aui_Tabs$tabContent, cb, model)
 				]));
 	});
@@ -10073,51 +10275,66 @@ var _stil4m$elm_aui_css$Demo_Avatars$view = A2(
 		[
 			A2(
 			_stil4m$elm_aui_css$Aui_Avatars$avatar,
-			{size: _stil4m$elm_aui_css$Aui_Avatars$XSmall, project: false},
+			_stil4m$elm_aui_css$Aui_Avatars$xsmall(_stil4m$elm_aui_css$Aui_Avatars$config),
 			_stil4m$elm_aui_css$Demo_Avatars$personAvatar),
 			A2(
 			_stil4m$elm_aui_css$Aui_Avatars$avatar,
-			{size: _stil4m$elm_aui_css$Aui_Avatars$Small, project: false},
+			_stil4m$elm_aui_css$Aui_Avatars$small(_stil4m$elm_aui_css$Aui_Avatars$config),
 			_stil4m$elm_aui_css$Demo_Avatars$personAvatar),
 			A2(
 			_stil4m$elm_aui_css$Aui_Avatars$avatar,
-			{size: _stil4m$elm_aui_css$Aui_Avatars$Medium, project: false},
+			_stil4m$elm_aui_css$Aui_Avatars$medium(_stil4m$elm_aui_css$Aui_Avatars$config),
 			_stil4m$elm_aui_css$Demo_Avatars$personAvatar),
 			A2(
 			_stil4m$elm_aui_css$Aui_Avatars$avatar,
-			{size: _stil4m$elm_aui_css$Aui_Avatars$Large, project: false},
+			_stil4m$elm_aui_css$Aui_Avatars$large(_stil4m$elm_aui_css$Aui_Avatars$config),
 			_stil4m$elm_aui_css$Demo_Avatars$personAvatar),
 			A2(
 			_stil4m$elm_aui_css$Aui_Avatars$avatar,
-			{size: _stil4m$elm_aui_css$Aui_Avatars$XLarge, project: false},
+			_stil4m$elm_aui_css$Aui_Avatars$xlarge(_stil4m$elm_aui_css$Aui_Avatars$config),
 			_stil4m$elm_aui_css$Demo_Avatars$personAvatar),
 			A2(
 			_stil4m$elm_aui_css$Aui_Avatars$avatar,
-			{size: _stil4m$elm_aui_css$Aui_Avatars$XXLarge, project: false},
+			_stil4m$elm_aui_css$Aui_Avatars$xxlarge(_stil4m$elm_aui_css$Aui_Avatars$config),
 			_stil4m$elm_aui_css$Demo_Avatars$personAvatar),
 			A2(
 			_stil4m$elm_aui_css$Aui_Avatars$avatar,
-			{size: _stil4m$elm_aui_css$Aui_Avatars$XSmall, project: true},
+			_stil4m$elm_aui_css$Aui_Avatars$xxxlarge(_stil4m$elm_aui_css$Aui_Avatars$config),
+			_stil4m$elm_aui_css$Demo_Avatars$personAvatar),
+			A2(
+			_stil4m$elm_aui_css$Aui_Avatars$avatar,
+			_stil4m$elm_aui_css$Aui_Avatars$project(
+				_stil4m$elm_aui_css$Aui_Avatars$xsmall(_stil4m$elm_aui_css$Aui_Avatars$config)),
 			_stil4m$elm_aui_css$Demo_Avatars$projectAvatar),
 			A2(
 			_stil4m$elm_aui_css$Aui_Avatars$avatar,
-			{size: _stil4m$elm_aui_css$Aui_Avatars$Small, project: true},
+			_stil4m$elm_aui_css$Aui_Avatars$project(
+				_stil4m$elm_aui_css$Aui_Avatars$small(_stil4m$elm_aui_css$Aui_Avatars$config)),
 			_stil4m$elm_aui_css$Demo_Avatars$projectAvatar),
 			A2(
 			_stil4m$elm_aui_css$Aui_Avatars$avatar,
-			{size: _stil4m$elm_aui_css$Aui_Avatars$Medium, project: true},
+			_stil4m$elm_aui_css$Aui_Avatars$project(
+				_stil4m$elm_aui_css$Aui_Avatars$medium(_stil4m$elm_aui_css$Aui_Avatars$config)),
 			_stil4m$elm_aui_css$Demo_Avatars$projectAvatar),
 			A2(
 			_stil4m$elm_aui_css$Aui_Avatars$avatar,
-			{size: _stil4m$elm_aui_css$Aui_Avatars$Large, project: true},
+			_stil4m$elm_aui_css$Aui_Avatars$project(
+				_stil4m$elm_aui_css$Aui_Avatars$large(_stil4m$elm_aui_css$Aui_Avatars$config)),
 			_stil4m$elm_aui_css$Demo_Avatars$projectAvatar),
 			A2(
 			_stil4m$elm_aui_css$Aui_Avatars$avatar,
-			{size: _stil4m$elm_aui_css$Aui_Avatars$XLarge, project: true},
+			_stil4m$elm_aui_css$Aui_Avatars$project(
+				_stil4m$elm_aui_css$Aui_Avatars$xlarge(_stil4m$elm_aui_css$Aui_Avatars$config)),
 			_stil4m$elm_aui_css$Demo_Avatars$projectAvatar),
 			A2(
 			_stil4m$elm_aui_css$Aui_Avatars$avatar,
-			{size: _stil4m$elm_aui_css$Aui_Avatars$XXLarge, project: true},
+			_stil4m$elm_aui_css$Aui_Avatars$project(
+				_stil4m$elm_aui_css$Aui_Avatars$xxlarge(_stil4m$elm_aui_css$Aui_Avatars$config)),
+			_stil4m$elm_aui_css$Demo_Avatars$projectAvatar),
+			A2(
+			_stil4m$elm_aui_css$Aui_Avatars$avatar,
+			_stil4m$elm_aui_css$Aui_Avatars$project(
+				_stil4m$elm_aui_css$Aui_Avatars$xxxlarge(_stil4m$elm_aui_css$Aui_Avatars$config)),
 			_stil4m$elm_aui_css$Demo_Avatars$projectAvatar)
 		]));
 
@@ -10246,7 +10463,7 @@ var _stil4m$elm_aui_css$Demo_Buttons$view = function (model) {
 							])),
 						A3(
 						_stil4m$elm_aui_css$Aui_Buttons$button,
-						A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Primary, _stil4m$elm_aui_css$Aui_Buttons$baseConfig),
+						A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$primaryStyle, _stil4m$elm_aui_css$Aui_Buttons$baseConfig),
 						_stil4m$elm_aui_css$Demo_Buttons$Clicked('Primary'),
 						_elm_lang$core$Native_List.fromArray(
 							[
@@ -10255,7 +10472,7 @@ var _stil4m$elm_aui_css$Demo_Buttons$view = function (model) {
 						A3(
 						_stil4m$elm_aui_css$Aui_Buttons$button,
 						_stil4m$elm_aui_css$Aui_Buttons$disable(
-							A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Primary, _stil4m$elm_aui_css$Aui_Buttons$baseConfig)),
+							A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$primaryStyle, _stil4m$elm_aui_css$Aui_Buttons$baseConfig)),
 						_stil4m$elm_aui_css$Demo_Buttons$Clicked('Primary Disabled'),
 						_elm_lang$core$Native_List.fromArray(
 							[
@@ -10284,7 +10501,7 @@ var _stil4m$elm_aui_css$Demo_Buttons$view = function (model) {
 							])),
 						A3(
 						_stil4m$elm_aui_css$Aui_Buttons$button,
-						A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Light, _stil4m$elm_aui_css$Aui_Buttons$baseConfig),
+						A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$lightStyle, _stil4m$elm_aui_css$Aui_Buttons$baseConfig),
 						_stil4m$elm_aui_css$Demo_Buttons$Clicked('Light'),
 						_elm_lang$core$Native_List.fromArray(
 							[
@@ -10293,7 +10510,7 @@ var _stil4m$elm_aui_css$Demo_Buttons$view = function (model) {
 						A3(
 						_stil4m$elm_aui_css$Aui_Buttons$button,
 						_stil4m$elm_aui_css$Aui_Buttons$disable(
-							A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Light, _stil4m$elm_aui_css$Aui_Buttons$baseConfig)),
+							A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$lightStyle, _stil4m$elm_aui_css$Aui_Buttons$baseConfig)),
 						_stil4m$elm_aui_css$Demo_Buttons$Clicked('Light Disabled'),
 						_elm_lang$core$Native_List.fromArray(
 							[
@@ -10322,7 +10539,7 @@ var _stil4m$elm_aui_css$Demo_Buttons$view = function (model) {
 							])),
 						A3(
 						_stil4m$elm_aui_css$Aui_Buttons$button,
-						A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Subtle, _stil4m$elm_aui_css$Aui_Buttons$baseConfig),
+						A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$subtleStyle, _stil4m$elm_aui_css$Aui_Buttons$baseConfig),
 						_stil4m$elm_aui_css$Demo_Buttons$Clicked('Subtle'),
 						_elm_lang$core$Native_List.fromArray(
 							[
@@ -10331,7 +10548,7 @@ var _stil4m$elm_aui_css$Demo_Buttons$view = function (model) {
 						A3(
 						_stil4m$elm_aui_css$Aui_Buttons$button,
 						_stil4m$elm_aui_css$Aui_Buttons$disable(
-							A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Subtle, _stil4m$elm_aui_css$Aui_Buttons$baseConfig)),
+							A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$subtleStyle, _stil4m$elm_aui_css$Aui_Buttons$baseConfig)),
 						_stil4m$elm_aui_css$Demo_Buttons$Clicked('Subtle Disabled'),
 						_elm_lang$core$Native_List.fromArray(
 							[
@@ -10360,7 +10577,7 @@ var _stil4m$elm_aui_css$Demo_Buttons$view = function (model) {
 							])),
 						A3(
 						_stil4m$elm_aui_css$Aui_Buttons$button,
-						A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Link, _stil4m$elm_aui_css$Aui_Buttons$baseConfig),
+						A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$linkStyle, _stil4m$elm_aui_css$Aui_Buttons$baseConfig),
 						_stil4m$elm_aui_css$Demo_Buttons$Clicked('Link'),
 						_elm_lang$core$Native_List.fromArray(
 							[
@@ -10369,7 +10586,7 @@ var _stil4m$elm_aui_css$Demo_Buttons$view = function (model) {
 						A3(
 						_stil4m$elm_aui_css$Aui_Buttons$button,
 						_stil4m$elm_aui_css$Aui_Buttons$disable(
-							A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Link, _stil4m$elm_aui_css$Aui_Buttons$baseConfig)),
+							A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$linkStyle, _stil4m$elm_aui_css$Aui_Buttons$baseConfig)),
 						_stil4m$elm_aui_css$Demo_Buttons$Clicked('Link Disabled'),
 						_elm_lang$core$Native_List.fromArray(
 							[
@@ -10401,7 +10618,7 @@ var _stil4m$elm_aui_css$Demo_Buttons$view = function (model) {
 						A2(
 							_stil4m$elm_aui_css$Aui_Buttons$withHref,
 							'http://elm-lang.org/',
-							A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Link, _stil4m$elm_aui_css$Aui_Buttons$baseConfig)),
+							A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$linkStyle, _stil4m$elm_aui_css$Aui_Buttons$baseConfig)),
 						_stil4m$elm_aui_css$Demo_Buttons$NoOp,
 						_elm_lang$core$Native_List.fromArray(
 							[
@@ -10413,7 +10630,7 @@ var _stil4m$elm_aui_css$Demo_Buttons$view = function (model) {
 							_stil4m$elm_aui_css$Aui_Buttons$withHref,
 							'http://elm-lang.org/',
 							_stil4m$elm_aui_css$Aui_Buttons$disable(
-								A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$Link, _stil4m$elm_aui_css$Aui_Buttons$baseConfig))),
+								A2(_stil4m$elm_aui_css$Aui_Buttons$withStyle, _stil4m$elm_aui_css$Aui_Buttons$linkStyle, _stil4m$elm_aui_css$Aui_Buttons$baseConfig))),
 						_stil4m$elm_aui_css$Demo_Buttons$NoOp,
 						_elm_lang$core$Native_List.fromArray(
 							[
@@ -10535,10 +10752,10 @@ var _stil4m$elm_aui_css$Demo_Dropdown$view = function (model) {
 						_stil4m$elm_aui_css$Aui_Dropdown$dropdown,
 						A2(
 							_stil4m$elm_aui_css$Aui_Dropdown$withStyle,
-							_stil4m$elm_aui_css$Aui_Buttons$Primary,
+							_stil4m$elm_aui_css$Aui_Buttons$primaryStyle,
 							A2(
 								_stil4m$elm_aui_css$Aui_Dropdown$withAlignment,
-								_stil4m$elm_aui_css$Aui_Dropdown$Left,
+								_stil4m$elm_aui_css$Aui_Dropdown$leftAlignment,
 								_stil4m$elm_aui_css$Aui_Dropdown$baseConfig(_stil4m$elm_aui_css$Demo_Dropdown$DropdownMsg1))),
 						_elm_lang$core$Native_List.fromArray(
 							[
@@ -10774,7 +10991,7 @@ var _stil4m$elm_aui_css$Demo_Dropdown$view = function (model) {
 						_stil4m$elm_aui_css$Aui_Dropdown$dropdown,
 						A2(
 							_stil4m$elm_aui_css$Aui_Dropdown$withAlignment,
-							_stil4m$elm_aui_css$Aui_Dropdown$Right,
+							_stil4m$elm_aui_css$Aui_Dropdown$rightAlignment,
 							_stil4m$elm_aui_css$Aui_Dropdown$baseConfig(_stil4m$elm_aui_css$Demo_Dropdown$DropdownMsg2)),
 						_elm_lang$core$Native_List.fromArray(
 							[
@@ -10983,14 +11200,20 @@ var _stil4m$elm_aui_css$Demo_Labels$view = function (model) {
 							])),
 						A2(
 						_stil4m$elm_aui_css$Aui_Labels$label,
-						A2(_stil4m$elm_aui_css$Aui_Labels$withNavigate, 'http://elm-lang.org/', _stil4m$elm_aui_css$Aui_Labels$baseConfig),
+						A2(
+							_stil4m$elm_aui_css$Aui_Labels$onClick,
+							_stil4m$elm_aui_css$Aui_Labels$navigate('http://elm-lang.org/'),
+							_stil4m$elm_aui_css$Aui_Labels$baseConfig),
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text('To elm lang')
 							])),
 						A2(
 						_stil4m$elm_aui_css$Aui_Labels$label,
-						A2(_stil4m$elm_aui_css$Aui_Labels$onClick, _stil4m$elm_aui_css$Demo_Labels$Clicked, _stil4m$elm_aui_css$Aui_Labels$baseConfig),
+						A2(
+							_stil4m$elm_aui_css$Aui_Labels$onClick,
+							_stil4m$elm_aui_css$Aui_Labels$trigger(_stil4m$elm_aui_css$Demo_Labels$Clicked),
+							_stil4m$elm_aui_css$Aui_Labels$baseConfig),
 						_elm_lang$core$Native_List.fromArray(
 							[
 								_elm_lang$html$Html$text('Clickable label')
@@ -11036,7 +11259,7 @@ var _stil4m$elm_aui_css$Demo_Labels$view = function (model) {
 };
 
 var _stil4m$elm_aui_css$Demo_Lozenge$types = _elm_lang$core$Native_List.fromArray(
-	[_stil4m$elm_aui_css$Aui_Lozenge$Generic, _stil4m$elm_aui_css$Aui_Lozenge$Success, _stil4m$elm_aui_css$Aui_Lozenge$Error, _stil4m$elm_aui_css$Aui_Lozenge$Current, _stil4m$elm_aui_css$Aui_Lozenge$Complete, _stil4m$elm_aui_css$Aui_Lozenge$Moved]);
+	[_stil4m$elm_aui_css$Aui_Lozenge$generic, _stil4m$elm_aui_css$Aui_Lozenge$success, _stil4m$elm_aui_css$Aui_Lozenge$error, _stil4m$elm_aui_css$Aui_Lozenge$current, _stil4m$elm_aui_css$Aui_Lozenge$complete, _stil4m$elm_aui_css$Aui_Lozenge$moved]);
 var _stil4m$elm_aui_css$Demo_Lozenge$presentLozenge = F2(
 	function (p, t) {
 		return A2(
@@ -11078,7 +11301,7 @@ var _stil4m$elm_aui_css$Demo_Lozenge$view = A2(
 						])),
 				A2(
 					_elm_lang$core$List$map,
-					_stil4m$elm_aui_css$Demo_Lozenge$presentLozenge(_stil4m$elm_aui_css$Aui_Lozenge$Normal),
+					_stil4m$elm_aui_css$Demo_Lozenge$presentLozenge(_stil4m$elm_aui_css$Aui_Lozenge$normal),
 					_stil4m$elm_aui_css$Demo_Lozenge$types))),
 			A2(
 			_elm_lang$html$Html$div,
@@ -11096,12 +11319,12 @@ var _stil4m$elm_aui_css$Demo_Lozenge$view = A2(
 						])),
 				A2(
 					_elm_lang$core$List$map,
-					_stil4m$elm_aui_css$Demo_Lozenge$presentLozenge(_stil4m$elm_aui_css$Aui_Lozenge$Subtle),
+					_stil4m$elm_aui_css$Demo_Lozenge$presentLozenge(_stil4m$elm_aui_css$Aui_Lozenge$subtle),
 					_stil4m$elm_aui_css$Demo_Lozenge$types)))
 		]));
 
 var _stil4m$elm_aui_css$Demo_Messages$allTypes = _elm_lang$core$Native_List.fromArray(
-	[_stil4m$elm_aui_css$Aui_Messages$Generic, _stil4m$elm_aui_css$Aui_Messages$Error, _stil4m$elm_aui_css$Aui_Messages$Warning, _stil4m$elm_aui_css$Aui_Messages$Success, _stil4m$elm_aui_css$Aui_Messages$Info, _stil4m$elm_aui_css$Aui_Messages$Hint]);
+	[_stil4m$elm_aui_css$Aui_Messages$generic, _stil4m$elm_aui_css$Aui_Messages$error, _stil4m$elm_aui_css$Aui_Messages$warning, _stil4m$elm_aui_css$Aui_Messages$success, _stil4m$elm_aui_css$Aui_Messages$info, _stil4m$elm_aui_css$Aui_Messages$hint]);
 var _stil4m$elm_aui_css$Demo_Messages$asMessage = function (t) {
 	return A3(
 		_stil4m$elm_aui_css$Aui_Messages$message,
@@ -11201,23 +11424,38 @@ var _stil4m$elm_aui_css$Demo_ProgressIndicator$asIndicator = function (f) {
 				_stil4m$elm_aui_css$Aui_ProgressIndicator$progressIndicator(f)
 			]));
 };
+var _stil4m$elm_aui_css$Demo_ProgressIndicator$active = A2(
+	_elm_lang$html$Html$div,
+	_elm_lang$core$Native_List.fromArray(
+		[
+			_elm_lang$html$Html_Attributes$style(
+			_elm_lang$core$Native_List.fromArray(
+				[
+					{ctor: '_Tuple2', _0: 'padding', _1: '10px'}
+				]))
+		]),
+	_elm_lang$core$Native_List.fromArray(
+		[_stil4m$elm_aui_css$Aui_ProgressIndicator$activeProgressIndicator]));
 var _stil4m$elm_aui_css$Demo_ProgressIndicator$view = A2(
 	_stil4m$elm_aui_css$Demo_Base$demoSection,
 	'Progress Indicators',
 	A2(
-		_elm_lang$core$List$map,
-		function (_p0) {
-			return _stil4m$elm_aui_css$Demo_ProgressIndicator$asIndicator(
-				A3(
-					_elm_lang$core$Basics$flip,
-					F2(
-						function (x, y) {
-							return x / y;
-						}),
-					10,
-					_elm_lang$core$Basics$toFloat(_p0)));
-		},
-		_elm_lang$core$Native_List.range(0, 10)));
+		_elm_lang$core$List_ops['::'],
+		_stil4m$elm_aui_css$Demo_ProgressIndicator$active,
+		A2(
+			_elm_lang$core$List$map,
+			function (_p0) {
+				return _stil4m$elm_aui_css$Demo_ProgressIndicator$asIndicator(
+					A3(
+						_elm_lang$core$Basics$flip,
+						F2(
+							function (x, y) {
+								return x / y;
+							}),
+						10,
+						_elm_lang$core$Basics$toFloat(_p0)));
+			},
+			_elm_lang$core$Native_List.range(0, 10))));
 
 var _stil4m$elm_aui_css$Demo_ProgressTracker$view = A2(
 	_stil4m$elm_aui_css$Demo_Base$demoSection,
@@ -11349,11 +11587,7 @@ var _stil4m$elm_aui_css$Demo_Select$view = function (model) {
 						_stil4m$elm_aui_css$Demo_Select$SelectMsg,
 						A2(
 							_stil4m$elm_aui_css$Aui_Select$singleSelect,
-							_elm_lang$core$Native_Utils.update(
-								_stil4m$elm_aui_css$Aui_Select$baseConfig,
-								{
-									placeholder: _elm_lang$core$Maybe$Just('Select placeholder')
-								}),
+							A2(_stil4m$elm_aui_css$Aui_Select$withPlaceholder, 'Select placeholder', _stil4m$elm_aui_css$Aui_Select$baseConfig),
 							model.selectModel))
 					]))
 			]));
@@ -11400,28 +11634,37 @@ var _stil4m$elm_aui_css$Demo_Tabs$At = {ctor: 'At'};
 var _stil4m$elm_aui_css$Demo_Tabs$Sed = {ctor: 'Sed'};
 var _stil4m$elm_aui_css$Demo_Tabs$Lorem = {ctor: 'Lorem'};
 var _stil4m$elm_aui_css$Demo_Tabs$initialModel = _stil4m$elm_aui_css$Aui_Tabs$modelWithActive(_stil4m$elm_aui_css$Demo_Tabs$Lorem);
-var _stil4m$elm_aui_css$Demo_Tabs$items = _elm_lang$core$Native_List.fromArray(
+var _stil4m$elm_aui_css$Demo_Tabs$headers = _elm_lang$core$Native_List.fromArray(
 	[
-		{id: _stil4m$elm_aui_css$Demo_Tabs$Lorem, name: 'Lorem'},
-		{id: _stil4m$elm_aui_css$Demo_Tabs$Sed, name: 'Sed'},
-		{id: _stil4m$elm_aui_css$Demo_Tabs$At, name: 'At'}
+		A2(_stil4m$elm_aui_css$Aui_Tabs$item, _stil4m$elm_aui_css$Demo_Tabs$Lorem, 'Lorem'),
+		A2(_stil4m$elm_aui_css$Aui_Tabs$item, _stil4m$elm_aui_css$Demo_Tabs$Sed, 'Sed'),
+		A2(_stil4m$elm_aui_css$Aui_Tabs$item, _stil4m$elm_aui_css$Demo_Tabs$At, 'At')
 	]);
 var _stil4m$elm_aui_css$Demo_Tabs$TabsMsg = function (a) {
 	return {ctor: 'TabsMsg', _0: a};
 };
-var _stil4m$elm_aui_css$Demo_Tabs$config = {horizontal: false, items: _stil4m$elm_aui_css$Demo_Tabs$items, msgMap: _stil4m$elm_aui_css$Demo_Tabs$TabsMsg};
 var _stil4m$elm_aui_css$Demo_Tabs$view = function (model) {
 	return A2(
 		_stil4m$elm_aui_css$Demo_Base$demoSection,
 		'Tabs',
 		_elm_lang$core$Native_List.fromArray(
 			[
-				A3(_stil4m$elm_aui_css$Aui_Tabs$tabs, _stil4m$elm_aui_css$Demo_Tabs$config, _stil4m$elm_aui_css$Demo_Tabs$tabView, model),
 				A3(
 				_stil4m$elm_aui_css$Aui_Tabs$tabs,
-				_elm_lang$core$Native_Utils.update(
-					_stil4m$elm_aui_css$Demo_Tabs$config,
-					{horizontal: true}),
+				A2(
+					_stil4m$elm_aui_css$Aui_Tabs$withItems,
+					_stil4m$elm_aui_css$Demo_Tabs$headers,
+					_stil4m$elm_aui_css$Aui_Tabs$horizontal(
+						_stil4m$elm_aui_css$Aui_Tabs$baseConfig(_stil4m$elm_aui_css$Demo_Tabs$TabsMsg))),
+				_stil4m$elm_aui_css$Demo_Tabs$tabView,
+				model),
+				A3(
+				_stil4m$elm_aui_css$Aui_Tabs$tabs,
+				A2(
+					_stil4m$elm_aui_css$Aui_Tabs$withItems,
+					_stil4m$elm_aui_css$Demo_Tabs$headers,
+					_stil4m$elm_aui_css$Aui_Tabs$vertical(
+						_stil4m$elm_aui_css$Aui_Tabs$baseConfig(_stil4m$elm_aui_css$Demo_Tabs$TabsMsg))),
 				_stil4m$elm_aui_css$Demo_Tabs$tabView,
 				model)
 			]));
@@ -11518,7 +11761,7 @@ var _stil4m$elm_aui_css$Demo_Toolbar$view = A2(
 									_stil4m$elm_aui_css$Demo_Toolbar$NoOp,
 									_elm_lang$core$Native_List.fromArray(
 										[
-											A2(_stil4m$elm_aui_css$Aui_Icons$icon, _stil4m$elm_aui_css$Aui_Icons$Small, _stil4m$elm_aui_css$Aui_Icons$Configure)
+											A2(_stil4m$elm_aui_css$Aui_Icons$icon, _stil4m$elm_aui_css$Aui_Icons$small, _stil4m$elm_aui_css$Aui_Icons$Configure)
 										]))
 								]))
 						]))
