@@ -28,7 +28,7 @@ module Aui.Dropdown exposing (dropdown, dropdownSection, Model, initialModel, Ms
 @docs baseConfig, withAlignment, withStyle
 -}
 
-import Aui.Buttons exposing (normalStyle, baseConfig, forceAnchor, withAdditionalClass, withActive)
+import Aui.Buttons exposing (normalStyle, baseConfig, forceAnchor, withAdditionalClass, withActive, withAction)
 import Aui.Backdrop exposing (backdrop)
 import Html exposing (Html, div, strong, text, ul, li, a)
 import Html.Attributes exposing (style, class, tabindex)
@@ -148,8 +148,14 @@ dropdown (Config config) buttonInner dropdownInner model =
             [ HA.map config.msgMap (backdrop config.zIndexBackdrop Toggle model.open)
             , div [ style [ ( "z-index", itemsZIndex ), ( "position", "relative" ) ] ]
                 [ HA.map config.msgMap
-                    (Aui.Buttons.button (Aui.Buttons.baseConfig |> forceAnchor |> withAdditionalClass "aui-dropdown2-trigger" |> Aui.Buttons.withStyle config.style |> withActive model.open)
-                        Toggle
+                    (Aui.Buttons.button
+                        (Aui.Buttons.baseConfig
+                            |> forceAnchor
+                            |> withAdditionalClass "aui-dropdown2-trigger"
+                            |> Aui.Buttons.withStyle config.style
+                            |> withActive model.open
+                            |> withAction Toggle
+                        )
                         buttonInner
                     )
                 ]

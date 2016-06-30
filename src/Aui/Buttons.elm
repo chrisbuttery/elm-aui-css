@@ -1,4 +1,4 @@
-module Aui.Buttons exposing (baseConfig, buttonGroup, disable, button, withStyle, withHref, withActive, withAdditionalClass, forceAnchor, Config, Style, primaryStyle, normalStyle, subtleStyle, lightStyle, linkStyle)
+module Aui.Buttons exposing (baseConfig, buttonGroup, disable, button, withStyle, withHref, withAction, withActive, withAdditionalClass, forceAnchor, Config, Style, primaryStyle, normalStyle, subtleStyle, lightStyle, linkStyle)
 
 {-| Functions to present AUI buttons and groups.
 
@@ -9,7 +9,7 @@ module Aui.Buttons exposing (baseConfig, buttonGroup, disable, button, withStyle
 
 # Config
 
-@docs Config, baseConfig, disable, withStyle, withHref, withActive, withAdditionalClass, forceAnchor
+@docs Config, baseConfig, disable, withStyle, withHref, withAction, withActive, withAdditionalClass, forceAnchor
 
 # Config
 
@@ -20,7 +20,7 @@ module Aui.Buttons exposing (baseConfig, buttonGroup, disable, button, withStyle
 -}
 
 import Html exposing (Html, p)
-import Html.Attributes exposing (class, attribute, href)
+import Html.Attributes exposing (class, attribute, href, disabled)
 import Html.Events exposing (onClick)
 
 
@@ -64,11 +64,12 @@ linkStyle =
     Link
 
 
-type alias InnerConfig =
+type alias InnerConfig a =
     { style : Style
     , forceAnchor : Bool
     , disabled : Bool
     , href : Maybe String
+    , action : Maybe a
     , active : Bool
     , additionalClass : Maybe String
     }
@@ -76,8 +77,8 @@ type alias InnerConfig =
 
 {-| Configuration type for presenting a button.
 -}
-type Config
-    = Config InnerConfig
+type Config a
+    = Config (InnerConfig a)
 
 
 {-| Button container that will add the correct classes to make a button group.
@@ -100,41 +101,35 @@ buttonGroup buttons =
         ButtonClicked
         [ text "Click me!"]
 -}
-button : Config -> a -> List (Html a) -> Html a
-button (Config config) click inner =
+button : Config a -> List (Html a) -> Html a
+button (Config config) inner =
     let
         classAttr =
             class <| config2buttonClass config
 
-        clickOrDisabled =
+        clickOrDisabledAttrs =
             if config.disabled then
-                attribute "aria-disabled" "true"
+                [ Just (attribute "aria-disabled" "true"), Just (disabled True) ]
             else
-                case config.href of
-                    Just h ->
-                        href h
-
-                    Nothing ->
-                        onClick click
+                [ Maybe.map href config.href
+                , Maybe.map onClick config.action
+                ]
 
         elem =
             if config.forceAnchor then
                 Html.a
             else
-                case config.href of
-                    Just _ ->
-                        Html.a
-
-                    Nothing ->
-                        Html.button
+                config.href
+                    |> Maybe.map (\_ -> Html.a)
+                    |> Maybe.withDefault Html.button
 
         attrs =
-            [ clickOrDisabled, classAttr ]
+            classAttr :: (List.filterMap identity clickOrDisabledAttrs)
     in
         elem attrs inner
 
 
-config2buttonClass : InnerConfig -> String
+config2buttonClass : InnerConfig a -> String
 config2buttonClass { style, active, additionalClass } =
     let
         styleClass =
@@ -170,13 +165,14 @@ config2buttonClass { style, active, additionalClass } =
 
 {-| A configuration with sane defaults (no style, no anchor, enable, ect.).
 -}
-baseConfig : Config
+baseConfig : Config a
 baseConfig =
     Config
         { style = Normal
         , forceAnchor = False
         , disabled = False
         , href = Nothing
+        , action = Nothing
         , active = False
         , additionalClass = Nothing
         }
@@ -186,7 +182,7 @@ baseConfig =
 
     baseConfig |> disable
 -}
-disable : Config -> Config
+disable : Config a -> Config a
 disable (Config c) =
     Config { c | disabled = True }
 
@@ -195,7 +191,7 @@ disable (Config c) =
 
     baseConfig |> withStyle Subtle
 -}
-withStyle : Style -> Config -> Config
+withStyle : Style -> Config a -> Config a
 withStyle s (Config config) =
     Config { config | style = s }
 
@@ -204,16 +200,25 @@ withStyle s (Config config) =
 
     baseConfig |> withHref "http://elm-lang.org/"
 -}
-withHref : String -> Config -> Config
+withHref : String -> Config a -> Config a
 withHref href (Config config) =
     Config { config | href = Just href }
+
+
+{-| Add an action to the buttons configuration.
+
+    baseConfig |> withAction MyAction
+-}
+withAction : a -> Config a -> Config a
+withAction action (Config config) =
+    Config { config | action = Just action }
 
 
 {-| Make a button active or not active.
 
     baseConfig |> withActive True
 -}
-withActive : Bool -> Config -> Config
+withActive : Bool -> Config a -> Config a
 withActive active (Config config) =
     Config { config | active = active }
 
@@ -222,7 +227,7 @@ withActive active (Config config) =
 
     baseConfig |> additionalClass "my-button"
 -}
-withAdditionalClass : String -> Config -> Config
+withAdditionalClass : String -> Config a -> Config a
 withAdditionalClass cl (Config config) =
     Config { config | additionalClass = Just cl }
 
@@ -231,6 +236,6 @@ withAdditionalClass cl (Config config) =
 
     baseConfig |> forceAnchor
 -}
-forceAnchor : Config -> Config
+forceAnchor : Config a -> Config a
 forceAnchor (Config config) =
     Config { config | forceAnchor = True }
