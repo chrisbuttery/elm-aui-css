@@ -8,26 +8,22 @@ import Html.Attributes exposing (style)
 import Aui.Icons exposing (icon, Icon(Configure), Size, small)
 
 
-type Msg
-    = NoOp
-
-
-view : Html Msg
+view : Html a
 view =
     demoSection "Toolbar"
         [ div [ style [ ( "border", "1px solid #ddd" ), ( "padding", "10px" ) ] ]
             [ toolbar
                 [ toolbarPrimary
-                    [ buttonGroup [ button baseConfig NoOp [ text "Edit" ] ]
+                    [ buttonGroup [ button baseConfig [ text "Edit" ] ]
                     , buttonGroup
-                        [ button baseConfig NoOp [ text "Assign" ]
-                        , button baseConfig NoOp [ text "Assign to me" ]
-                        , button baseConfig NoOp [ text "Assign to me" ]
-                        , button baseConfig NoOp [ text "Comment" ]
-                        , button baseConfig NoOp [ text "More" ]
+                        [ button baseConfig [ text "Assign" ]
+                        , button baseConfig [ text "Assign to me" ]
+                        , button baseConfig [ text "Assign to me" ]
+                        , button baseConfig [ text "Comment" ]
+                        , button baseConfig [ text "More" ]
                         ]
                     ]
-                , toolbarSecondary [ button baseConfig NoOp [ icon small Configure ] ]
+                , toolbarSecondary [ button baseConfig [ icon small Configure ] ]
                 ]
             ]
         ]
