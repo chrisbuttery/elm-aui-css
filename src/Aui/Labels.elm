@@ -20,7 +20,7 @@ module Aui.Labels exposing (label, Action, navigate, trigger, Config, baseConfig
 -}
 
 import Html exposing (Html, span, a, text)
-import Html.Attributes exposing (class, href)
+import Html.Attributes exposing (class, href, style)
 import Html.Events
 
 
@@ -122,12 +122,12 @@ actionAttrs : Maybe (Action a) -> List (Html.Attribute a)
 actionAttrs onClick =
     case onClick of
         Just action ->
-            case action of
+              case action of
                 Navigate x ->
-                    [ href x ]
+                    [ href x, style [("cursor","pointer")] ]
 
                 Trigger a ->
-                    [ Html.Events.onClick a ]
+                    [ Html.Events.onClick a, style [("cursor","pointer")] ]
 
         Nothing ->
             []
