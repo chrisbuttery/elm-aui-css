@@ -1,11 +1,9 @@
 module Demo.Select exposing (view, model, Model, Msg, update)
 
 import Demo.Base exposing (demoSection)
-import Demo.Ports
 import Aui.Select exposing (..)
 import Html exposing (Html, form)
 import Html.Attributes exposing (class)
-import Html.App
 
 
 type Msg
@@ -17,16 +15,11 @@ type alias Model =
     }
 
 
-ports : Ports
-ports =
-    { blur = Demo.Ports.blur, focus = Demo.Ports.focus }
-
-
 model : ( Model, Cmd Msg )
 model =
     let
         ( selectModel, selectCmds ) =
-            Aui.Select.initialModel ports "product-select" [ "JIRA", "Confluence", "Bamboo" ]
+            Aui.Select.initialModel "product-select" [ "JIRA", "Confluence", "Bamboo" ]
     in
         ( { selectModel = selectModel }, Cmd.map SelectMsg selectCmds )
 
@@ -48,7 +41,7 @@ view : Model -> Html Msg
 view model =
     demoSection "Selects"
         [ form [ class "aui" ]
-            [ Html.App.map SelectMsg
+            [ Html.map SelectMsg
                 <| singleSelect (baseConfig |> withPlaceholder "Select placeholder")
                     model.selectModel
             ]

@@ -88,7 +88,7 @@ label (Config onRemove onClick) inner =
             else
                 "aui-label aui-label-closeable aui-label-split"
 
-        inner' =
+        inner_ =
             case onRemove of
                 Nothing ->
                     inner
@@ -98,7 +98,7 @@ label (Config onRemove onClick) inner =
                     , labelRemoveSpan action
                     ]
 
-        actionAttrs' =
+        actionAttrs_ =
             actionAttrs onClick
 
         elem =
@@ -107,8 +107,8 @@ label (Config onRemove onClick) inner =
             else
                 a
     in
-        elem (class classString :: actionAttrs')
-            inner'
+        elem (class classString :: actionAttrs_)
+            inner_
 
 
 labelRemoveSpan : a -> Html a

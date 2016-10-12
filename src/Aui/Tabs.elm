@@ -32,7 +32,6 @@ module Aui.Tabs exposing (tabs, Msg, Model, modelWithActive, update, Item, item,
 import Html exposing (Html, div, ul, li, a, text)
 import Html.Attributes exposing (class, attribute, href)
 import Html.Events exposing (onClick)
-import Html.App as HA
 
 
 {-| Configuration record to show a tabs component.
@@ -124,7 +123,7 @@ tabs (Config config) cb model =
                 "aui-tabs vertical-tabs"
     in
         div [ class tabClass ]
-            [ HA.map config.msgMap (menu config.items model)
+            [ Html.map config.msgMap (menu config.items model)
             , tabContent cb model
             ]
 

@@ -2,7 +2,7 @@ module Demo.Main exposing (..)
 
 import Html exposing (text, Html, div, p, h1, section, img, input, a)
 import Html.Attributes exposing (class, style, href, attribute, src, alt)
-import Html.App exposing (beginnerProgram, program)
+import Html exposing (beginnerProgram, program)
 import Demo.Base exposing (demoSection)
 import Demo.Avatars
 import Demo.Buttons
@@ -45,7 +45,7 @@ type Msg
     | DropdownMsg Demo.Dropdown.Msg
 
 
-main : Program Never
+main : Program Never Model Msg
 main =
     program
         { init = init
@@ -79,21 +79,21 @@ view model =
     div [ class "aui-page-focused aui-page-focused-large" ]
         [ section []
             [ intro
-            , Html.App.map (\x -> NoOp) Demo.Avatars.view
-            , Html.App.map (\x -> NoOp) Demo.Toolbar.view
-            , Html.App.map DropdownMsg (Demo.Dropdown.view model.dropdowns)
-            , Html.App.map ToggleMsg (Demo.Toggle.view model.toggles)
-            , Html.App.map TabsMsg (Demo.Tabs.view model.tabs)
-            , Html.App.map SelectMsg (Demo.Select.view model.selects)
-            , Html.App.map (\x -> NoOp) Demo.Badges.view
-            , Html.App.map ButtonMsg (Demo.Buttons.view model.buttons)
-            , Html.App.map LabelsMsg (Demo.Labels.view model.labels)
-            , Html.App.map ExpanderMsg (Demo.Expander.view model.expander)
-            , Html.App.map (\x -> NoOp) Demo.Icons.view
-            , Html.App.map (\x -> NoOp) Demo.Lozenge.view
-            , Html.App.map MessagesMsg (Demo.Messages.view model.messages)
-            , Html.App.map (\x -> NoOp) Demo.ProgressIndicator.view
-            , Html.App.map (\x -> NoOp) Demo.ProgressTracker.view
+            , Html.map (\x -> NoOp) Demo.Avatars.view
+            , Html.map (\x -> NoOp) Demo.Toolbar.view
+            , Html.map DropdownMsg (Demo.Dropdown.view model.dropdowns)
+            , Html.map ToggleMsg (Demo.Toggle.view model.toggles)
+            , Html.map TabsMsg (Demo.Tabs.view model.tabs)
+            , Html.map SelectMsg (Demo.Select.view model.selects)
+            , Html.map (\x -> NoOp) Demo.Badges.view
+            , Html.map ButtonMsg (Demo.Buttons.view model.buttons)
+            , Html.map LabelsMsg (Demo.Labels.view model.labels)
+            , Html.map ExpanderMsg (Demo.Expander.view model.expander)
+            , Html.map (\x -> NoOp) Demo.Icons.view
+            , Html.map (\x -> NoOp) Demo.Lozenge.view
+            , Html.map MessagesMsg (Demo.Messages.view model.messages)
+            , Html.map (\x -> NoOp) Demo.ProgressIndicator.view
+            , Html.map (\x -> NoOp) Demo.ProgressTracker.view
             ]
         ]
 

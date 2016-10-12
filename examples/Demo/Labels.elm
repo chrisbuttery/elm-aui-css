@@ -21,7 +21,7 @@ type Msg
 model : Model
 model =
     { removedItems = []
-    , items = List.map (\x -> "Item " ++ (toString x)) [1..5]
+    , items = List.map (\x -> "Item " ++ (toString x)) <| List.range 1 5
     , counter = 0
     }
 

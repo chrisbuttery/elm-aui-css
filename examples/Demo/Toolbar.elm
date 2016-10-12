@@ -5,7 +5,7 @@ import Aui.Toolbar exposing (..)
 import Aui.Buttons exposing (buttonGroup, button, baseConfig)
 import Html exposing (Html, text, div)
 import Html.Attributes exposing (style)
-import Aui.Icons exposing (icon, Icon(Configure), Size, small)
+import Aui.Icons exposing (icon, configureIcon, Size, small)
 
 
 view : Html a
@@ -23,7 +23,7 @@ view =
                         , button baseConfig [ text "More" ]
                         ]
                     ]
-                , toolbarSecondary [ button baseConfig [ icon small Configure ] ]
+                , toolbarSecondary [ button baseConfig [ icon small configureIcon ] ]
                 ]
             ]
         ]

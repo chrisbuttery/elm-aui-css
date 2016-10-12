@@ -22,4 +22,4 @@ view =
 
 samples : List Icon
 samples =
-    [ Add, CustomBullet, ArrowsDown, ArrowsLeft, ArrowsRight, ArrowsUp, Layout3colLarge ]
+    [ addIcon, customBulletIcon, arrowsDownIcon, arrowsLeftIcon, arrowsRightIcon, arrowsUpIcon, layout3ColLargeIcon ]

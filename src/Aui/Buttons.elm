@@ -149,7 +149,7 @@ config2buttonClass { style, active, additionalClass } =
                 Light ->
                     "aui-button aui-button-light"
 
-        styleClass' =
+        styleClass_ =
             if active then
                 styleClass ++ " active"
             else
@@ -157,10 +157,10 @@ config2buttonClass { style, active, additionalClass } =
     in
         case additionalClass of
             Nothing ->
-                styleClass'
+                styleClass_
 
             Just x ->
-                styleClass' ++ " " ++ x
+                styleClass_ ++ " " ++ x
 
 
 {-| A configuration with sane defaults (no style, no anchor, enable, ect.).

@@ -1,10 +1,10 @@
-module Aui.Select exposing (singleSelect, Model, initialModel, update, Ports, Msg, Config, baseConfig, withPlaceholder, withZIndex)
+module Aui.Select exposing (singleSelect, Model, initialModel, update, Msg, Config, baseConfig, withPlaceholder, withZIndex)
 
 {-| Functions to present AUI select.
 
 # Type
 
-@docs Msg, Config, Ports
+@docs Msg, Config
 
 # Model
 
@@ -25,13 +25,13 @@ module Aui.Select exposing (singleSelect, Model, initialModel, update, Ports, Ms
 -}
 
 import Html exposing (Html, ul, li, div, button, node, input, select, text, form, span)
-import Html.Attributes exposing (value, type', class, name, placeholder, tabindex, autocomplete, attribute, style, id)
+import Html.Attributes exposing (value, type_, class, name, placeholder, tabindex, autocomplete, attribute, style, id)
 import Html.Events exposing (onClick, onFocus, onBlur, onInput, keyCode, on, onWithOptions, defaultOptions, onSubmit, onMouseEnter)
 import String exposing (contains, toLower)
 import Json.Decode as Json
-import List.Extra exposing (elemIndex, getAt)
 import Aui.Backdrop exposing (backdrop)
-
+import Dom
+import Task
 
 {-| Messages being sent by the select component
 -}
@@ -60,17 +60,10 @@ type alias InnerConfig =
     }
 
 
-{-| Required ports for this module. These should be injected in the module because ports cannot be published in a package. :/
--}
-type alias Ports =
-    { blur : String -> Cmd Msg, focus : String -> Cmd Msg }
-
-
 {-| Model for the select component.
 -}
 type alias Model =
-    { ports : Ports
-    , open : Bool
+    { open : Bool
     , query : Maybe String
     , items : List String
     , value : Maybe String
@@ -105,10 +98,9 @@ withPlaceholder x (Config config) =
 
 {-| Initial model for a select.
 -}
-initialModel : Ports -> String -> List String -> ( Model, Cmd Msg )
-initialModel ports identifier items =
-    ( { ports = ports
-      , identifier = identifier
+initialModel : String -> List String -> ( Model, Cmd Msg )
+initialModel identifier items =
+    ( { identifier = identifier
       , open = False
       , items = items
       , query = Nothing
@@ -130,7 +122,7 @@ singleSelect (Config config) model =
             else
                 "none"
 
-        activeOptions' =
+        activeOptions_ =
             activeOptionsForModel model
 
         zIndexItems =
@@ -157,7 +149,7 @@ singleSelect (Config config) model =
                             ]
                         ]
                         [ ul [ class "aui-optionlist" ]
-                            (List.map (asOption model) activeOptions')
+                            (List.map (asOption model) activeOptions_)
                         ]
                     ]
                 ]
@@ -216,19 +208,19 @@ update msg model =
 changeHighlighted : Int -> Model -> ( Model, Cmd Msg )
 changeHighlighted patch oldModel =
     let
-        activeOptionsForModel' =
+        activeOptionsForModel_ =
             activeOptionsForModel oldModel
 
         newHighlighted =
             case oldModel.highlighted of
                 Nothing ->
-                    List.head activeOptionsForModel'
+                    List.head activeOptionsForModel_
 
                 Just oldHighlighted ->
                     let
                         newByIndex =
-                            elemIndex oldHighlighted activeOptionsForModel'
-                                `Maybe.andThen` (\index -> getAt (index + patch) activeOptionsForModel')
+                            elemIndex oldHighlighted activeOptionsForModel_
+                                |> Maybe.andThen (\index -> getAt (index + patch) activeOptionsForModel_)
                     in
                         case newByIndex of
                             Nothing ->
@@ -240,6 +232,23 @@ changeHighlighted patch oldModel =
         ( { oldModel | highlighted = newHighlighted }, Cmd.none )
 
 
+elemIndex : a -> List a -> Maybe Int
+elemIndex e list =
+    list
+     |> List.indexedMap (,)
+     |> List.filter (snd >> (==) e)
+     |> List.head
+     |> Maybe.map fst
+
+getAt : Int -> List a -> Maybe a
+getAt n list =
+    list
+     |> List.indexedMap (,)
+     |> List.filter (fst >> (==) n)
+     |> List.head
+     |> Maybe.map snd
+
+
 handleOpen : Model -> ( Model, Cmd Msg )
 handleOpen model =
     let
@@ -249,7 +258,9 @@ handleOpen model =
         newHighlighted =
             activeOptionForQuery newQuery model
     in
-        ( { model | open = True, query = newQuery, highlighted = newHighlighted }, model.ports.focus ("#" ++ model.identifier ++ " input") )
+        ( { model | open = True, query = newQuery, highlighted = newHighlighted }
+        , Dom.focus (inputIdentifier model) |> Task.attempt (always NoOp)
+        )
 
 
 handleQueryChange : String -> Model -> ( Model, Cmd Msg )
@@ -264,10 +275,12 @@ handleQueryChange newQuery oldModel =
 handleSubmit : Model -> ( Model, Cmd Msg )
 handleSubmit model =
     let
-        activeOptions' =
+        activeOptions_ =
             activeOptionsForModel model
     in
-        ( { model | open = False, query = Nothing, highlighted = Nothing, value = model.highlighted }, model.ports.blur ("#" ++ model.identifier ++ " input") )
+        ( { model | open = False, query = Nothing, highlighted = Nothing, value = model.highlighted }
+        , Dom.blur (inputIdentifier model) |> Task.attempt (always NoOp)
+        )
 
 
 activeOptionForQuery : Maybe String -> Model -> Maybe String
@@ -297,7 +310,7 @@ dropDownButton zIndex model =
         , attribute "role" "button"
         , tabindex -1
         , style [ ( "z-index", zIndex ) ]
-        , type' "button"
+        , type_ "button"
         , onClick
             (if model.open then
                 Close
@@ -307,6 +320,9 @@ dropDownButton zIndex model =
         ]
         []
 
+inputIdentifier : Model -> String
+inputIdentifier model =
+    model.identifier ++ "__input"
 
 queryInput : String -> Model -> Html Msg
 queryInput zIndex model =
@@ -319,9 +335,9 @@ queryInput zIndex model =
     in
         input
             [ value inputValue
-            , type' "undefined"
+            , type_ "undefined"
             , class "text"
-            , id "mySelect"
+            , id (inputIdentifier model)
             , autocomplete False
             , style [ ( "position", "relative" ), ( "z-index", zIndex ) ]
             , on "input" (Json.map ChangeQuery Html.Events.targetValue)

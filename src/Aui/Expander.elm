@@ -26,7 +26,6 @@ module Aui.Expander exposing (expander, Model, initialModel, Msg, update, Config
 
 import Html exposing (Html, div, text, a)
 import Html.Attributes exposing (class, attribute, style)
-import Html.App as HA
 import Html.Events exposing (onClick)
 import String exposing (toLower)
 
@@ -88,7 +87,7 @@ expander (Config config) body model =
         , style [ ( "min-height", config.minHeight ) ]
         ]
         [ text body
-        , HA.map config.msgMap
+        , Html.map config.msgMap
             (a
                 [ class "aui-expander-trigger aui-expander-reveal-text"
                 , onClick Toggle

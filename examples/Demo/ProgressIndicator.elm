@@ -9,7 +9,7 @@ import Aui.ProgressIndicator exposing (..)
 view : Html a
 view =
     demoSection "Progress Indicators"
-        (active :: (List.map (toFloat >> (flip (/) 10) >> asIndicator) [0..10]))
+        (active :: (List.map (toFloat >> (flip (/) 10) >> asIndicator) <| List.range 0 10))
 
 
 active : Html a

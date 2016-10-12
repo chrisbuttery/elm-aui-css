@@ -32,7 +32,6 @@ import Aui.Buttons exposing (normalStyle, baseConfig, forceAnchor, withAdditiona
 import Aui.Backdrop exposing (backdrop)
 import Html exposing (Html, div, strong, text, ul, li, a)
 import Html.Attributes exposing (style, class, tabindex)
-import Html.App as HA
 
 
 -- {-| Style for the dropdown.
@@ -145,9 +144,9 @@ dropdown (Config config) buttonInner dropdownInner model =
             config.zIndexBackdrop + 1 |> toString
     in
         div [ style [ ( "position", "relative" ), ( "display", "inline-block" ) ] ]
-            [ HA.map config.msgMap (backdrop config.zIndexBackdrop Toggle model.open)
+            [ Html.map config.msgMap (backdrop config.zIndexBackdrop Toggle model.open)
             , div [ style [ ( "z-index", itemsZIndex ), ( "position", "relative" ) ] ]
-                [ HA.map config.msgMap
+                [ Html.map config.msgMap
                     (Aui.Buttons.button
                         (Aui.Buttons.baseConfig
                             |> forceAnchor

@@ -8,7 +8,7 @@ import Html exposing (..)
 view : Html a
 view =
     demoSection "Badges"
-        (List.map presentBadge [1..10])
+        (List.map presentBadge <| List.range 1 10)
 
 
 presentBadge : Int -> Html a

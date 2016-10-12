@@ -8,25 +8,6 @@ An UI component library for the Elm supporting integration with the CSS of the [
 elm package install stil4m/elm-aui-css
 ```
 
-## Notes
-
-Currently there is one component that requires ports (Single Select) to focus and blur input. You should setup this for example as follows:
-
-```
-port module MyModule (..)
-
-port blur : String -> Cmd msg
-port focus : String -> Cmd msg
-
-initialModel =
-    { selectModel =
-        initialModel { blur = blur, focus = focus } ...
-    , ...
-    }
-```
-
-See `Demo/Select.elm` for more details. `index.html` contains information how to set up the ports.
-
 ## Supported Components
 
 * Avatars
